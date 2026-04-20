@@ -1,0 +1,212 @@
+{
+  "main": {
+    "id": "6ceaf4eea231b307",
+    "type": "split",
+    "children": [
+      {
+        "id": "f57926fdf464c372",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "74e7bd0dee9b3585",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4a1ccd5aeac899bc",
+    "type": "split",
+    "children": [
+      {
+        "id": "f54dbed878421b99",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3f32d4a3399611e5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "0d6b274d4370a6b5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "mimik",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "24d607399a9bf4ab",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0a930a162516fb2b",
+    "type": "split",
+    "children": [
+      {
+        "id": "c879976c0e054d27",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cdc9057f88667abc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "02-Web/Web-Fuzzing-and-Discovery.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Web-Fuzzing-and-Discovery"
+            }
+          },
+          {
+            "id": "b6b98bf8a6b0a63c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "02-Web/Web-Fuzzing-and-Discovery.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Web-Fuzzing-and-Discovery"
+            }
+          },
+          {
+            "id": "7efa4ddc4bda084d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c99d20281827499b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "a5bc7a5e8e34dbeb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "02-Web/Web-Fuzzing-and-Discovery.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Web-Fuzzing-and-Discovery"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "74e7bd0dee9b3585",
+  "lastOpenFiles": [
+    "XX_MINDMAP.canvas",
+    "07-Credentials-and-Cracking/Hashcat-and-John.md",
+    "02-Web/Web-SQLi.md",
+    "02-Web/Untitled.canvas",
+    "03-Active-Directory/Lateral-Move-and-DCSync.md",
+    "04-Windows/Bypasses.md",
+    "00-README.md",
+    "12-Cloud-and-Resources/AWS.md",
+    "12-Cloud-and-Resources/Methodology-and-Resources.md",
+    "11-RE-and-xpDev/Payloads-and-Webshells.md",
+    "10-Toolbox/Searchsploit-n-CVEs.md",
+    "10-Toolbox/Tmux.md",
+    "10-Toolbox/Misc-Tools.md",
+    "10-Toolbox/Nmap.md",
+    "10-Toolbox/Links.md",
+    "10-Toolbox/_S1R3N_.md",
+    "09-Movement/Pivot-Tunnel-and-Port-Forward.md",
+    "09-Movement/Ligolo.md",
+    "09-Movement/File-Transfers.md",
+    "08-Post-Exploitation/Persistence-and-Cleanup.md",
+    "04-Windows/Windows-Privilege-Escalation.md",
+    "07-Credentials-and-Cracking/Passwords-Spraying-and-Reuse.md",
+    "03-Active-Directory/AD-Enum.md",
+    "06-Services/SQLite.md",
+    "06-Services/Redis.md",
+    "06-Services/PostgreSQL.md",
+    "06-Services/MySQL.md"
+  ]
+}

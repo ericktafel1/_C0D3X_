@@ -1,0 +1,14 @@
+{
+	"nodes":[
+		{"id":"196c0216be451f50","x":-96,"y":162,"width":400,"height":400,"type":"file","file":"02-Web/Web-Auth.md"},
+		{"id":"3784760327f70ccd","x":349,"y":162,"width":400,"height":400,"type":"file","file":"02-Web/Web-Client-Side.md"},
+		{"id":"c316f462facb993b","x":794,"y":162,"width":400,"height":400,"type":"file","file":"02-Web/Web-CMS-and-APIs.md"},
+		{"id":"8e8d262f79a984b3","x":1239,"y":162,"width":400,"height":400,"type":"file","file":"02-Web/Web-Files-Inclusion-and-Uploads.md"},
+		{"id":"3da2aa7eb69a633b","x":1684,"y":162,"width":400,"height":400,"type":"file","file":"02-Web/Web-Fuzzing-and-Discovery.md"},
+		{"id":"5129798496b956a1","x":2129,"y":162,"width":400,"height":400,"type":"file","file":"02-Web/Web-General.md"},
+		{"id":"65f9e394d1b46e0c","x":2574,"y":162,"width":400,"height":400,"type":"file","file":"02-Web/Web-SQLi.md"},
+		{"id":"f1220ce603740d27","x":-471,"y":-365,"width":400,"height":400,"color":"5","type":"file","file":"01-Enumeration/External-and-Network-Recon.md"},
+		{"id":"3605431d0bb67b1a","x":-26,"y":-365,"width":400,"height":400,"color":"5","type":"file","file":"01-Enumeration/Internal-Recon.md"}
+	],
+	"edges":[]
+}
