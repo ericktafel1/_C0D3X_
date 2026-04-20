@@ -1,20 +1,24 @@
 {
   "main": {
-    "id": "6ceaf4eea231b307",
+    "id": "4013863ee2cf21a2",
     "type": "split",
     "children": [
       {
-        "id": "f57926fdf464c372",
+        "id": "a7684c3e32d692a8",
         "type": "tabs",
         "children": [
           {
-            "id": "74e7bd0dee9b3585",
+            "id": "48f2789c541359ba",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "06 Services/MSSQL.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "MSSQL"
             }
           }
         ]
@@ -23,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "4a1ccd5aeac899bc",
+    "id": "6fbd44ce8fd6f1de",
     "type": "split",
     "children": [
       {
-        "id": "f54dbed878421b99",
+        "id": "4fa5e9990c653e86",
         "type": "tabs",
         "children": [
           {
-            "id": "3f32d4a3399611e5",
+            "id": "436d36a7eba98628",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -44,12 +48,12 @@
             }
           },
           {
-            "id": "0d6b274d4370a6b5",
+            "id": "30e9c51188b4fe35",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "mimik",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,7 +65,7 @@
             }
           },
           {
-            "id": "24d607399a9bf4ab",
+            "id": "52946725ec5e389b",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -77,20 +81,20 @@
     "width": 300
   },
   "right": {
-    "id": "0a930a162516fb2b",
+    "id": "4f725853a0d09020",
     "type": "split",
     "children": [
       {
-        "id": "c879976c0e054d27",
+        "id": "ee3e3e0b53caf670",
         "type": "tabs",
         "children": [
           {
-            "id": "cdc9057f88667abc",
+            "id": "9fb1d2d57fa0ea2d",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02-Web/Web-Fuzzing-and-Discovery.md",
+                "file": "06 Services/MSSQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Web-Fuzzing-and-Discovery"
+              "title": "Backlinks for MSSQL"
             }
           },
           {
-            "id": "b6b98bf8a6b0a63c",
+            "id": "6a4682b877ed65f5",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02-Web/Web-Fuzzing-and-Discovery.md",
+                "file": "06 Services/MSSQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Web-Fuzzing-and-Discovery"
+              "title": "Outgoing links from MSSQL"
             }
           },
           {
-            "id": "7efa4ddc4bda084d",
+            "id": "61329876c4de9236",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -133,7 +137,7 @@
             }
           },
           {
-            "id": "c99d20281827499b",
+            "id": "1f579d1557c17b4a",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -147,18 +151,18 @@
             }
           },
           {
-            "id": "a5bc7a5e8e34dbeb",
+            "id": "75834308c2a6900b",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "02-Web/Web-Fuzzing-and-Discovery.md",
+                "file": "06 Services/MSSQL.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Web-Fuzzing-and-Discovery"
+              "title": "Outline of MSSQL"
             }
           }
         ]
@@ -179,34 +183,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "74e7bd0dee9b3585",
+  "active": "48f2789c541359ba",
   "lastOpenFiles": [
-    "XX_MINDMAP.canvas",
-    "07-Credentials-and-Cracking/Hashcat-and-John.md",
-    "02-Web/Web-SQLi.md",
-    "02-Web/Untitled.canvas",
-    "03-Active-Directory/Lateral-Move-and-DCSync.md",
-    "04-Windows/Bypasses.md",
-    "00-README.md",
-    "12-Cloud-and-Resources/AWS.md",
-    "12-Cloud-and-Resources/Methodology-and-Resources.md",
-    "11-RE-and-xpDev/Payloads-and-Webshells.md",
-    "10-Toolbox/Searchsploit-n-CVEs.md",
-    "10-Toolbox/Tmux.md",
-    "10-Toolbox/Misc-Tools.md",
-    "10-Toolbox/Nmap.md",
-    "10-Toolbox/Links.md",
-    "10-Toolbox/_S1R3N_.md",
-    "09-Movement/Pivot-Tunnel-and-Port-Forward.md",
-    "09-Movement/Ligolo.md",
-    "09-Movement/File-Transfers.md",
-    "08-Post-Exploitation/Persistence-and-Cleanup.md",
-    "04-Windows/Windows-Privilege-Escalation.md",
-    "07-Credentials-and-Cracking/Passwords-Spraying-and-Reuse.md",
-    "03-Active-Directory/AD-Enum.md",
-    "06-Services/SQLite.md",
-    "06-Services/Redis.md",
-    "06-Services/PostgreSQL.md",
-    "06-Services/MySQL.md"
+    "05 Linux/Shell Stabilization.md",
+    "05 Linux/Enumeration.md",
+    "04 Windows/PowerShell.md",
+    "04 Windows/Host Enumeration and Access.md",
+    "00 README.md",
+    "04 Windows/Privilege Escalation.md",
+    "_SCR0LL_/ACCURACY_REVIEW.md",
+    "06 Services/MySQL.md",
+    "03 AD/BloodHound ACLs and AD CS.md",
+    "02 Web/SQL Injection.md"
   ]
 }

