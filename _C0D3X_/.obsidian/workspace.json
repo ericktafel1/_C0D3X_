@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "4f725853a0d09020",
@@ -185,6 +185,8 @@
   },
   "active": "48f2789c541359ba",
   "lastOpenFiles": [
+    "02 Web/File Inclusion Uploads and Git Exposure.md",
+    "02 Web/SQL Injection.md",
     "02 Web/Web Application Methodology.md",
     "05 Linux/Enumeration.md",
     "09 Movement/Pivoting Tunneling and Port Forwarding.md",
@@ -196,7 +198,6 @@
     "04 Windows/Privilege Escalation.md",
     "_SCR0LL_/ACCURACY_REVIEW.md",
     "06 Services/MySQL.md",
-    "03 AD/BloodHound ACLs and AD CS.md",
-    "02 Web/SQL Injection.md"
+    "03 AD/BloodHound ACLs and AD CS.md"
   ]
 }

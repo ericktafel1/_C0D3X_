@@ -1,3 +1,10 @@
 {
-  "promptDelete": false
+  "promptDelete": false,
+  "tabSize": 4,
+  "showLineNumber": true,
+  "strictLineBreaks": false,
+  "rightToLeft": false,
+  "useTab": true,
+  "vimMode": false,
+  "readableLineLength": false
 }
