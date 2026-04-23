@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 Web/PortSwigger-Guide/IMPORTANT.md",
+                "file": "02 Web/PortSwigger-Guide/Authentication/Authentication.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "IMPORTANT"
+              "title": "Authentication"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 304.5
+    "width": 253.5
   },
   "right": {
     "id": "4f725853a0d09020",
@@ -185,6 +185,8 @@
   },
   "active": "48f2789c541359ba",
   "lastOpenFiles": [
+    "02 Web/PortSwigger-Guide/IMPORTANT.md",
+    "02 Web/PortSwigger-Guide/OAuth Authentication/Oauth authentication.md",
     "02 Web/PortSwigger-Guide/3stages.png",
     "02 Web/PortSwigger-Guide/Authentication/Authentication.md",
     "02 Web/PortSwigger-Guide/Payloads/FilePathTraversal.md",
@@ -200,7 +202,6 @@
     "02 Web/PortSwigger-Guide/Payloads/Passwords.md",
     "02 Web/PortSwigger-Guide/Payloads/SSRFPayloads.md",
     "02 Web/PortSwigger-Guide/Payloads/SSTIPayloads.md",
-    "02 Web/PortSwigger-Guide/IMPORTANT.md",
     "02 Web/PortSwigger-guide/payloads/simple.php",
     "02 Web/PortSwigger-guide/payloads/polyglot.php",
     "02 Web/PortSwigger-guide/payloads",
