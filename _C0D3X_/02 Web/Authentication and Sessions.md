@@ -49,7 +49,9 @@ $ curl -H 'Authorization: Basic b2Zmc2VjOmVsaXRl' -G --data-urlencode 'cmd=.\rev
 ## Session and State Handling Checks
 
 - Test direct object access with cookies or bearer tokens removed, downgraded, duplicated, or replayed.
-- Change `Host`, `Origin`, `Referer`, `X-Forwarded-For`, `X-Original-URL`, and method overrides only when the application or proxy behavior suggests they matter.
+- Change `Host`, `Origin`, `Referer`, `X-Forwarded-For` (1-100), `X-Original-URL`, and method overrides only when the application or proxy behavior suggests they matter.
+	- Add in Burp Intruder to bypass IP Blacklisting in Brute Force attacks
+	- Add the correct header to intercepted request with correct creds (e.g., `X-Forwarded-For: 49` and `username=wiener` and `password=peter`)
 - Compare login responses for valid user / bad password, invalid user, locked user, MFA-required, and password-reset-required cases.
 - Reuse intercepted session cookies after logout, password change, or privilege change to check for invalidation gaps.
 - If the app uses JWTs, inspect `alg`, `kid`, audience, issuer, expiry, and trust decisions before spending time on brute-force guesses.

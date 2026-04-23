@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06 Services/Kerberos.md",
+                "file": "02 Web/PortSwigger-Guide/Authentication/Authentication.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Kerberos"
+              "title": "Authentication"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Kerberoasting",
+                "query": "X-Forwarded",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,12 +74,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 304.5
   },
   "right": {
     "id": "4f725853a0d09020",
@@ -186,20 +185,50 @@
   },
   "active": "48f2789c541359ba",
   "lastOpenFiles": [
-    "03 AD/Domain Enumeration.md",
-    "02 Web/SQL Injection.md",
-    "02 Web/File Inclusion Uploads and Git Exposure.md",
-    "02 Web/Web Application Methodology.md",
-    "05 Linux/Enumeration.md",
-    "09 Movement/Pivoting Tunneling and Port Forwarding.md",
-    "06 Services/MSSQL.md",
-    "05 Linux/Shell Stabilization.md",
-    "04 Windows/PowerShell.md",
-    "04 Windows/Host Enumeration and Access.md",
-    "00 README.md",
-    "04 Windows/Privilege Escalation.md",
-    "_SCR0LL_/ACCURACY_REVIEW.md",
-    "06 Services/MySQL.md",
-    "03 AD/BloodHound ACLs and AD CS.md"
+    "02 Web/PortSwigger-Guide/3stages.png",
+    "02 Web/PortSwigger-Guide/Authentication/Authentication.md",
+    "02 Web/PortSwigger-Guide/Payloads/FilePathTraversal.md",
+    "02 Web/PortSwigger-Guide/Payloads/CookieStealer(XSS).md",
+    "02 Web/PortSwigger-guide/tools/ysoserial-all.jar",
+    "02 Web/PortSwigger-guide/tools/phpggc",
+    "02 Web/PortSwigger-guide/tools",
+    "02 Web/PortSwigger-guide/payloads/upload.jpg",
+    "02 Web/PortSwigger-guide/payloads/Untitled.md",
+    "02 Web/PortSwigger-Guide/Payloads/XXEPayloads.md",
+    "02 Web/PortSwigger-Guide/Payloads/Usernames.md",
+    "02 Web/PortSwigger-Guide/Payloads/HttpRequestSmugglingPayloads.md",
+    "02 Web/PortSwigger-Guide/Payloads/Passwords.md",
+    "02 Web/PortSwigger-Guide/Payloads/SSRFPayloads.md",
+    "02 Web/PortSwigger-Guide/Payloads/SSTIPayloads.md",
+    "02 Web/PortSwigger-Guide/IMPORTANT.md",
+    "02 Web/PortSwigger-guide/payloads/simple.php",
+    "02 Web/PortSwigger-guide/payloads/polyglot.php",
+    "02 Web/PortSwigger-guide/payloads",
+    "02 Web/Authentication and Sessions.md",
+    "02 Web/PortSwigger-Guide/File Upload Vulnerabilities/exploits/file_get_contents.php.md",
+    "02 Web/PortSwigger-Guide/Http Request Smuggling/lib/request.txt.md",
+    "02 Web/PortSwigger-Guide/Http Request Smuggling/lib/countchar.py.md",
+    "02 Web/PortSwigger-Guide/Clickjacking/exploits/Multistep.md",
+    "02 Web/PortSwigger-Guide/Clickjacking/exploits/Input data prefilled.md",
+    "02 Web/PortSwigger-Guide/Clickjacking/exploits/Frame buster script.md",
+    "02 Web/PortSwigger-Guide/Clickjacking/exploits/Dom based xss.md",
+    "02 Web/PortSwigger-Guide/Clickjacking/exploits/Csrf token protection.md",
+    "02 Web/PortSwigger-Guide/Clickjacking/exploits/Base.md",
+    "02 Web/PortSwigger-Guide/XSS/XSS.md",
+    "02 Web/PortSwigger-Guide/XXE/XXE.md",
+    "02 Web/PortSwigger-Guide/XXE/PAYLOADS.md",
+    "02 Web/PortSwigger-Guide/XSS/Portswigger-cheatsheet.txt.md",
+    "02 Web/PortSwigger-Guide/Http Request Smuggling/lib",
+    "02 Web/PortSwigger-Guide/File Upload Vulnerabilities/exploits",
+    "02 Web/PortSwigger-Guide/Clickjacking/exploits",
+    "02 Web/PortSwigger-Guide/XXE",
+    "02 Web/BURP/XXE Injection/Images/XXE-2.png",
+    "02 Web/BURP/XXE Injection/Images/XXE-1.png",
+    "02 Web/BURP/SQL Injection/Images/sqli-5.png",
+    "02 Web/BURP/SQL Injection/Images/sqli-4.png",
+    "02 Web/BURP/SQL Injection/Images/sqli-3.png",
+    "02 Web/BURP/SQL Injection/Images/sqli-2.png",
+    "02 Web/BURP/SQL Injection/Images/sqli-1.png",
+    "02 Web/BURP/JWT Attacks/Images/Picture2.png"
   ]
 }
