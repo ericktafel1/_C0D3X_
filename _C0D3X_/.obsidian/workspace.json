@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 Web/PortSwigger-Guide/Authentication/Authentication.md",
+                "file": "04 Windows/Host Enumeration and Access.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Authentication"
+              "title": "Host Enumeration and Access"
+            }
+          },
+          {
+            "id": "e7a916a5760566d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_Click_Script.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "_Click_Script"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -53,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "X-Forwarded",
+                "query": "god potato",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253.5
+    "width": 200
   },
   "right": {
     "id": "4f725853a0d09020",
@@ -183,12 +198,31 @@
       "bases:Create new base": false
     }
   },
-  "active": "48f2789c541359ba",
+  "active": "e7a916a5760566d5",
   "lastOpenFiles": [
+    "04 Windows/Host Enumeration and Access.md",
+    "_Click_Script.md",
+    "03 AD/Domain Enumeration.md",
+    "02 Web/Content Discovery and VHosts.md",
+    "02 Web/PortSwigger-Guide/Directory Traversal/Directory traversal.md",
+    "01 Enumeration/External and Network Enumeration.md",
+    "08 Post Exploitation/Persistence and Cleanup.md",
+    "03 AD/BloodHound ACLs and AD CS.md",
+    "02 Web/File Inclusion Uploads and Git Exposure.md",
+    "06 Services/Docker API.md",
+    "06 Services/MSSQL.md",
+    "07 Creds and Cracking/Password Spraying and Reuse.md",
+    "03 AD/Kerberos.md",
+    "09 Movement/File Transfers.md",
+    "02 Web/Client-Side and Office Payload Delivery.md",
+    "01 Enumeration/Internal Enumeration.md",
+    "09 Movement/Pivoting Tunneling and Port Forwarding.md",
+    "10 Tool Box/Operator Quick Hits - S1R3N.md",
+    "07 Creds and Cracking/Hashcat and John.md",
+    "02 Web/PortSwigger-Guide/Authentication/Authentication.md",
     "02 Web/PortSwigger-Guide/IMPORTANT.md",
     "02 Web/PortSwigger-Guide/OAuth Authentication/Oauth authentication.md",
     "02 Web/PortSwigger-Guide/3stages.png",
-    "02 Web/PortSwigger-Guide/Authentication/Authentication.md",
     "02 Web/PortSwigger-Guide/Payloads/FilePathTraversal.md",
     "02 Web/PortSwigger-Guide/Payloads/CookieStealer(XSS).md",
     "02 Web/PortSwigger-guide/tools/ysoserial-all.jar",
@@ -197,28 +231,9 @@
     "02 Web/PortSwigger-guide/payloads/upload.jpg",
     "02 Web/PortSwigger-guide/payloads/Untitled.md",
     "02 Web/PortSwigger-Guide/Payloads/XXEPayloads.md",
-    "02 Web/PortSwigger-Guide/Payloads/Usernames.md",
-    "02 Web/PortSwigger-Guide/Payloads/HttpRequestSmugglingPayloads.md",
-    "02 Web/PortSwigger-Guide/Payloads/Passwords.md",
-    "02 Web/PortSwigger-Guide/Payloads/SSRFPayloads.md",
-    "02 Web/PortSwigger-Guide/Payloads/SSTIPayloads.md",
     "02 Web/PortSwigger-guide/payloads/simple.php",
     "02 Web/PortSwigger-guide/payloads/polyglot.php",
     "02 Web/PortSwigger-guide/payloads",
-    "02 Web/Authentication and Sessions.md",
-    "02 Web/PortSwigger-Guide/File Upload Vulnerabilities/exploits/file_get_contents.php.md",
-    "02 Web/PortSwigger-Guide/Http Request Smuggling/lib/request.txt.md",
-    "02 Web/PortSwigger-Guide/Http Request Smuggling/lib/countchar.py.md",
-    "02 Web/PortSwigger-Guide/Clickjacking/exploits/Multistep.md",
-    "02 Web/PortSwigger-Guide/Clickjacking/exploits/Input data prefilled.md",
-    "02 Web/PortSwigger-Guide/Clickjacking/exploits/Frame buster script.md",
-    "02 Web/PortSwigger-Guide/Clickjacking/exploits/Dom based xss.md",
-    "02 Web/PortSwigger-Guide/Clickjacking/exploits/Csrf token protection.md",
-    "02 Web/PortSwigger-Guide/Clickjacking/exploits/Base.md",
-    "02 Web/PortSwigger-Guide/XSS/XSS.md",
-    "02 Web/PortSwigger-Guide/XXE/XXE.md",
-    "02 Web/PortSwigger-Guide/XXE/PAYLOADS.md",
-    "02 Web/PortSwigger-Guide/XSS/Portswigger-cheatsheet.txt.md",
     "02 Web/PortSwigger-Guide/Http Request Smuggling/lib",
     "02 Web/PortSwigger-Guide/File Upload Vulnerabilities/exploits",
     "02 Web/PortSwigger-Guide/Clickjacking/exploits",
