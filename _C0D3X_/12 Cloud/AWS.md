@@ -54,6 +54,9 @@ aws configure --profile test                         # Use profiles with every `
 aws sts get-caller-identity --profile test           # Get Account ID for profile... `whoami` equivalent
 aws s3 ls s3://dev.huge-logistics.com/<folder>/ --profile test
 aws s3 cp s3://dev.huge-logistics.com/<folder>/ . --recursive --profile test
+
+# Get the Bucket Policy
+aws s3api get-bucket-policy --bucket dev.huge-logistics.com --profile admin | jq -r '.Policy | fromjson'
 ```
 
 **With s3scanner:**
