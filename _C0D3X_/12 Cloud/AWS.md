@@ -1,14 +1,13 @@
-# AWS
-
-AWS-focused enumeration and exploitation notes preserved from the source.
-
-## AWS
-
-## AWS
-
----
-
 🕵️ Enumeration
+
+```bash
+~/.aws/credentials                      # Location for AWS profiles that includes AWS Access Key and AWS Secret Keys
+```
+
+**Will need to find a way to automatically add profiles when I find AWS Access and Secret Keys!**
+```bash
+aws configure --profile test   
+```
 
 ---
 
@@ -42,12 +41,19 @@ Manually inspect source code for:
 
 ## 🪣 S3 Bucket Enumeration
 
-**Unauthenticated:**
-
-```
+```bash
+# Unauthenticated
 aws s3 ls s3://<bucket-name> --no-sign-request
+aws s3 ls s3://<bucket-name>/<folder>/ --no-sign-request --recursive
+aws s3 cp s3://<bucket-name>/<folder>/file.zip . --no-sign-request
 aws s3api get-bucket-acl --bucket <bucket-name> --no-sign-request
 aws s3api list-objects --bucket <bucket-name> --no-sign-request
+
+# Authenticated
+aws configure --profile test                         # Use profiles with every `aws` command after configure to manage multiple creds
+aws sts get-caller-identity --profile test           # Get Account ID for profile... `whoami` equivalent
+aws s3 ls s3://dev.huge-logistics.com/<folder>/ --profile test
+aws s3 cp s3://dev.huge-logistics.com/<folder>/ . --recursive --profile test
 ```
 
 **With s3scanner:**
@@ -61,7 +67,7 @@ s3scanner --bucket <bucket-name>
 ```bash
 # Bruteforce leaked bucket owner ID
 aws configure                          # Paste the Access key ID & Secret access key
-aws sts get-caller-identity            # Get Account ID (427648302155)
+aws sts get-caller-identity            # Get Account ID (427648302155)... `whoami` equivalent
 s3-account-search arn:aws:iam::427648302155:role/LeakyBucket mega-big-tech
 
 # Enumerate the bucket region
