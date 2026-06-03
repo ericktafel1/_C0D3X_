@@ -52,10 +52,24 @@ aws s3api list-objects --bucket <bucket-name> --no-sign-request
 
 **With s3scanner:**
 
-```
+```bash
 s3scanner --bucket <bucket-name>
 ```
 
+## Leaky Buckets & Public Snapshots
+
+```bash
+# Bruteforce leaked bucket owner ID
+aws configure                          # Paste the Access key ID & Secret access key
+aws sts get-caller-identity            # Get Account ID (427648302155)
+s3-account-search arn:aws:iam::427648302155:role/LeakyBucket mega-big-tech
+
+# Enumerate the bucket region
+curl -I https://mega-big-tech.s3.amazonaws.com
+
+# To list public snapshots, supply owner ID and region:
+aws ec2 describe-snapshots --owner-ids 107513503799 --region us-east-1
+```
 ---
 
 ## 🗂️ Directory Brute-Forcing
