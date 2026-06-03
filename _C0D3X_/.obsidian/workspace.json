@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12 Cloud/AWS.md",
+                "file": "02 Web/Content Discovery and VHosts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AWS"
+              "title": "Content Discovery and VHosts"
             }
           },
           {
@@ -67,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "/drive:",
+                "query": "feroxbuster",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,7 +88,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -200,11 +201,12 @@
   "active": "48f2789c541359ba",
   "lastOpenFiles": [
     "01 Enumeration/External and Network Enumeration.md",
+    "01 Enumeration/Internal Enumeration.md",
+    "12 Cloud/AWS.md",
     "06 Services/RDP.md",
     "09 Movement/File Transfers.md",
     "00 README.md",
     "_Click_Script.md",
-    "12 Cloud/AWS.md",
     "05 Linux/Privilege Escalation.md",
     "04 Windows/Host Enumeration and Access.md",
     "03 AD/Domain Enumeration.md",
@@ -218,7 +220,6 @@
     "07 Creds and Cracking/Password Spraying and Reuse.md",
     "03 AD/Kerberos.md",
     "02 Web/Client-Side and Office Payload Delivery.md",
-    "01 Enumeration/Internal Enumeration.md",
     "09 Movement/Pivoting Tunneling and Port Forwarding.md",
     "10 Tool Box/Operator Quick Hits - S1R3N.md",
     "07 Creds and Cracking/Hashcat and John.md",
