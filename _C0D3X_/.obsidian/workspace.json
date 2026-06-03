@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04 Windows/Host Enumeration and Access.md",
+                "file": "12 Cloud/AWS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Host Enumeration and Access"
+              "title": "AWS"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "_Click_Script"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -68,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "god potato",
+                "query": "/drive:",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -198,14 +197,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "e7a916a5760566d5",
+  "active": "48f2789c541359ba",
   "lastOpenFiles": [
-    "04 Windows/Host Enumeration and Access.md",
+    "01 Enumeration/External and Network Enumeration.md",
+    "06 Services/RDP.md",
+    "09 Movement/File Transfers.md",
+    "00 README.md",
     "_Click_Script.md",
+    "12 Cloud/AWS.md",
+    "05 Linux/Privilege Escalation.md",
+    "04 Windows/Host Enumeration and Access.md",
     "03 AD/Domain Enumeration.md",
     "02 Web/Content Discovery and VHosts.md",
     "02 Web/PortSwigger-Guide/Directory Traversal/Directory traversal.md",
-    "01 Enumeration/External and Network Enumeration.md",
     "08 Post Exploitation/Persistence and Cleanup.md",
     "03 AD/BloodHound ACLs and AD CS.md",
     "02 Web/File Inclusion Uploads and Git Exposure.md",
@@ -213,7 +217,6 @@
     "06 Services/MSSQL.md",
     "07 Creds and Cracking/Password Spraying and Reuse.md",
     "03 AD/Kerberos.md",
-    "09 Movement/File Transfers.md",
     "02 Web/Client-Side and Office Payload Delivery.md",
     "01 Enumeration/Internal Enumeration.md",
     "09 Movement/Pivoting Tunneling and Port Forwarding.md",
@@ -223,14 +226,10 @@
     "02 Web/PortSwigger-Guide/IMPORTANT.md",
     "02 Web/PortSwigger-Guide/OAuth Authentication/Oauth authentication.md",
     "02 Web/PortSwigger-Guide/3stages.png",
-    "02 Web/PortSwigger-Guide/Payloads/FilePathTraversal.md",
-    "02 Web/PortSwigger-Guide/Payloads/CookieStealer(XSS).md",
     "02 Web/PortSwigger-guide/tools/ysoserial-all.jar",
     "02 Web/PortSwigger-guide/tools/phpggc",
     "02 Web/PortSwigger-guide/tools",
     "02 Web/PortSwigger-guide/payloads/upload.jpg",
-    "02 Web/PortSwigger-guide/payloads/Untitled.md",
-    "02 Web/PortSwigger-Guide/Payloads/XXEPayloads.md",
     "02 Web/PortSwigger-guide/payloads/simple.php",
     "02 Web/PortSwigger-guide/payloads/polyglot.php",
     "02 Web/PortSwigger-guide/payloads",
