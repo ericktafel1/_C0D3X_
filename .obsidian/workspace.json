@@ -1,0 +1,250 @@
+{
+  "main": {
+    "id": "4013863ee2cf21a2",
+    "type": "split",
+    "children": [
+      {
+        "id": "a7684c3e32d692a8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "48f2789c541359ba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "12 Cloud/AWS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AWS"
+            }
+          },
+          {
+            "id": "e7a916a5760566d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_Click_Script.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "_Click_Script"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6fbd44ce8fd6f1de",
+    "type": "split",
+    "children": [
+      {
+        "id": "4fa5e9990c653e86",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "436d36a7eba98628",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "30e9c51188b4fe35",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "gobuster vhost",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "52946725ec5e389b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "4f725853a0d09020",
+    "type": "split",
+    "children": [
+      {
+        "id": "ee3e3e0b53caf670",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9fb1d2d57fa0ea2d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "06 Services/MSSQL.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for MSSQL"
+            }
+          },
+          {
+            "id": "6a4682b877ed65f5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "06 Services/MSSQL.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from MSSQL"
+            }
+          },
+          {
+            "id": "61329876c4de9236",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1f579d1557c17b4a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "75834308c2a6900b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "06 Services/MSSQL.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of MSSQL"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "436d36a7eba98628",
+  "lastOpenFiles": [
+    "12 Cloud/AWS.md",
+    "YYYYYYYYYYYYYYYYYYYYYYYYYYYY.md",
+    "02 Web/Content Discovery and VHosts.md",
+    "01 Enumeration/External and Network Enumeration.md",
+    "01 Enumeration/Internal Enumeration.md",
+    "06 Services/RDP.md",
+    "09 Movement/File Transfers.md",
+    "00 README.md",
+    "_Click_Script.md",
+    "05 Linux/Privilege Escalation.md",
+    "04 Windows/Host Enumeration and Access.md",
+    "03 AD/Domain Enumeration.md",
+    "02 Web/PortSwigger-Guide/Directory Traversal/Directory traversal.md",
+    "08 Post Exploitation/Persistence and Cleanup.md",
+    "03 AD/BloodHound ACLs and AD CS.md",
+    "02 Web/File Inclusion Uploads and Git Exposure.md",
+    "06 Services/Docker API.md",
+    "06 Services/MSSQL.md",
+    "07 Creds and Cracking/Password Spraying and Reuse.md",
+    "03 AD/Kerberos.md",
+    "02 Web/Client-Side and Office Payload Delivery.md",
+    "09 Movement/Pivoting Tunneling and Port Forwarding.md",
+    "10 Tool Box/Operator Quick Hits - S1R3N.md",
+    "07 Creds and Cracking/Hashcat and John.md",
+    "02 Web/PortSwigger-Guide/Authentication/Authentication.md",
+    "02 Web/PortSwigger-Guide/IMPORTANT.md",
+    "02 Web/PortSwigger-Guide/3stages.png",
+    "02 Web/PortSwigger-guide/tools/ysoserial-all.jar",
+    "02 Web/PortSwigger-guide/tools/phpggc",
+    "02 Web/PortSwigger-guide/tools",
+    "02 Web/PortSwigger-guide/payloads/upload.jpg",
+    "02 Web/PortSwigger-guide/payloads/simple.php",
+    "02 Web/PortSwigger-guide/payloads/polyglot.php",
+    "02 Web/PortSwigger-guide/payloads",
+    "02 Web/PortSwigger-Guide/Http Request Smuggling/lib",
+    "02 Web/PortSwigger-Guide/File Upload Vulnerabilities/exploits",
+    "02 Web/PortSwigger-Guide/Clickjacking/exploits",
+    "02 Web/PortSwigger-Guide/XXE",
+    "02 Web/BURP/XXE Injection/Images/XXE-2.png",
+    "02 Web/BURP/XXE Injection/Images/XXE-1.png",
+    "02 Web/BURP/SQL Injection/Images/sqli-5.png",
+    "02 Web/BURP/SQL Injection/Images/sqli-4.png",
+    "02 Web/BURP/SQL Injection/Images/sqli-3.png",
+    "02 Web/BURP/SQL Injection/Images/sqli-2.png",
+    "02 Web/BURP/SQL Injection/Images/sqli-1.png",
+    "02 Web/BURP/JWT Attacks/Images/Picture2.png"
+  ]
+}
