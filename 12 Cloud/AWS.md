@@ -50,6 +50,9 @@ aws s3 ls s3://<bucket-name>/<folder>/ --no-sign-request --recursive
 aws s3 cp s3://<bucket-name>/<folder>/file.zip . --no-sign-request
 aws s3api get-bucket-acl --bucket <bucket-name> --no-sign-request
 aws s3api list-objects --bucket <bucket-name> --no-sign-request
+aws s3api get-bucket-versioning --bucket huge-logistics-dashboard --no-sign-request
+aws s3api list-object-versions --bucket huge-logistics-dashboard --query "Versions[?VersionId!='null']" --no-sign-request
+aws s3api get-object --bucket huge-logistics-dashboard --key "private/Business Health - Board Meeting (Confidential).xlsx" --version-id "XXXXXXXXXXXXXXXXXXXXXXX" test.xlsx --no-sign-request                            
 
 # Authenticated
 aws configure --profile test                         # Use profiles with every `aws` command after configure to manage multiple creds
@@ -62,6 +65,7 @@ aws dynamodb scan --table-name analytics_app_users --profile test > output.json
 
 # Get the Bucket Policy
 aws s3api get-bucket-policy --bucket dev.huge-logistics.com --profile admin | jq -r '.Policy | fromjson'
+aws s3api get-object --bucket huge-logistics-dashboard --key "private/Business Health - Board Meeting (Confidential).xlsx" --version-id "XXXXXXXXXXXXXXXXXXXXXXX" test.xlsx --profile admin2
 ```
 
 **With s3scanner:**
