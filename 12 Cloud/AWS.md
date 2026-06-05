@@ -145,10 +145,42 @@ dirb https://<target>
 curl -s https://<target>/.git/config
 ```
 
+**Git Secrets:**
+```bash
+git clone https://github.com/awslabs/git-secrets
+cd git-secrets
+make install
+
+git clone https://github.com/huge-logistics/cargo-logistics-dev
+cd cargo-logistics-dev/
+git secrets --install
+git secrets --register-aws
+git secrets --scan
+git secrets --scan-history
+git show abcdefg0123456789abcdefg0123456789:log-s3-test/log-upload.php
+```
+
+**Trufflehog:**
+```bash
+pip install trufflehog       # Exegol/docker
+brew install trufflehog     # Mac
+apt install trufflehog        # Debian
+
+Or:
+
+git clone https://github.com/trufflesecurity/trufflehog/; cd trufflehog
+go install
+
+trufflehog git file://cargo-logistics-dev/ --regex --no-entropy
+trufflehog git https://github.com/huge-logistics/cargo-logistics-dev --max-depth 2
+```
+
 Tools:
 
 - `git-dumper`
+- `git-secrets`
 - `git-extractor`
+- `trufflehog`
 
 ---
 
