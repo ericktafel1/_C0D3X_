@@ -122,6 +122,7 @@ go install github.com/WhiteOakSecurity/GoAWSConsoleSpray@latest
 # Bruteforce leaked bucket owner ID
 aws configure                          # Paste the Access key ID & Secret access key
 aws sts get-caller-identity            # Get Account ID (427648302155)... `whoami` equivalent
+aws sts get-access-key-info --access-key-id <Access_Key>
 s3-account-search arn:aws:iam::427648302155:role/LeakyBucket mega-big-tech
 
 # Enumerate the bucket region
