@@ -218,8 +218,10 @@ go install -v github.com/shabarkin/aws-enumerator@latest
 aws-enumerator cred                # Set our keys (saved in `.env`), or `~/go/bin/aws-enumerator cred`. Specify `-aws_region`, `-aws_access_key_id`, `aws_secret_access_key`, and `-aws_session_token`
 aws-enumerator enum -services all
 aws-enumerator dump -services <service_with_permissions>                         # example is `secretsmanager` with `listsecrets` permission
+
 aws secretsmanager list-secrets --query 'SecretList[*].[Name, Description, ARN]' --output json --profile client-huge       # See above comment
 aws secretsmanager get-secret-value --secret-id ext/cost-optimization --profile client-huge
+
 aws iam list-attached-user-policies --user-name ext-cost-user --profile ext-cost
 aws iam list-attached-role-policies --role-name ExternalCostOpimizeAccess --profile ext-cost
 aws iam get-policy --policy-arn arn:aws:iam::427648302155:policy/ExtPolicyTest --profile ext-cost
@@ -241,7 +243,7 @@ aws sts assume-role --role-arn arn:aws:iam::427648302155:role/ExternalCostOpimiz
 aws iam list-access-keys --user-name <username>
 ```
 
-**List Public RDS Snapshots:**
+**List Public RDS & EC2 Snapshots:**
 
 ```bash
 aws rds describe-db-instances
@@ -249,7 +251,9 @@ aws rds describe-db-instances --query 'DBInstances[*].PubliclyAccessible' --quer
 aws rds describe-db-snapshots --snapshot-type public --include-public --region us-east-1 | grep 104506445608        # grep for AWS Account ID
 aws rds describe-db-cluster-snapshots --snapshot-type public --include-public --region us-east-1 | grep 104506445608     # grep for AWS Account ID
 
-aws ec2 describe-snapshots --owner-ids 107513503799 --region us-east-1
+aws ec2 describe-snapshots --owner-ids 107513503799 --region us-east-1 --profile ebs
+aws ec2 describe-snapshot-attribute --attribute createVolumePermission --snapshot-id snap-0123456789 --region us-east-1 --profile ebs
+aws ec2 describe-snapshots --owner-id self --restorable-by-user-ids all --no-paginate --region us-east-1 --profile ebs
 
 # AWS Console > Select Region > RDS Service - Snaphots > Public > Search: "<snapshot_name>" > Restore Snapshot > Restore DB Cluster > Setup EC2 Connection > Select | Create EC2 instance > Continue > Set up > modify cluster > NOW ssh to the EC2 instance (psql in EC2 optionally)
 ```
