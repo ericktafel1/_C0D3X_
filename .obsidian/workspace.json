@@ -89,8 +89,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -199,7 +198,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "e7a916a5760566d5",
+  "active": "436d36a7eba98628",
   "lastOpenFiles": [
     "02 Web/SQL Injection.md",
     "10 Tool Box/Links and References.md",
