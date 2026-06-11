@@ -24,13 +24,13 @@ echo Sliver running in Daemon mode!
 # Create new user config
 cd /root
 IP=`curl https://ifconfig.me/ip`
-./sliver-server operator --name sliver-user --lhost "$IP" --save /root/sliver-user.cfg
+./sliver-server operator --name g1gs --lhost "$IP" --save /root/g1gs.cfg
 exit
 ```
 
 ## Sliver Client
 ```bash
-./sliver-client import ./sliver-user.cfg    # Import config
+./sliver-client import ./g1gs.cfg    # Import config
 ./sliver-client                             # Connect to Sliver server
 
 Connecting to <IP ADDRESS>:31337 ...
