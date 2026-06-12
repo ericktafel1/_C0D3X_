@@ -117,7 +117,7 @@ netstat -tulpn
 35. List running processes:
 
 ```bash
-ps aux
+ps auxwwef
 ```
 
 36. Use `pspy` to monitor processes:
