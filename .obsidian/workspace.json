@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13 AI/LLM - OWASP Top 10.md",
+                "file": "13 AI/Cheatsheet - AI Red Team.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LLM - OWASP Top 10"
+              "title": "Cheatsheet - AI Red Team"
             }
           }
         ]
@@ -183,8 +183,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "436d36a7eba98628",
+  "active": "e7a916a5760566d5",
   "lastOpenFiles": [
+    "13 AI/LLM - OWASP Top 10.md",
+    "13 AI/ML - OWASP Top 10.md",
+    "13 AI/Cheatsheet - AI Red Team.md",
     "13 AI/Malware Classification/Malware_Detection.ipynb",
     "13 AI/Spam Classification/spam_detection_model.joblib",
     "13 AI/Spam Classification/spam_classification.py",
@@ -196,9 +199,6 @@
     "13 AI/Network Anomaly Detection",
     "13 AI/Malware Classification/malware_classification.joblib",
     "13 AI/Malware Classification/malware.ipynb",
-    "13 AI/Malware Classification",
-    "13 AI/ML - OWASP Top 10.md",
-    "13 AI/LLM - OWASP Top 10.md",
     "05 Linux/Privilege Escalation.md",
     "06 Services/MySQL.md",
     "_Click_Script.md",

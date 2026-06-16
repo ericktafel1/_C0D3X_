@@ -12,3 +12,5 @@
 | LLM10 | `Unbounded Consumption`: Attackers feed inputs to the LLM that result in high resource consumption, potentially causing disruptions to the LLM service or high costs.                         |
 
 ---
+
+Prompt Injection > Leak System Prompt > 
