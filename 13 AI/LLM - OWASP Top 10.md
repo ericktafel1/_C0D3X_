@@ -13,4 +13,4 @@
 
 ---
 
-Prompt Injection > Leak System Prompt > 
+Prompt Injection > Leak System Prompt > https://itsbroken.ai/cheatsheet/
