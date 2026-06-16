@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05 Linux/Privilege Escalation.md",
+                "file": "13 AI/LLM - OWASP Top 10.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Privilege Escalation"
+              "title": "LLM - OWASP Top 10"
             }
           }
         ]
@@ -185,9 +185,22 @@
   },
   "active": "e7a916a5760566d5",
   "lastOpenFiles": [
+    "13 AI/HTB-AI-Red-Teamer/Spam Classification/spam_detection_model.joblib",
+    "13 AI/HTB-AI-Red-Teamer/Spam Classification/spam_classification.py",
+    "13 AI/HTB-AI-Red-Teamer/Spam Classification/Spam_Classification_Model.ipynb",
+    "13 AI/HTB-AI-Red-Teamer/Spam Classification",
+    "13 AI/HTB-AI-Red-Teamer/Network Anomaly Detection/training_model.py",
+    "13 AI/HTB-AI-Red-Teamer/Network Anomaly Detection/network_anomaly_detection_model.joblib",
+    "13 AI/HTB-AI-Red-Teamer/Malware Classification/malware_classification.joblib",
+    "13 AI/HTB-AI-Red-Teamer/Malware Classification/malware.ipynb",
+    "13 AI/HTB-AI-Red-Teamer/Capstone Model/training_model.py",
+    "13 AI/HTB-AI-Red-Teamer/Network Anomaly Detection",
+    "13 AI/HTB-AI-Red-Teamer/Malware Classification",
+    "13 AI/ML - OWASP Top 10.md",
+    "13 AI/LLM - OWASP Top 10.md",
+    "05 Linux/Privilege Escalation.md",
     "06 Services/MySQL.md",
     "_Click_Script.md",
-    "05 Linux/Privilege Escalation.md",
     "01 Enumeration/External and Network Enumeration.md",
     "02 Web/Authentication and Sessions.md",
     "01 Enumeration/Internal Enumeration.md",
@@ -208,19 +221,6 @@
     "_C0D3X_/02 Web/PortSwigger-Guide/Clickjacking/exploits/Dom based xss.md",
     "_C0D3X_/02 Web/PortSwigger-Guide/Clickjacking/exploits/Csrf token protection.md",
     "_C0D3X_/02 Web/PortSwigger-Guide/Clickjacking/exploits/Base.md",
-    "_C0D3X_/02 Web/PortSwigger-Guide/Http Request Smuggling/lib/countchar.py.md",
-    "_C0D3X_/02 Web/PortSwigger-Guide/Http Request Smuggling/lib/request.txt.md",
-    "_C0D3X_/02 Web/PortSwigger-Guide/File Upload Vulnerabilities/exploits/file_get_contents.php.md",
-    "_C0D3X_/02 Web/PortSwigger-Guide/Http Request Smuggling/lib",
-    "_C0D3X_/02 Web/PortSwigger-Guide/File Upload Vulnerabilities/exploits",
-    "_C0D3X_/02 Web/PortSwigger-Guide/Clickjacking/exploits",
-    "_C0D3X_/02 Web/PortSwigger-Guide/XXE",
-    "_C0D3X_/02 Web/PortSwigger-Guide/XSS",
-    "_C0D3X_/02 Web/PortSwigger-Guide/WebSockets",
-    "_C0D3X_/02 Web/PortSwigger-Guide/Web cache poisoning",
-    "_C0D3X_/02 Web/PortSwigger-Guide/Server side template injection",
-    "_C0D3X_/02 Web/PortSwigger-Guide/SSRF",
-    "_C0D3X_/02 Web/PortSwigger-Guide/SQL Injection",
     "_C0D3X_/02 Web/PortSwigger-Guide/3stages.png",
     "02 Web/PortSwigger-Guide/3stages.png",
     "02 Web/PortSwigger-guide/payloads/upload.jpg",
