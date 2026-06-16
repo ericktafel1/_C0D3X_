@@ -6,6 +6,15 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 import seaborn as sns
 import matplotlib.pyplot as plt
 import joblib
+import requests, zipfile, io
+
+# URL for the NSL-KDD dataset
+url = "https://academy.hackthebox.com/storage/modules/292/KDD_dataset.zip"
+
+# Download the zip file and extract its contents
+response = requests.get(url)
+z = zipfile.ZipFile(io.BytesIO(response.content))
+z.extractall('.')  # Extracts to the current directory
 
 # Set the file path to the dataset
 file_path = r'KDD+.txt'
