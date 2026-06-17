@@ -1,7 +1,6 @@
 https://itsbroken.ai/cheatsheet/
 
 ---
-## Recon
 
 ATLAS: ML Model Access OWASP: LLM06
 

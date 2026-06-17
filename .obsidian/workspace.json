@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13 AI/Cheatsheet - AI Red Team.md",
+                "file": "13 AI/1_Prompt-Injection.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cheatsheet - AI Red Team"
+              "title": "1_Prompt-Injection"
             }
           }
         ]
@@ -183,13 +183,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "436d36a7eba98628",
+  "active": "e7a916a5760566d5",
   "lastOpenFiles": [
+    "13 AI/0_Recon.md",
+    "13 AI/1_Prompt-Injection.md",
+    "_Click_Script.md",
+    "13 AI/Cheatsheet - AI Red Team.md",
     "13 AI/AI Models",
     "13 AI/AI Models/Skill_Assessment/training_model.py",
     "13 AI/AI Models/Skill_Assessment",
     "13 AI/LLM - OWASP Top 10.md",
-    "13 AI/Cheatsheet - AI Red Team.md",
     "13 AI/ML - OWASP Top 10.md",
     "13 AI/Malware Classification/Malware_Detection.ipynb",
     "13 AI/AI Models/Spam Classification/spam_detection_model.joblib",
@@ -199,10 +202,8 @@
     "13 AI/README.md",
     "13 AI/AI Models/Network Anomaly Detection/training_model.py",
     "13 AI/AI Models/Network Anomaly Detection/network_anomaly_detection_model.joblib",
-    "13 AI/AI Models/Network Anomaly Detection",
     "05 Linux/Privilege Escalation.md",
     "06 Services/MySQL.md",
-    "_Click_Script.md",
     "01 Enumeration/External and Network Enumeration.md",
     "02 Web/Authentication and Sessions.md",
     "01 Enumeration/Internal Enumeration.md",
@@ -220,7 +221,6 @@
     "_C0D3X_/02 Web/PortSwigger-Guide/Clickjacking/exploits/Multistep.md",
     "_C0D3X_/02 Web/PortSwigger-Guide/Clickjacking/exploits/Input data prefilled.md",
     "_C0D3X_/02 Web/PortSwigger-Guide/Clickjacking/exploits/Frame buster script.md",
-    "_C0D3X_/02 Web/PortSwigger-Guide/Clickjacking/exploits/Dom based xss.md",
     "_C0D3X_/02 Web/PortSwigger-Guide/3stages.png",
     "02 Web/PortSwigger-Guide/3stages.png",
     "02 Web/PortSwigger-guide/payloads/upload.jpg",
