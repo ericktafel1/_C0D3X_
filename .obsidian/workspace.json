@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "1_Prompt-Injection"
             }
+          },
+          {
+            "id": "666987a7d7f0abfc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03 AD/BloodHound ACLs and AD CS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "BloodHound ACLs and AD CS"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -53,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "bloodyAD",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,11 +89,12 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 240.5
+    "width": 200
   },
   "right": {
     "id": "4f725853a0d09020",
@@ -183,10 +199,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "e7a916a5760566d5",
+  "active": "666987a7d7f0abfc",
   "lastOpenFiles": [
-    "13 AI/0_Recon.md",
+    "06 Services/Kerberos.md",
+    "03 AD/BloodHound ACLs and AD CS.md",
+    "12 Cloud/Azure.md",
+    "03 AD/Domain Enumeration.md",
+    "06 Services/LDAP.md",
+    "07 Creds and Cracking/Hashcat and John.md",
+    "01 Enumeration/External and Network Enumeration.md",
     "13 AI/1_Prompt-Injection.md",
+    "13 AI/0_Recon.md",
     "_Click_Script.md",
     "13 AI/Cheatsheet - AI Red Team.md",
     "13 AI/AI Models",
@@ -204,23 +227,16 @@
     "13 AI/AI Models/Network Anomaly Detection/network_anomaly_detection_model.joblib",
     "05 Linux/Privilege Escalation.md",
     "06 Services/MySQL.md",
-    "01 Enumeration/External and Network Enumeration.md",
     "02 Web/Authentication and Sessions.md",
     "01 Enumeration/Internal Enumeration.md",
     "10 Tool Box/sssliver.md",
     "10 Tool Box/Payloads and Webshells.md",
     "10 Tool Box/Operator Quick Hits - S1R3N.md",
-    "06 Services/Kerberos.md",
-    "12 Cloud/Azure.md",
     "12 Cloud/Containers and Kubernetes.md",
     "12 Cloud/AWS.md",
     "02 Web/SQL Injection.md",
     "10 Tool Box/Links and References.md",
     "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZzz.md",
-    "YYYYYYYYYYYYYYYYYYYYYYYYYYYY.md",
-    "_C0D3X_/02 Web/PortSwigger-Guide/Clickjacking/exploits/Multistep.md",
-    "_C0D3X_/02 Web/PortSwigger-Guide/Clickjacking/exploits/Input data prefilled.md",
-    "_C0D3X_/02 Web/PortSwigger-Guide/Clickjacking/exploits/Frame buster script.md",
     "_C0D3X_/02 Web/PortSwigger-Guide/3stages.png",
     "02 Web/PortSwigger-Guide/3stages.png",
     "02 Web/PortSwigger-guide/payloads/upload.jpg",

