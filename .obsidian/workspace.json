@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "xss",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -185,8 +186,9 @@
   },
   "active": "666987a7d7f0abfc",
   "lastOpenFiles": [
-    "13 AI/Recon.md",
+    "02 Web/PortSwigger-Guide/Payloads/CookieStealer(XSS).md",
     "13 AI/Cheatsheet - AI Red Team.md",
+    "13 AI/Recon.md",
     "13 AI/1_Prompt-Injection.md",
     "03 AD/BloodHound ACLs and AD CS.md",
     "06 Services/Kerberos.md",
@@ -220,7 +222,6 @@
     "12 Cloud/AWS.md",
     "02 Web/SQL Injection.md",
     "10 Tool Box/Links and References.md",
-    "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZzz.md",
     "_C0D3X_/02 Web/PortSwigger-Guide/3stages.png",
     "02 Web/PortSwigger-Guide/3stages.png",
     "02 Web/PortSwigger-guide/payloads/upload.jpg",
