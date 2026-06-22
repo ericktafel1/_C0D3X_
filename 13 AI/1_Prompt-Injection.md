@@ -1,5 +1,0 @@
-## Direct Prompt Injection
-
-```text
-
-```

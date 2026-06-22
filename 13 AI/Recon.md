@@ -1,4 +1,3 @@
-
 - Identify the model, including its capabilities and limits
 - Identify information about the model's system prompt
 - Identify potential guardrails
