@@ -11,10 +11,14 @@
             "id": "ca901a89eb689cbd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "02 Web/PortSwigger-Guide/XSS/XSS.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "XSS"
             }
           }
         ]
@@ -179,8 +183,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "436d36a7eba98628",
+  "active": "ca901a89eb689cbd",
   "lastOpenFiles": [
+    "02 Web/PortSwigger-Guide/XSS/Portswigger-cheatsheet.txt.md",
+    "02 Web/Client-Side and Office Payload Delivery.md",
+    "02 Web/Authentication and Sessions.md",
     "Untitled.md",
     "13 AI/Cheatsheet - AI Red Team.md",
     "02 Web/SQL Injection.md",
@@ -211,12 +218,9 @@
     "13 AI/AI Models/Network Anomaly Detection/network_anomaly_detection_model.joblib",
     "05 Linux/Privilege Escalation.md",
     "06 Services/MySQL.md",
-    "02 Web/Authentication and Sessions.md",
     "01 Enumeration/Internal Enumeration.md",
     "10 Tool Box/sssliver.md",
     "10 Tool Box/Payloads and Webshells.md",
-    "10 Tool Box/Operator Quick Hits - S1R3N.md",
-    "12 Cloud/Containers and Kubernetes.md",
     "_C0D3X_/02 Web/PortSwigger-Guide/3stages.png",
     "02 Web/PortSwigger-Guide/3stages.png",
     "02 Web/PortSwigger-guide/payloads/upload.jpg",
