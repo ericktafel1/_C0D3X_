@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 Web/PortSwigger-Guide/XSS/XSS.md",
+                "file": "02 Web/Authentication and Sessions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "XSS"
+              "title": "Authentication and Sessions"
             }
           }
         ]
@@ -183,14 +183,24 @@
       "bases:Create new base": false
     }
   },
-  "active": "ca901a89eb689cbd",
+  "active": "436d36a7eba98628",
   "lastOpenFiles": [
-    "02 Web/PortSwigger-Guide/XSS/Portswigger-cheatsheet.txt.md",
     "02 Web/Client-Side and Office Payload Delivery.md",
+    "02 Web/CMS and APIs.md",
+    "02 Web/Content Discovery and VHosts.md",
+    "02 Web/File Inclusion Uploads and Git Exposure.md",
+    "02 Web/SQL Injection.md",
+    "02 Web/Web Application Methodology.md",
+    "02 Web/PortSwigger-Guide/API Testing/API Testing.md",
+    "02 Web/PortSwigger-Guide/Access-control/Access-control.md",
     "02 Web/Authentication and Sessions.md",
+    "02 Web/PortSwigger-Guide/SSRF/SSRF.md",
+    "02 Web/PortSwigger-Guide/XSS/XSS.md",
+    "02 Web/PortSwigger-Guide/XSS/Portswigger-cheatsheet.txt.md",
+    "02 Web/PortSwigger-Guide/3stages.png",
+    "02 Web/PortSwigger-Guide/Server side template injection/Server side template injection.md",
     "Untitled.md",
     "13 AI/Cheatsheet - AI Red Team.md",
-    "02 Web/SQL Injection.md",
     "12 Cloud/AWS.md",
     "02 Web/PortSwigger-Guide/Payloads/CookieStealer(XSS).md",
     "13 AI/Recon.md",
@@ -202,27 +212,17 @@
     "06 Services/LDAP.md",
     "07 Creds and Cracking/Hashcat and John.md",
     "01 Enumeration/External and Network Enumeration.md",
-    "_Click_Script.md",
     "13 AI/AI Models",
     "13 AI/AI Models/Skill_Assessment/training_model.py",
     "13 AI/AI Models/Skill_Assessment",
-    "13 AI/LLM - OWASP Top 10.md",
-    "13 AI/ML - OWASP Top 10.md",
     "13 AI/Malware Classification/Malware_Detection.ipynb",
     "13 AI/AI Models/Spam Classification/spam_detection_model.joblib",
     "13 AI/AI Models/Spam Classification/spam_classification.py",
     "13 AI/AI Models/Spam Classification/Spam_Classification_Model.ipynb",
     "13 AI/AI Models/Spam Classification",
-    "13 AI/README.md",
     "13 AI/AI Models/Network Anomaly Detection/training_model.py",
     "13 AI/AI Models/Network Anomaly Detection/network_anomaly_detection_model.joblib",
-    "05 Linux/Privilege Escalation.md",
-    "06 Services/MySQL.md",
-    "01 Enumeration/Internal Enumeration.md",
-    "10 Tool Box/sssliver.md",
-    "10 Tool Box/Payloads and Webshells.md",
     "_C0D3X_/02 Web/PortSwigger-Guide/3stages.png",
-    "02 Web/PortSwigger-Guide/3stages.png",
     "02 Web/PortSwigger-guide/payloads/upload.jpg",
     "02 Web/BURP/XXE Injection/Images/XXE-2.png",
     "02 Web/BURP/XXE Injection/Images/XXE-1.png",
