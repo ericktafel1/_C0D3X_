@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 Web/Authentication and Sessions.md",
+                "file": "12 Cloud/AWS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Authentication and Sessions"
+              "title": "AWS"
             }
           }
         ]
@@ -183,8 +183,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "436d36a7eba98628",
+  "active": "ca901a89eb689cbd",
   "lastOpenFiles": [
+    "02 Web/Authentication and Sessions.md",
     "02 Web/Client-Side and Office Payload Delivery.md",
     "02 Web/CMS and APIs.md",
     "02 Web/Content Discovery and VHosts.md",
@@ -193,7 +194,6 @@
     "02 Web/Web Application Methodology.md",
     "02 Web/PortSwigger-Guide/API Testing/API Testing.md",
     "02 Web/PortSwigger-Guide/Access-control/Access-control.md",
-    "02 Web/Authentication and Sessions.md",
     "02 Web/PortSwigger-Guide/SSRF/SSRF.md",
     "02 Web/PortSwigger-Guide/XSS/XSS.md",
     "02 Web/PortSwigger-Guide/XSS/Portswigger-cheatsheet.txt.md",
