@@ -1,4 +1,4 @@
-# _SCR0LL_ Operator Vault
+# _SCR0LL_
 
 This vault is a rebuilt operator reference derived from the `_C0D3X_` source archive and normalized for real-world offensive pentesting use.
 
@@ -23,6 +23,7 @@ This vault is a rebuilt operator reference derived from the `_C0D3X_` source arc
 - `09 Movement` — transfers, pivots, tunnels, Ligolo-ng
 - `10 Tool Box` — payloads, helper snippets, compact operator utilities, curated references
 - `12 Cloud` — AWS plus container/Kubernetes follow-up
+- `13 AI` - Red teaming AI notes
 
 ## Usage philosophy
 

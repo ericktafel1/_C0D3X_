@@ -1,0 +1,3 @@
+
+
+fping -asgq subnet
