@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 README.md",
+                "file": "05 Linux/Privilege Escalation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00 README"
+              "title": "Privilege Escalation"
             }
           }
         ]
@@ -53,8 +53,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "SSRF",
-                "matchingCase": false,
+                "query": "bcrypt",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -185,6 +185,9 @@
   },
   "active": "ca901a89eb689cbd",
   "lastOpenFiles": [
+    "copy-pasta-2.0/1. Network/2. Enumeration/1. Linux/1. Checklist.md",
+    "06 Services/NFS.md",
+    "00 README.md",
     "copy-pasta-2.0/2. Web Applications/5. File Uploads/0. Web Shells.md",
     "copy-pasta-2.0/Untitled.base",
     "02 Web/PortSwigger-Guide/Payloads/SSRFPayloads.md",
@@ -210,10 +213,7 @@
     "copy-pasta-2.0/1. Network/4. Post Exploitation/2. Lateral Movement/3. Active Directory/4. DCSync.md",
     "copy-pasta-2.0/1. Network/4. Post Exploitation/2. Lateral Movement/3. Active Directory/3. Certificate Services.md",
     "copy-pasta-2.0/1. Network/4. Post Exploitation/2. Lateral Movement/3. Active Directory/2. DACLs.md",
-    "copy-pasta-2.0/1. Network/4. Post Exploitation/2. Lateral Movement/3. Active Directory/1. Enumeration.md",
-    "copy-pasta-2.0/1. Network/4. Post Exploitation/2. Lateral Movement/2. Windows/WMI and WinRM.md",
     "copy-pasta-2.0/1. Network/4. Post Exploitation/2. Lateral Movement/2. Windows/Persistence",
-    "copy-pasta-2.0/1. Network/4. Post Exploitation/2. Lateral Movement/2. Windows/Pass the Ticket.md",
     "copy-pasta-2.0/1. Network/4. Post Exploitation/1. Privilege Escalation/Windows",
     "copy-pasta-2.0/1. Network/4. Post Exploitation/1. Privilege Escalation/Linux",
     "copy-pasta-2.0/1. Network/4. Post Exploitation/2. Lateral Movement/3. Active Directory",
