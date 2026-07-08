@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05 Linux/Privilege Escalation.md",
+                "file": "02 Web/CMS and APIs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Privilege Escalation"
+              "title": "CMS and APIs"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "bcrypt",
+                "query": "wpscan",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 361.5
   },
   "right": {
     "id": "4f725853a0d09020",
@@ -183,8 +183,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "ca901a89eb689cbd",
+  "active": "436d36a7eba98628",
   "lastOpenFiles": [
+    "02 Web/PortSwigger-Guide/XSS/Portswigger-cheatsheet.txt.md",
+    "02 Web/Web Application Methodology.md",
+    "02 Web/SQL Injection.md",
+    "02 Web/CMS and APIs.md",
+    "02 Web/Content Discovery and VHosts.md",
+    "02 Web/Client-Side and Office Payload Delivery.md",
+    "05 Linux/Privilege Escalation.md",
     "copy-pasta-2.0/1. Network/2. Enumeration/1. Linux/1. Checklist.md",
     "06 Services/NFS.md",
     "00 README.md",
@@ -205,14 +212,7 @@
     "copy-pasta-2.0/1. Network/4. Post Exploitation/1. Privilege Escalation/Windows/0. Checks.md",
     "copy-pasta-2.0/1. Network/4. Post Exploitation/1. Privilege Escalation/Linux/3. Find SUID.md",
     "copy-pasta-2.0/1. Network/4. Post Exploitation/1. Privilege Escalation/Linux/2. LinPeas.md",
-    "copy-pasta-2.0/1. Network/4. Post Exploitation/1. Privilege Escalation/Linux/1. Enumeration.md",
     "copy-pasta-2.0/1. Network/4. Post Exploitation/2. Lateral Movement/3. Active Directory/Kerberos",
-    "copy-pasta-2.0/1. Network/4. Post Exploitation/2. Lateral Movement/3. Active Directory/7. dMSA (Delegated Managed Service Account).md",
-    "copy-pasta-2.0/1. Network/4. Post Exploitation/2. Lateral Movement/3. Active Directory/6. Tombstones.md",
-    "copy-pasta-2.0/1. Network/4. Post Exploitation/2. Lateral Movement/3. Active Directory/5. Silver Tickets.md",
-    "copy-pasta-2.0/1. Network/4. Post Exploitation/2. Lateral Movement/3. Active Directory/4. DCSync.md",
-    "copy-pasta-2.0/1. Network/4. Post Exploitation/2. Lateral Movement/3. Active Directory/3. Certificate Services.md",
-    "copy-pasta-2.0/1. Network/4. Post Exploitation/2. Lateral Movement/3. Active Directory/2. DACLs.md",
     "copy-pasta-2.0/1. Network/4. Post Exploitation/2. Lateral Movement/2. Windows/Persistence",
     "copy-pasta-2.0/1. Network/4. Post Exploitation/1. Privilege Escalation/Windows",
     "copy-pasta-2.0/1. Network/4. Post Exploitation/1. Privilege Escalation/Linux",

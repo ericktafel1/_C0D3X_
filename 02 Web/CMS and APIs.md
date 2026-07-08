@@ -6,7 +6,7 @@ Use this after the application surface is mapped and you know the stack or produ
 ## WordPress
 
 ```bash
-wpscan --url [http://website.com](http://website.com)
+wpscan --url [http://website.com](http://website.com) --enumerate u,vp,vt
 ```
 
 ## Open-Source Code Discovery
