@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 Web/CMS and APIs.md",
+                "file": "05 Linux/Privilege Escalation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CMS and APIs"
+              "title": "Privilege Escalation"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 361.5
+    "width": 361.5,
+    "collapsed": true
   },
   "right": {
     "id": "4f725853a0d09020",
@@ -183,12 +184,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "436d36a7eba98628",
+  "active": "ca901a89eb689cbd",
   "lastOpenFiles": [
+    "02 Web/CMS and APIs.md",
     "02 Web/PortSwigger-Guide/XSS/Portswigger-cheatsheet.txt.md",
     "02 Web/Web Application Methodology.md",
     "02 Web/SQL Injection.md",
-    "02 Web/CMS and APIs.md",
     "02 Web/Content Discovery and VHosts.md",
     "02 Web/Client-Side and Office Payload Delivery.md",
     "05 Linux/Privilege Escalation.md",
