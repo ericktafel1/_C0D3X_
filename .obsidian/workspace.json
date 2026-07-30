@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CWES_Prep.md",
+                "file": "02 Web/cURL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CWES_Prep"
+              "title": "cURL"
             }
           }
         ],
@@ -200,8 +200,11 @@
   },
   "active": "6e9b0759e6329d89",
   "lastOpenFiles": [
-    "02 Web/Authentication and Sessions.md",
+    "02 Web/Web Application Methodology.md",
+    "02 Web/cURL.md",
+    "02 Web/Client-Side and Office Payload Delivery.md",
     "CWES_Prep.md",
+    "02 Web/Authentication and Sessions.md",
     "CWES_Prep/Boxes.md",
     "copy-pasta-2.0/Untitled.base",
     "copy-pasta-2.0/Untitled 2.base",
@@ -228,9 +231,6 @@
     "copy-pasta-2.0/5. Misc/iptables.md",
     "copy-pasta-2.0/5. Misc/git.md",
     "copy-pasta-2.0/5. Misc/fping.md",
-    "copy-pasta-2.0/5. Misc/encoding.md",
-    "copy-pasta-2.0/5. Misc/Untitled.md",
-    "copy-pasta-2.0/5. Misc/Shellcode.md",
     "copy-pasta-2.0/5. Misc/Metasploit",
     "copy-pasta-2.0/5. Misc",
     "copy-pasta-2.0/4. Mobile/1. Android",
