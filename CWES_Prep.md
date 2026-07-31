@@ -1,8 +1,8 @@
-DURING EXAM: some `Note:` sections in `HTB_MODULES` will have information to help identify the intended path
-PortSwigger Labs
-HTB  Labs - Challenges
-	Filter for Web
-HTB Lab - Machines
+
+1. PortSwigger Labs
+2. HTB  Labs - Challenges
+	1. Filter for Web
+3. HTB Lab - Machines
 ```
 |#|Machine|OS|Key Focus|
 |---|---|---|---|
@@ -31,3 +31,7 @@ HTB Lab - Machines
 |23|Timing|Linux|LFI, mass assignment|
 |24|Node|Linux|API exploitation, deserialization|
 ```
+
+
+DURING EXAM:
+- some `Note:` sections in `HTB_MODULES` will have information to help identify the intended path

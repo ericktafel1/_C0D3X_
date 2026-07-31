@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB_MODULES/API Attacks.md",
+                "file": "CWES_Prep.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "API Attacks"
+              "title": "CWES_Prep"
             }
           }
         ]
@@ -183,8 +183,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "436d36a7eba98628",
+  "active": "ca901a89eb689cbd",
   "lastOpenFiles": [
+    "HTB_MODULES/API Attacks.md",
     "HTB_CHEATSHEETS/Introduction to Windows Evasion Techniques.md",
     "HTB_CHEATSHEETS/Web Requests.md",
     "CWES_Prep.md",
@@ -210,7 +211,6 @@
     "HTB_MODULES/Vulnerability Assessment.md",
     "HTB_MODULES/Using the Metasploit Framework.md",
     "HTB_MODULES/Using Web Proxies.md",
-    "HTB_MODULES/Using CrackMapExec.md",
     "HTB_MODULES",
     "HTB Modules",
     "copy-pasta-2.0/Untitled.base",
