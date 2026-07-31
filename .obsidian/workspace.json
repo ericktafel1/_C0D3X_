@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CWES_Prep.md",
+                "file": "HTB_CHEATSHEETS/Introduction to Windows Evasion Techniques.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CWES_Prep"
+              "title": "Introduction to Windows Evasion Techniques"
             }
           }
         ]
@@ -183,15 +183,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "436d36a7eba98628",
+  "active": "ca901a89eb689cbd",
   "lastOpenFiles": [
-    "HTB_MODULES.md",
+    "HTB_CHEATSHEETS/Web Requests.md",
     "CWES_Prep.md",
+    "HTB_MODULES.md",
     "00 README.md",
     "_Click_Script.md",
     "HTB_MODULES 1.md",
     "HTB_MODULES/Web Requests.md",
-    "HTB_CHEATSHEETS/Web Requests.md",
     "HTB_MODULES/YARA & Sigma for SOC Analysts.md",
     "HTB_MODULES/Working with IDS-IPS.md",
     "HTB_MODULES/Wired Equivalent Privacy (WEP) Attacks.md",
