@@ -1,3 +1,4 @@
+DURING EXAM: some `Note:` sections will have information to help identify the intended path
 PortSwigger Labs
 HTB  Labs - Challenges
 	Filter for Web
