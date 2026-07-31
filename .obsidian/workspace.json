@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 Web/Authentication and Sessions.md",
+                "file": "02 Web/Auth+Sessions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Authentication and Sessions"
+              "title": "Auth+Sessions"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 Web/cURL.md",
+                "file": "CWES_Prep.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cURL"
+              "title": "CWES_Prep"
             }
           }
         ],
@@ -93,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 373.5
   },
   "right": {
     "id": "4f725853a0d09020",
@@ -200,42 +200,42 @@
   },
   "active": "6e9b0759e6329d89",
   "lastOpenFiles": [
-    "02 Web/Web Application Methodology.md",
-    "02 Web/cURL.md",
-    "02 Web/Client-Side and Office Payload Delivery.md",
-    "CWES_Prep.md",
-    "02 Web/Authentication and Sessions.md",
-    "CWES_Prep/Boxes.md",
+    "00 README.md",
+    "_Click_Script.md",
     "copy-pasta-2.0/Untitled.base",
-    "copy-pasta-2.0/Untitled 2.base",
+    "HTB_CHEATSHEETS/XSS.md",
+    "HTB_CHEATSHEETS/Wired Equivalent Privacy (WEP) Attacks.md",
+    "HTB_CHEATSHEETS/Windows Lateral Movement.md",
+    "HTB_CHEATSHEETS/Windows Fundamentals.md",
+    "HTB_CHEATSHEETS/Windows Attacks & Defense.md",
+    "HTB_CHEATSHEETS/Wi-Fi Penetration Testing Basics.md",
+    "HTB_CHEATSHEETS/Wi-Fi Evil Twin Attacks.md",
+    "HTB_CHEATSHEETS/Whitebox Pentesting 101_ Command Injection.md",
+    "HTB_CHEATSHEETS/Whitebox Pentesting 101 Command Injection.md",
+    "HTB_CHEATSHEETS/Whitebox Attacks.md",
+    "HTB_CHEATSHEETS/Web Requests.md",
+    "HTB_CHEATSHEETS/Web Proxies.md",
+    "HTB_CHEATSHEETS/Web Fuzzing.md",
+    "HTB_CHEATSHEETS/Web Attacks.md",
+    "HTB_CHEATSHEETS/Using Web Proxies.md",
+    "HTB_CHEATSHEETS/Using CrackMapExec.md",
+    "HTB_CHEATSHEETS/User Behavior Forensics.md",
+    "HTB_CHEATSHEETS/Tools of the Trade.md",
+    "HTB_CHEATSHEETS/Supply Chain Attacks.md",
+    "HTB_CHEATSHEETS/Stack-Based Buffer Overflows on Windows x86.md",
+    "HTB_CHEATSHEETS/SQLMap Essentials.md",
+    "HTB_CHEATSHEETS/SQLmap.md",
+    "HTB_CHEATSHEETS/Server-side Attacks.md",
+    "HTB_CHEATSHEETS/Secure Coding 101_ JavaScript.md",
+    "HTB_CHEATSHEETS/modules.txt",
+    "HTB_CHEATSHEETS",
     "copy-pasta-2.0/Untitled 1.base",
-    "copy-pasta-2.0/6. Wireless/Aircrack-NG/7. Aircrack-ng.md",
-    "copy-pasta-2.0/6. Wireless/Aircrack-NG/5. Aireplay-ng.md",
-    "copy-pasta-2.0/6. Wireless/Aircrack-NG/6. Airdecap-ng.md",
-    "copy-pasta-2.0/6. Wireless/Aircrack-NG/4. Airgraph-ng.md",
-    "copy-pasta-2.0/6. Wireless/Aircrack-NG/3. Airodump-ng.md",
-    "copy-pasta-2.0/6. Wireless/Aircrack-NG/2. Airmong-ng.md",
-    "copy-pasta-2.0/6. Wireless/Aircrack-NG/1. Intro to Aircrack-ng.md",
+    "copy-pasta-2.0/Untitled 2.base",
+    "02 Web/CWES-Course",
     "copy-pasta-2.0/6. Wireless/Aircrack-NG",
-    "copy-pasta-2.0/6. Wireless/5. Bypassing MAC Filtering.md",
-    "copy-pasta-2.0/6. Wireless/4. Finding Hidden SSIDs.md",
-    "copy-pasta-2.0/6. Wireless/3. Connecting to WiFi Networks.md",
-    "copy-pasta-2.0/6. Wireless/2. Interface Modes.md",
-    "copy-pasta-2.0/6. Wireless/1. Wi-Fi Interfaces.md",
     "copy-pasta-2.0/6. Wireless",
-    "copy-pasta-2.0/5. Misc/Metasploit/Misc.md",
-    "copy-pasta-2.0/5. Misc/Metasploit/Post-Exploitation.md",
-    "copy-pasta-2.0/5. Misc/Metasploit/Pivoting.md",
-    "copy-pasta-2.0/5. Misc/Metasploit/Persistence.md",
-    "copy-pasta-2.0/5. Misc/msf db.md",
-    "copy-pasta-2.0/5. Misc/iptables.md",
-    "copy-pasta-2.0/5. Misc/git.md",
-    "copy-pasta-2.0/5. Misc/fping.md",
     "copy-pasta-2.0/5. Misc/Metasploit",
     "copy-pasta-2.0/5. Misc",
-    "copy-pasta-2.0/4. Mobile/1. Android",
-    "copy-pasta-2.0/4. Mobile",
-    "copy-pasta-2.0/3. Cloud/Azure",
     "copy-pasta-2.0/1. Network/Images/Pasted image 20250723132618.png",
     "copy-pasta-2.0/1. Network/Images/Pasted image 20250723130557.png",
     "copy-pasta-2.0/1. Network/Images/Pasted image 20250723125914.png",
