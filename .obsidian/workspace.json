@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB_CHEATSHEETS/Introduction to Windows Evasion Techniques.md",
+                "file": "HTB_MODULES/API Attacks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Introduction to Windows Evasion Techniques"
+              "title": "API Attacks"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "XML",
+                "query": "broken",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -183,8 +183,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "ca901a89eb689cbd",
+  "active": "436d36a7eba98628",
   "lastOpenFiles": [
+    "HTB_CHEATSHEETS/Introduction to Windows Evasion Techniques.md",
     "HTB_CHEATSHEETS/Web Requests.md",
     "CWES_Prep.md",
     "HTB_MODULES.md",
@@ -210,7 +211,6 @@
     "HTB_MODULES/Using the Metasploit Framework.md",
     "HTB_MODULES/Using Web Proxies.md",
     "HTB_MODULES/Using CrackMapExec.md",
-    "HTB_MODULES/User Behavior Forensics.md",
     "HTB_MODULES",
     "HTB Modules",
     "copy-pasta-2.0/Untitled.base",
