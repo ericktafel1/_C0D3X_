@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C0D3X/_Click_Script.md",
+                "file": "C0D3X/02 Web/Web App Methodology.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_Click_Script"
+              "title": "Web App Methodology"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "crt.sh",
+                "query": "finalrecon",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -76,7 +76,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -185,8 +186,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "436d36a7eba98628",
+  "active": "30e9c51188b4fe35",
   "lastOpenFiles": [
+    "N3CR0-NOMNOM/2. Web Applications/0. Checklist/Misc.md",
+    "C0D3X/02 Web/PortSwigger-Guide/OAuth Authentication/Oauth authentication.md",
+    "_HTB_MODULES/Attacking Authentication Mechanisms.md",
+    "_HTB_CHEATSHEETS/Information Gathering.md",
+    "C0D3X/_Click_Script.md",
     "00 README.md",
     "N3CR0-NOMNOM/1. Network/1. Reconnaissance/Certs/Certs.md",
     "N3CR0-NOMNOM/2. Web Applications/11. Web Services and APIs/Web Service Attacks.md",
@@ -210,11 +216,6 @@
     "_HTB_MODULES/Introduction to Web Applications.md",
     "C0D3X/02 Web/PortSwigger-Guide/DOM-based/DOM-based.md",
     "_HTB_MODULES/Cross-Site Scripting (XSS).md",
-    "C0D3X/02 Web/PortSwigger-Guide/Payloads/CookieStealer(XSS).md",
-    "C0D3X/02 Web/CMS+APIs.md",
-    "C0D3X/02 Web/Client-Side+Office Payload Delivery.md",
-    "CWES_Prep.md",
-    "_HTB_MODULES/API Attacks.md",
     "_HTB_MODULES",
     "HTB Modules",
     "_HTB_CHEATSHEETS/modules.txt",
