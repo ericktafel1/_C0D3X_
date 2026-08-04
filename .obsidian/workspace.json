@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CWES_Prep.md",
+                "file": "copy-pasta-2.0/2. Web Applications/Misc/Cheatsheet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CWES_Prep"
+              "title": "Cheatsheet"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -53,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "broken",
+                "query": "crt.sh",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -183,34 +185,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "ca901a89eb689cbd",
+  "active": "436d36a7eba98628",
   "lastOpenFiles": [
+    "C0D3X",
+    "copy-pasta-2.0/1. Network/1. Reconnaissance/Certs/Certs.md",
+    "C0D3X/02 Web/Web App Methodology.md",
+    "copy-pasta-2.0/2. Web Applications/2. Broken Auth/1. Brute Force Attacks.md",
+    "C0D3X/06 Services/DNS.md",
+    "HTB_CHEATSHEETS/Information Gathering - Web Edition.md",
+    "C0D3X/02 Web/Auth+Sessions.md",
+    "C0D3X/01 Enumeration/Internal Enumeration.md",
+    "C0D3X/01 Enumeration/External and Network Enumeration.md",
+    "copy-pasta-2.0/1. Network/1. Reconnaissance/DNS/1. Dig.md",
+    "C0D3X/02 Web/File Inclusion Uploads and Git Exposure.md",
+    "HTB_MODULES/Using Web Proxies.md",
+    "HTB_MODULES/DNS Enumeration Using Python.md",
+    "HTB_MODULES/Introduction to Web Applications.md",
+    "C0D3X/02 Web/PortSwigger-Guide/DOM-based/DOM-based.md",
+    "HTB_MODULES/Cross-Site Scripting (XSS).md",
+    "C0D3X/02 Web/PortSwigger-Guide/Payloads/CookieStealer(XSS).md",
+    "C0D3X/02 Web/CMS+APIs.md",
+    "C0D3X/02 Web/Client-Side+Office Payload Delivery.md",
+    "CWES_Prep.md",
     "HTB_MODULES/API Attacks.md",
     "HTB_CHEATSHEETS/Introduction to Windows Evasion Techniques.md",
     "HTB_CHEATSHEETS/Web Requests.md",
-    "CWES_Prep.md",
     "HTB_MODULES.md",
     "00 README.md",
     "_Click_Script.md",
-    "HTB_MODULES 1.md",
-    "HTB_MODULES/Web Requests.md",
-    "HTB_MODULES/YARA & Sigma for SOC Analysts.md",
-    "HTB_MODULES/Working with IDS-IPS.md",
-    "HTB_MODULES/Wired Equivalent Privacy (WEP) Attacks.md",
-    "HTB_MODULES/Windows Lateral Movement.md",
-    "HTB_MODULES/Windows Fundamentals.md",
-    "HTB_MODULES/Windows Event Logs & Finding Evil.md",
-    "HTB_MODULES/Windows Attacks & Defense.md",
-    "HTB_MODULES/Wi-Fi Penetration Testing Basics.md",
-    "HTB_MODULES/Wi-Fi Evil Twin Attacks.md",
-    "HTB_MODULES/Whitebox Pentesting 101- Command Injection.md",
-    "HTB_MODULES/Whitebox Attacks.md",
-    "HTB_MODULES/Web Fuzzing.md",
-    "HTB_MODULES/Process Injection Attacks and Detection.md",
-    "HTB_MODULES/Web Attacks.md",
-    "HTB_MODULES/Vulnerability Assessment.md",
-    "HTB_MODULES/Using the Metasploit Framework.md",
-    "HTB_MODULES/Using Web Proxies.md",
     "HTB_MODULES",
     "HTB Modules",
     "copy-pasta-2.0/Untitled.base",

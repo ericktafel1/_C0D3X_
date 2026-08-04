@@ -6,5 +6,6 @@
   "rightToLeft": false,
   "useTab": true,
   "vimMode": false,
-  "readableLineLength": false
+  "readableLineLength": false,
+  "alwaysUpdateLinks": true
 }
