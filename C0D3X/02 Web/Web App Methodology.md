@@ -110,7 +110,7 @@ cat rest.txt | feroxbuster --stdin -w $SECLIST/Discovery/Web-Content/raft-large-
 22. Remember, **Enumeration is key; step back and try harder.**
 23. Verify all findings and ensure no steps were missed.
 
-## finalrecon
+## CRAWL - finalrecon, reconspider
 
 ```bash
 g1gs@htb[/htb]$ git clone https://github.com/thewhiteh4t/FinalRecon.git
@@ -118,6 +118,12 @@ g1gs@htb[/htb]$ cd FinalRecon
 g1gs@htb[/htb]$ pip3 install -r requirements.txt
 g1gs@htb[/htb]$ chmod +x ./finalrecon.py
 g1gs@htb[/htb]$ ./finalrecon.py --help
+
+pip3 install scrapy
+wget -O ReconSpider.zip https://academy.hackthebox.com/storage/modules/144/ReconSpider.v1.2.zip
+unzip ReconSpider.zip
+python3 ReconSpider.py http://inlanefreight.htb:34677
+cat results.json
 ```
 
 ## HTTP Scan
