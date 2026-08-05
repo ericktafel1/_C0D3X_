@@ -3,52 +3,6 @@
 General operator workflow for finding and validating web attack surface before focusing on a single bug class.
 Prioritize stack identification, content discovery, request/response mapping, input enumeration, and fast manual review in Burp.
 
-## General Checklist for Web Applications
-
-1. Disable any ad-blockers, cookie-plugins or useragent-switcher.
-2. Find web servers in scope:
-
-```bash
-nmap -vv -sV -p 80,443,8080,8443,8000,8888,8800,8088,8880,10443,9443 --script http-title --open --min-rate 3000 -T4 192.168.123.100
-```
-
-3. Identify the tech stack using `whatweb`, `wappalyzer`, or `httpx`.
-4. Check the website using [web-check.as93.net](https://web-check.as93.net/).
-5. Use `feroxbuster` for directory enumeration:
-
-```bash
-feroxbuster -k -u http://192.168.180.100:7742/ -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -C 403,404,400,503,301 -x php,html,htm,asp,aspx,jsp,txt,bak,zip,tar.gz,old,inc,conf,config,log,db,json -t 200
-
-# consider lower or higher -t (min 50, max 500)
-```
-
-6. Search for PDFs:
-
-```bash
-feroxbuster -u http://192.168.123.100/ -w $SECLIST/Discovery/Web-Content/raft-large-words.txt -x pdf -q | grep '\.pdf$'
-```
-
-7. Scan with Nessus, Nuclei, Nikto, or Sn1per.
-	1. `nikto --host $IP <port> -C all `
-8. Check network interactions via browser DevTools.
-9. Perform a Burp Suite Pro scan.
-10. Enumerate subdomains:
-
-```bash
-echo domain.com | subfinder -silent | httpx -silent -sc -title -td -ip -cname -cl -lc -server -efqdn -fr
-```
-
-11. Create a list of directories using Burp Suite and input them to `feroxbuster` to get a comprehensive sitemap.
-12. Find exploits using Sploitus, SearchSploit, and CVEMap.
-13. Check for LFI/RFI vulnerabilities.
-14. Proceed to the [Web Application Login Checklist](#web-application-login-checklist).
-15. Attempt to brute-force the login page.
-16. Try different usernames.
-17. Check if there is a Git repository.
-18. Revert the machine if necessary.
-19. Remember, **Enumeration is key; step back and try harder.**
-20. Verify all findings and ensure no steps were missed.
-
 ## Web Application Pre-Authentication Checklist
 
 1. Disable ad-blockers.
@@ -88,9 +42,13 @@ feroxbuster -u http://192.168.123.100/ -w $SECLIST/Discovery/Web-Content/raft-la
 10. Scan with tools like Nessus, Nuclei, Nikto, and Sn1per.
 11. Check network interactions via browser DevTools.
 12. Perform a Burp Suite Pro scan.
-13. Enumerate subdomains:
+13. Enumerate vhosts/subdomains:
 
 ```bash
+gobuster vhost -k -u https://vulnerablesite.htb -w /path/to/SecLists/Discovery/DNS/subdomains-top1million-20000.txt
+
+ffuf -w namelist.txt:FUZZ -u http://10.129.203.101/ -H 'Host:FUZZ.inlanefreight.local' -fs 15157
+
 echo domain.com | subfinder -silent | httpx -silent -sc -title -td -ip -cname -cl -lc -server -fr
 ```
 
@@ -282,7 +240,11 @@ ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/file-extensions.txt:
 
 ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u 'http://<SERVER_IP>:<PORT>/index.php?FUZZ=value' -fs 2287
 
+# GET fuzz
 ffuf -w /usr/share/wordlists/seclists/Fuzzing/LFI/LFI-Jhaddix.txt:FUZZ -u 'http://<SERVER_IP>:<PORT>/index.php?language=FUZZ' -fs 2287
+
+# POST fuzz
+ffuf -u http://IP:PORT/post.php -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "y=FUZZ" -w /usr/share/seclists/Discovery/Web-Content/common.txt -mc 200 -v
 
 ffuf -w /opt/useful/SecLists/Discovery/Web-Content/default-web-root-directory-linux.txt:FUZZ -u 'http://<SERVER_IP>:<PORT>/index.php?language=../../../../FUZZ/index.php' -fs 2287
 ```
