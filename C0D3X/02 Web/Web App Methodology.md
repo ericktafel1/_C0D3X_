@@ -45,7 +45,10 @@ feroxbuster -u http://192.168.123.100/ -w $SECLIST/Discovery/Web-Content/raft-la
 13. Enumerate vhosts/subdomains:
 
 ```bash
+gobuster vhost -u http://inlanefreight.htb:81 -w /usr/share/seclists/Discovery/Web-Content/common.txt --append-domain
 gobuster vhost -k -u https://vulnerablesite.htb -w /path/to/SecLists/Discovery/DNS/subdomains-top1million-20000.txt
+gobuster dns -d inlanefreight.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt
+# Note: In the latest Gobuster release, `-d` now sets the delay between requests, not the domain. Use `--do` or `--domain` to specify the target domain if you are using the latest version.
 
 ffuf -w namelist.txt:FUZZ -u http://10.129.203.101/ -H 'Host:FUZZ.inlanefreight.local' -fs 15157
 
