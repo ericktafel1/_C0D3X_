@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "4013863ee2cf21a2",
+    "id": "fca365a49b845236",
     "type": "split",
     "children": [
       {
-        "id": "3bd8a404ccd51c22",
+        "id": "b7a4a4059bfa2578",
         "type": "tabs",
         "children": [
           {
-            "id": "ca901a89eb689cbd",
+            "id": "64a7ad9c6c4c711a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "C0D3X/02 Web/Web App Methodology.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Web App Methodology"
+              "title": "New tab"
             }
           }
         ]
@@ -27,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "6fbd44ce8fd6f1de",
+    "id": "312e3b14c5876fe4",
     "type": "split",
     "children": [
       {
-        "id": "4fa5e9990c653e86",
+        "id": "a39b83bc6fd79c79",
         "type": "tabs",
         "children": [
           {
-            "id": "436d36a7eba98628",
+            "id": "eb2a2211dbd1b58f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -50,12 +46,12 @@
             }
           },
           {
-            "id": "30e9c51188b4fe35",
+            "id": "e1caf0abedef40f4",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "ffuf",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -67,7 +63,7 @@
             }
           },
           {
-            "id": "52946725ec5e389b",
+            "id": "774b2e939eacbd2c",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -80,23 +76,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 373.5
+    "width": 300
   },
   "right": {
-    "id": "4f725853a0d09020",
+    "id": "3387ccba916ce3b9",
     "type": "split",
     "children": [
       {
-        "id": "ee3e3e0b53caf670",
+        "id": "af942b8826ee771b",
         "type": "tabs",
         "children": [
           {
-            "id": "9fb1d2d57fa0ea2d",
+            "id": "3592da7be412ec65",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "06 Services/MSSQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,25 +101,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for MSSQL"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "6a4682b877ed65f5",
+            "id": "cf0651e88cc83762",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "06 Services/MSSQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from MSSQL"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "61329876c4de9236",
+            "id": "e7985d02c23da069",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -139,7 +133,7 @@
             }
           },
           {
-            "id": "1f579d1557c17b4a",
+            "id": "f1b7d117ec8171f8",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -153,18 +147,17 @@
             }
           },
           {
-            "id": "75834308c2a6900b",
+            "id": "4aeaa8e1ce0e0e92",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "06 Services/MSSQL.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of MSSQL"
+              "title": "Outline"
             }
           }
         ]
@@ -185,44 +178,44 @@
       "bases:Create new base": false
     }
   },
-  "active": "ca901a89eb689cbd",
+  "active": "64a7ad9c6c4c711a",
   "lastOpenFiles": [
-    "_HTB_MODULES/Attacking Enterprise Networks.md",
-    "_HTB_MODULES/Attacking Web Applications with Ffuf.md",
-    "_HTB_MODULES/API Attacks.md",
-    "_HTB_MODULES/Abusing HTTP Misconfigurations.md",
-    "N3CR0-NOMNOM/2. Web Applications/4. File Inclusion/4. Automation and Prevention.md",
-    "N3CR0-NOMNOM/2. Web Applications/2. Broken Auth/2. Authentication Bypass.md",
-    "N3CR0-NOMNOM/2. Web Applications/3. Server Side Attacks/1. Server-Side Request Forgery.md",
-    "N3CR0-NOMNOM/2. Web Applications/4. File Inclusion/1. Local File Inclusion.md",
-    "N3CR0-NOMNOM/2. Web Applications/2. Broken Auth/1. Brute Force Attacks.md",
-    "C0D3X/02 Web/Web App Methodology.md",
-    "_HTB_MODULES/Advanced XSS and CSRF Exploitation.md",
-    "_HTB_CHEATSHEETS/Abusing HTTP Misconfigurations.md",
+    "_HTB_MODULES/YARA & Sigma for SOC Analysts.md",
+    "_HTB_MODULES/Working with IDS-IPS.md",
+    "_HTB_MODULES/Wired Equivalent Privacy (WEP) Attacks.md",
+    "_HTB_MODULES/Windows Lateral Movement.md",
+    "_HTB_MODULES/Windows Fundamentals.md",
+    "_HTB_MODULES/Windows Event Logs & Finding Evil.md",
+    "_HTB_MODULES/Windows Attacks & Defense.md",
+    "_HTB_MODULES/Wi-Fi Penetration Testing Basics.md",
+    "_HTB_MODULES/Wi-Fi Evil Twin Attacks.md",
+    "_HTB_MODULES/Whitebox Pentesting 101- Command Injection.md",
+    "_HTB_MODULES/Whitebox Attacks.md",
+    "_HTB_MODULES/Web Requests.md",
     "_HTB_MODULES/Web Fuzzing.md",
-    "C0D3X/02 Web/PortSwigger-Guide/Access-control/Access-control.md",
-    "C0D3X/02 Web/PortSwigger-Guide/API Testing/API Testing.md",
-    "_HTB_CHEATSHEETS/Web Fuzzing.md",
-    "_HTB_MODULES/Active Directory Enumeration & Attacks.md",
-    "_HTB_CHEATSHEETS/Active Directory Enumeration.md",
-    "C0D3X/02 Web/Content Discovery + VHosts.md",
-    "_HTB_MODULES/Attacking Common Applications.md",
-    "_HTB_MODULES/Information Gathering - Web Edition.md",
-    "_HTB_CHEATSHEETS/Attacking Web Applications with Ffuf.md",
-    "_HTB_CHEATSHEETS/Information Gathering.md",
-    "C0D3X/12 Cloud/AWS.md",
-    "N3CR0-NOMNOM/1. Network/1. Reconnaissance/DNS/4. Dnsrecon.md",
-    "N3CR0-NOMNOM/1. Network/1. Reconnaissance/DNS/1. Dig.md",
-    "N3CR0-NOMNOM/Untitled.base",
-    "C0D3X",
+    "_HTB_MODULES/Web Attacks.md",
+    "_HTB_MODULES/Vulnerability Assessment.md",
+    "_HTB_MODULES/Using the Metasploit Framework.md",
+    "_HTB_MODULES/Using Web Proxies.md",
+    "_HTB_MODULES/Using CrackMapExec.md",
+    "_HTB_MODULES/User Behavior Forensics.md",
+    "_HTB_MODULES/Understanding Log Sources & Investigating with Splunk.md",
+    "_HTB_MODULES/Supply Chain Attacks.md",
+    "_HTB_MODULES/Stack-Based Buffer Overflows on Windows x86.md",
+    "_HTB_MODULES/Stack-Based Buffer Overflows on Linux x86.md",
+    "_HTB_MODULES/Setting Up.md",
+    "_HTB_MODULES/Session Security.md",
+    "_HTB_MODULES/Server-side Attacks.md",
     "_HTB_MODULES",
-    "HTB Modules",
     "_HTB_CHEATSHEETS/modules.txt",
     "_HTB_CHEATSHEETS",
-    "copy-pasta-2.0/Untitled 1.base",
-    "copy-pasta-2.0/Untitled 2.base",
-    "02 Web/CWES-Course",
+    "N3CR0-NOMNOM/Untitled.base",
     "N3CR0-NOMNOM/6. Wireless/Aircrack-NG",
+    "N3CR0-NOMNOM/6. Wireless",
+    "N3CR0-NOMNOM/5. Misc/Metasploit",
+    "N3CR0-NOMNOM/5. Misc",
+    "N3CR0-NOMNOM/4. Mobile/1. Android",
+    "N3CR0-NOMNOM/4. Mobile",
     "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723132618.png",
     "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723130557.png",
     "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723125914.png",
