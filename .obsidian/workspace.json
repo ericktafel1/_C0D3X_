@@ -11,10 +11,14 @@
             "id": "64a7ad9c6c4c711a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "N3CR0-NOMNOM/2. Web Applications/3. Server Side Attacks/2. Server-Side Includes.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2. Server-Side Includes"
             }
           }
         ]
@@ -51,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "gobuster vhost",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -180,6 +184,10 @@
   },
   "active": "64a7ad9c6c4c711a",
   "lastOpenFiles": [
+    "N3CR0-NOMNOM/2. Web Applications/3. Server Side Attacks/1. Server-Side Request Forgery.md",
+    "C0D3X/02 Web/Web App Methodology.md",
+    "_HTB_MODULES/Advanced XSS and CSRF Exploitation.md",
+    "_HTB_MODULES/Web Fuzzing.md",
     "_HTB_MODULES/YARA & Sigma for SOC Analysts.md",
     "_HTB_MODULES/Working with IDS-IPS.md",
     "_HTB_MODULES/Wired Equivalent Privacy (WEP) Attacks.md",
@@ -192,7 +200,6 @@
     "_HTB_MODULES/Whitebox Pentesting 101- Command Injection.md",
     "_HTB_MODULES/Whitebox Attacks.md",
     "_HTB_MODULES/Web Requests.md",
-    "_HTB_MODULES/Web Fuzzing.md",
     "_HTB_MODULES/Web Attacks.md",
     "_HTB_MODULES/Vulnerability Assessment.md",
     "_HTB_MODULES/Using the Metasploit Framework.md",
@@ -203,9 +210,6 @@
     "_HTB_MODULES/Supply Chain Attacks.md",
     "_HTB_MODULES/Stack-Based Buffer Overflows on Windows x86.md",
     "_HTB_MODULES/Stack-Based Buffer Overflows on Linux x86.md",
-    "_HTB_MODULES/Setting Up.md",
-    "_HTB_MODULES/Session Security.md",
-    "_HTB_MODULES/Server-side Attacks.md",
     "_HTB_MODULES",
     "_HTB_CHEATSHEETS/modules.txt",
     "_HTB_CHEATSHEETS",
