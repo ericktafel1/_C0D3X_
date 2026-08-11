@@ -11,10 +11,14 @@
             "id": "ca901a89eb689cbd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "C0D3X/14 Mobile/Android.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Android"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "john",
+                "query": "mobsf",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -182,6 +185,8 @@
   },
   "active": "ca901a89eb689cbd",
   "lastOpenFiles": [
+    "C0D3X/14 Mobile/Android.md",
+    "C0D3X/14 Mobile",
     "07 Creds and Cracking/Hashcat and John.md",
     "_HTB_MODULES/Using CrackMapExec.md",
     "_HTB_MODULES/YARA & Sigma for SOC Analysts.md",
@@ -207,7 +212,6 @@
     "_HTB_MODULES/Understanding Log Sources & Investigating with Splunk.md",
     "_HTB_MODULES/Stack-Based Buffer Overflows on Windows x86.md",
     "_HTB_MODULES/Stack-Based Buffer Overflows on Linux x86.md",
-    "_HTB_MODULES/Setting Up.md",
     "_HTB_MODULES",
     "_HTB_CHEATSHEETS/modules.txt",
     "_HTB_CHEATSHEETS",
@@ -217,7 +221,6 @@
     "N3CR0-NOMNOM/1. Network/4. Post Exploitation/2. Lateral Movement/2. Windows",
     "N3CR0-NOMNOM/1. Network/4. Post Exploitation/1. Privilege Escalation/Linux",
     "N3CR0-NOMNOM/1. Network/4. Post Exploitation/1. Privilege Escalation/Windows",
-    "N3CR0-NOMNOM/2. Web Applications/1. Injection/1. SQL Injection",
     "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250630122617.png",
     "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250327111312.png",
     "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723132618.png",
