@@ -1,0 +1,232 @@
+{
+  "main": {
+    "id": "4013863ee2cf21a2",
+    "type": "split",
+    "children": [
+      {
+        "id": "3bd8a404ccd51c22",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ca901a89eb689cbd",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6fbd44ce8fd6f1de",
+    "type": "split",
+    "children": [
+      {
+        "id": "4fa5e9990c653e86",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "436d36a7eba98628",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "30e9c51188b4fe35",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "john",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "52946725ec5e389b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 361.5
+  },
+  "right": {
+    "id": "4f725853a0d09020",
+    "type": "split",
+    "children": [
+      {
+        "id": "ee3e3e0b53caf670",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9fb1d2d57fa0ea2d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "06 Services/MSSQL.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for MSSQL"
+            }
+          },
+          {
+            "id": "6a4682b877ed65f5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "06 Services/MSSQL.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from MSSQL"
+            }
+          },
+          {
+            "id": "61329876c4de9236",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1f579d1557c17b4a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "75834308c2a6900b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "06 Services/MSSQL.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of MSSQL"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "ca901a89eb689cbd",
+  "lastOpenFiles": [
+    "07 Creds and Cracking/Hashcat and John.md",
+    "_HTB_MODULES/Using CrackMapExec.md",
+    "_HTB_MODULES/YARA & Sigma for SOC Analysts.md",
+    "_HTB_MODULES/Working with IDS-IPS.md",
+    "_HTB_MODULES/Wired Equivalent Privacy (WEP) Attacks.md",
+    "_HTB_MODULES/Windows Lateral Movement.md",
+    "_HTB_MODULES/Windows Fundamentals.md",
+    "_HTB_MODULES/Windows Event Logs & Finding Evil.md",
+    "_HTB_MODULES/Windows Attacks & Defense.md",
+    "_HTB_MODULES/Wi-Fi Penetration Testing Basics.md",
+    "_HTB_MODULES/Wi-Fi Evil Twin Attacks.md",
+    "_HTB_MODULES/Whitebox Pentesting 101- Command Injection.md",
+    "_HTB_MODULES/Whitebox Attacks.md",
+    "_HTB_MODULES/Web Requests.md",
+    "_HTB_MODULES/Web Fuzzing.md",
+    "_HTB_MODULES/Web Attacks.md",
+    "_HTB_MODULES/Pivoting, Tunneling, and Port Forwarding.md",
+    "_HTB_MODULES/Vulnerability Assessment.md",
+    "_HTB_MODULES/Using Web Proxies.md",
+    "_HTB_MODULES/Using the Metasploit Framework.md",
+    "_HTB_MODULES/User Behavior Forensics.md",
+    "_HTB_MODULES/Supply Chain Attacks.md",
+    "_HTB_MODULES/Understanding Log Sources & Investigating with Splunk.md",
+    "_HTB_MODULES/Stack-Based Buffer Overflows on Windows x86.md",
+    "_HTB_MODULES/Stack-Based Buffer Overflows on Linux x86.md",
+    "_HTB_MODULES/Setting Up.md",
+    "_HTB_MODULES",
+    "_HTB_CHEATSHEETS/modules.txt",
+    "_HTB_CHEATSHEETS",
+    "N3CR0-NOMNOM/1. Network/4. Post Exploitation/2. Lateral Movement/3. Active Directory/Kerberos",
+    "N3CR0-NOMNOM/1. Network/4. Post Exploitation/2. Lateral Movement/2. Windows/Persistence",
+    "N3CR0-NOMNOM/1. Network/4. Post Exploitation/2. Lateral Movement/3. Active Directory",
+    "N3CR0-NOMNOM/1. Network/4. Post Exploitation/2. Lateral Movement/2. Windows",
+    "N3CR0-NOMNOM/1. Network/4. Post Exploitation/1. Privilege Escalation/Linux",
+    "N3CR0-NOMNOM/1. Network/4. Post Exploitation/1. Privilege Escalation/Windows",
+    "N3CR0-NOMNOM/2. Web Applications/1. Injection/1. SQL Injection",
+    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250630122617.png",
+    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250327111312.png",
+    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723132618.png",
+    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723130557.png",
+    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723125914.png",
+    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250328160016.png",
+    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20240628114633.png",
+    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250327110033.png",
+    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20240705134337.png",
+    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20240628115017.png"
+  ]
+}
