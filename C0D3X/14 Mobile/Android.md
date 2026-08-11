@@ -27,9 +27,16 @@ apktool d test.apk
 ## Frida
 
 ```bash
-# https://frida.re/docs/android/
-
 pip install frida-tools
+# https://frida.re/docs/android/
+adb install test.apk
+adb push frida-server /data/local/tmp/
+adb shell "chmod 755 /data/local/tmp/frida-server"
+adb shell "/data/local/tmp/frida-server &"
+
+aapt dump badging catchv1.0.apk | grep package
+frida -U -f <package.name> -l script.js --no-pause
+
 frida-ls-devices
 frida-apk test.apk
 firda-ps -D <Id>
