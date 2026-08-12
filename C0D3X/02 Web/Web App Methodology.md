@@ -232,6 +232,21 @@ console.log(encoded);
 
 ```bash
 wenum -w /usr/share/seclists/Discovery/Web-Content/common.txt --hc 404 -u "http://154.57.164.82:30400/get.php?x=FUZZ"
+
+# Show only successful requests and redirects:
+wenum -w wordlist.txt --sc 200,301,302 -u https://example.com/FUZZ
+
+# Hide responses with common error codes:
+wenum -w wordlist.txt --hc 404,400,500 -u https://example.com/FUZZ
+
+# Show only short error messages (responses with 5-10 words):
+wenum -w wordlist.txt --sw 5-10 -u https://example.com/FUZZ
+
+# Hide large files and focus on smaller responses:
+wenum -w wordlist.txt --hs 10000 -u https://example.com/FUZZ
+
+# Filter for responses containing specific information:
+wenum -w wordlist.txt --sr "admin\|password" -u https://example.com/FUZZ
 ```
 
 ## ffuf
