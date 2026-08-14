@@ -82,11 +82,11 @@ python3 api_fuzzer.py http://IP:PORT
 ## CRAWL - finalrecon, reconspider
 
 ```bash
-g1gs@htb[/htb]$ git clone https://github.com/thewhiteh4t/FinalRecon.git
-g1gs@htb[/htb]$ cd FinalRecon
-g1gs@htb[/htb]$ pip3 install -r requirements.txt
-g1gs@htb[/htb]$ chmod +x ./finalrecon.py
-g1gs@htb[/htb]$ ./finalrecon.py --help
+git clone https://github.com/thewhiteh4t/FinalRecon.git
+cd FinalRecon
+pip3 install -r requirements.txt
+chmod +x ./finalrecon.py
+./finalrecon.py --help
 
 pip3 install scrapy
 wget -O ReconSpider.zip https://academy.hackthebox.com/storage/modules/144/ReconSpider.v1.2.zip
