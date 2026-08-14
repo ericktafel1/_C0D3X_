@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "wenum",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -76,8 +76,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -188,9 +187,14 @@
   },
   "active": "ca901a89eb689cbd",
   "lastOpenFiles": [
+    "_HTB_MODULES/Web Fuzzing.md",
+    "_HTB_MODULES/Active Directory Enumeration & Attacks.md",
+    "N3CR0-NOMNOM/2. Web Applications/Misc/Cheatsheet.md",
+    "N3CR0-NOMNOM/2. Web Applications/0. Checklist/Misc.md",
+    "C0D3X/02 Web/Web App Methodology.md",
+    "C0D3X/02 Web/PortSwigger-Guide/API Testing/API Testing.md",
     "C0D3X/14 Mobile/Android.md",
     "C0D3X/14 Mobile",
-    "N3CR0-NOMNOM/2. Web Applications/0. Checklist/Misc.md",
     "_HTB_MODULES/Intro to Academy's Purple Modules.md",
     "_HTB_MODULES/Android Fundamentals.md",
     "_HTB_MODULES/Advanced Deserialization Attacks.md",
@@ -198,7 +202,6 @@
     "N3CR0-NOMNOM/Untitled.base",
     "N3CR0-NOMNOM/4. Mobile/1. Android/Using Frida Without Root.md",
     "N3CR0-NOMNOM/4. Mobile/1. Android/Rooting an Android Device.md",
-    "C0D3X/02 Web/Web App Methodology.md",
     "_HTB_MODULES/Attacking Enterprise Networks.md",
     "_HTB_MODULES/Attacking Web Applications with Ffuf.md",
     "_HTB_MODULES/API Attacks.md",
@@ -210,12 +213,8 @@
     "N3CR0-NOMNOM/2. Web Applications/2. Broken Auth/1. Brute Force Attacks.md",
     "_HTB_MODULES/Advanced XSS and CSRF Exploitation.md",
     "_HTB_CHEATSHEETS/Abusing HTTP Misconfigurations.md",
-    "_HTB_MODULES/Web Fuzzing.md",
     "C0D3X/02 Web/PortSwigger-Guide/Access-control/Access-control.md",
-    "C0D3X/02 Web/PortSwigger-Guide/API Testing/API Testing.md",
     "_HTB_CHEATSHEETS/Web Fuzzing.md",
-    "_HTB_MODULES/Active Directory Enumeration & Attacks.md",
-    "_HTB_CHEATSHEETS/Active Directory Enumeration.md",
     "C0D3X",
     "_HTB_MODULES",
     "HTB Modules",

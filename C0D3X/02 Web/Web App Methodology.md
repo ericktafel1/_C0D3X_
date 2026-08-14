@@ -70,6 +70,14 @@ cat rest.txt | feroxbuster --stdin -w $SECLIST/Discovery/Web-Content/raft-large-
 21. Revert the machine if necessary.
 22. Remember, **Enumeration is key; step back and try harder.**
 23. Verify all findings and ensure no steps were missed.
+24. API? Fuzz for endpoints, IDOR, etc...
+```bash
+git clone https://github.com/PandaSt0rm/webfuzz_api.git
+cd webfuzz_api
+pip3 install -r requirements.txt
+
+python3 api_fuzzer.py http://IP:PORT
+```
 
 ## CRAWL - finalrecon, reconspider
 
