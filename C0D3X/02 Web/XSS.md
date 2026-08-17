@@ -42,7 +42,7 @@ sudo pip3 install pycurl bs4 pygeoip PyGObject selenium ddgs fpdf2
 cd xsser
 python3 setup.py
 python3 xsser
-xsser -d 'search.php?id=' --De duck
+python3 xsser -u "http://SERVER_IP:PORT/index.php?task=test"
 
 # Old Tool
 https://github.com/rajeshmajumdar/BruteXSS
