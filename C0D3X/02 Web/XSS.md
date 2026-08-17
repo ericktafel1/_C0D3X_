@@ -24,7 +24,8 @@
 | `python xsstrike.py -u "http://SERVER_IP:PORT/index.php?task=test"`                           | Run `xsstrike` on a url parameter |
 | `sudo nc -lvnp 80`                                                                            | Start `netcat` listener           |
 | `sudo php -S 0.0.0.0:80`                                                                      | Start `PHP` server                |
-
+- https://github.com/payload-box
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XSS%20Injection/README.md
 ---
 
 ## Detect XSS
