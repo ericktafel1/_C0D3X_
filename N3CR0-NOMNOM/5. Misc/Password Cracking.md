@@ -58,7 +58,7 @@ remove the filename or first word in hash so it starts with $keepass$
 ```
 hashcat -m 13400 keepass.hash /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/rockyou-30000.rule --force  
   
-mono ~/Inev/tools/KeePass/KeePass.exe [file]  
+mono ~/g1gs/tools/KeePass/KeePass.exe [file]  
 ```
   
   

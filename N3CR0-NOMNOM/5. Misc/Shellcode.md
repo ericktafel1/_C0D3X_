@@ -2,7 +2,7 @@
 # Convert PE files to Shellcode
 
 ```
-~/Inev/tools/donut -a 3 -f 3 -o calc.c -i C:\windows\system32\calc.exe
+~/g1gs/tools/donut -a 3 -f 3 -o calc.c -i C:\windows\system32\calc.exe
 ```
 
 - `-a` specifies the architecture; in this case 3 is x86 + amd64 (dual-mode)
