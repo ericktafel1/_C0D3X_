@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C0D3X/02 Web/Web App Methodology.md",
+                "file": "N3CR0-NOMNOM/2. Web Applications/9. Deserialization/Deserialization.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Web App Methodology"
+              "title": "Deserialization"
             }
           }
         ]
@@ -187,11 +187,11 @@
   },
   "active": "ca901a89eb689cbd",
   "lastOpenFiles": [
+    "C0D3X/02 Web/Web App Methodology.md",
     "_HTB_MODULES/Web Fuzzing.md",
     "_HTB_MODULES/Active Directory Enumeration & Attacks.md",
     "N3CR0-NOMNOM/2. Web Applications/Misc/Cheatsheet.md",
     "N3CR0-NOMNOM/2. Web Applications/0. Checklist/Misc.md",
-    "C0D3X/02 Web/Web App Methodology.md",
     "C0D3X/02 Web/PortSwigger-Guide/API Testing/API Testing.md",
     "C0D3X/14 Mobile/Android.md",
     "C0D3X/14 Mobile",
