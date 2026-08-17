@@ -29,11 +29,23 @@
 
 ## Detect XSS
 ```bash
+# New Tool
 git clone https://github.com/s0md3v/XSStrike.git
 cd XSStrike
 pip install -r requirements.txt
 python xsstrike.py
 python xsstrike.py -u "http://SERVER_IP:PORT/index.php?task=test"
+
+# Alt Tool
+git clone https://github.com/epsylon/xsser.git
+sudo pip3 install pycurl bs4 pygeoip PyGObject selenium ddgs fpdf2
+cd xsser
+python3 setup.py
+python3 xsser
+xsser -d 'search.php?id=' --De duck
+
+# Old Tool
+https://github.com/rajeshmajumdar/BruteXSS
 ```
 
 ## Basic
