@@ -225,6 +225,12 @@ function encode_to_javascript(string) {
 let encoded = encode_to_javascript('insert_minified_javascript');
 console.log(encoded);
 ```
+### JS Obfuscated XSS:
+https://jsfuck.com/ 
+https://utf-8.jp/public/jjencode.html
+https://utf-8.jp/public/aaencode.html
+
+Test obfuscated code in: https://jsconsole.com/
 
 ---
 

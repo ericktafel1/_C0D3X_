@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Deserialization"
             }
+          },
+          {
+            "id": "5d74cc329532db28",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Info.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Info"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -80,7 +95,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 373.5
+    "width": 272.5
   },
   "right": {
     "id": "4f725853a0d09020",
@@ -185,16 +200,26 @@
       "bases:Create new base": false
     }
   },
-  "active": "ca901a89eb689cbd",
+  "active": "5d74cc329532db28",
   "lastOpenFiles": [
+    "N3CR0-NOMNOM/2. Web Applications/9. Deserialization/Deserialization.md",
+    "N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Info.md",
+    "N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Scanners.md",
+    "N3CR0-NOMNOM/2. Web Applications/1. Injection/Command Injection.md",
+    "N3CR0-NOMNOM/2. Web Applications/1. Injection/XML eXternal Entities (XXE).md",
+    "C0D3X/02 Web/Web App Methodology.md",
+    "N3CR0-NOMNOM/2. Web Applications/1. Injection/3. Cypher Injection.md",
+    "C0D3X/02 Web/File Inclusion Uploads and Git Exposure.md",
+    "C0D3X/02 Web/SQLi.md",
+    "C0D3X/02 Web/Auth+Sessions.md",
+    "C0D3X/02 Web/Client-Side+Office Payload Delivery.md",
+    "C0D3X/02 Web/CMS+APIs.md",
+    "C0D3X/02 Web/Content Discovery + VHosts.md",
     "N3CR0-NOMNOM/1. Network/6. Phishing/WebDAV.md",
     "N3CR0-NOMNOM/5. Misc/Shellcode.md",
-    "N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Scanners.md",
     "N3CR0-NOMNOM/5. Misc/Password Cracking.md",
     "N3CR0-NOMNOM/1. Network/4. Post Exploitation/1. Privilege Escalation/Windows/Evasion.md",
     "N3CR0-NOMNOM/2. Web Applications/11. Web Services and APIs/API Attacks.md",
-    "N3CR0-NOMNOM/2. Web Applications/9. Deserialization/Deserialization.md",
-    "C0D3X/02 Web/Web App Methodology.md",
     "_HTB_MODULES/Web Fuzzing.md",
     "_HTB_MODULES/Active Directory Enumeration & Attacks.md",
     "N3CR0-NOMNOM/2. Web Applications/Misc/Cheatsheet.md",
@@ -204,17 +229,7 @@
     "C0D3X/14 Mobile",
     "_HTB_MODULES/Intro to Academy's Purple Modules.md",
     "_HTB_MODULES/Android Fundamentals.md",
-    "_HTB_MODULES/Advanced Deserialization Attacks.md",
-    "_HTB_MODULES/Active Directory Trust Attacks.md",
     "N3CR0-NOMNOM/Untitled.base",
-    "N3CR0-NOMNOM/4. Mobile/1. Android/Using Frida Without Root.md",
-    "N3CR0-NOMNOM/4. Mobile/1. Android/Rooting an Android Device.md",
-    "_HTB_MODULES/Attacking Enterprise Networks.md",
-    "_HTB_MODULES/Attacking Web Applications with Ffuf.md",
-    "_HTB_MODULES/API Attacks.md",
-    "_HTB_MODULES/Abusing HTTP Misconfigurations.md",
-    "N3CR0-NOMNOM/2. Web Applications/4. File Inclusion/4. Automation and Prevention.md",
-    "N3CR0-NOMNOM/2. Web Applications/2. Broken Auth/2. Authentication Bypass.md",
     "C0D3X",
     "_HTB_MODULES",
     "HTB Modules",
