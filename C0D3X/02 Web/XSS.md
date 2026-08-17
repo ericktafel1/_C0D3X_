@@ -1,5 +1,5 @@
 
-1. **DOM-based (Non-Persistent) -** directly in the browser (e.g. through client-side HTTP parameters or anchor tags)
+1. **DOM-based (Non-Persistent) -** directly in the browser (e.g. through client-side HTTP parameters or anchor tags). Processed on client-side.
 2. **Reflected (Non-Persistent) -** Displayed on the page after being processed by backend server, without being stored (e.g. search result or error message.) Put in URL parameter and phish
 3. **Stored (Persistent) -** Most critical. User input is stored on the back-end database and then displayed upon retrieval (e.g. posts or comments)
 
