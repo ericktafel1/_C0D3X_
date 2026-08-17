@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Info.md",
+                "file": "C0D3X/02 Web/XSS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Info"
+              "title": "XSS"
             }
           }
         ],
@@ -202,8 +202,9 @@
   },
   "active": "5d74cc329532db28",
   "lastOpenFiles": [
-    "N3CR0-NOMNOM/2. Web Applications/9. Deserialization/Deserialization.md",
     "N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Info.md",
+    "C0D3X/02 Web/XSS.md",
+    "N3CR0-NOMNOM/2. Web Applications/9. Deserialization/Deserialization.md",
     "N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Scanners.md",
     "N3CR0-NOMNOM/2. Web Applications/1. Injection/Command Injection.md",
     "N3CR0-NOMNOM/2. Web Applications/1. Injection/XML eXternal Entities (XXE).md",
@@ -228,7 +229,6 @@
     "C0D3X/14 Mobile/Android.md",
     "C0D3X/14 Mobile",
     "_HTB_MODULES/Intro to Academy's Purple Modules.md",
-    "_HTB_MODULES/Android Fundamentals.md",
     "N3CR0-NOMNOM/Untitled.base",
     "C0D3X",
     "_HTB_MODULES",
