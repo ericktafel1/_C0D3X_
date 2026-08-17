@@ -53,6 +53,7 @@ document.write()
 ```
 DOM.innerHTML
 ```
+- `innerHTML` will not allow the use of `<script>` but allows others...
 
 ```
 DOM.outerHTML
