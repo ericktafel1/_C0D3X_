@@ -1,5 +1,6 @@
 
 1. **DOM-based (Non-Persistent) -** directly in the browser (e.g. through client-side HTTP parameters or anchor tags). Processed on client-side.
+	1. Input parameter in the URL using a hashtag `#` means that this is a client-side parameter that is completely processed on the browser, `DOM-based XSS`.
 2. **Reflected (Non-Persistent) -** Displayed on the page after being processed by backend server, without being stored (e.g. search result or error message.) Phish with URL, hosting malicious XSS javascript payload or XSS in URL parameter, etc. 
 3. **Stored (Persistent) -** Most critical. User input is stored on the back-end database and then displayed upon retrieval (e.g. posts or comments)
 
