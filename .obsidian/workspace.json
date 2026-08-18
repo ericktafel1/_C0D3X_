@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C0D3X/02 Web/XSS.md",
+                "file": "_HTB_MODULES/Prompt Injection Attacks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "XSS"
+              "title": "Prompt Injection Attacks"
             }
           },
           {
@@ -69,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "garak",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,7 +90,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -201,8 +202,13 @@
   },
   "active": "ca901a89eb689cbd",
   "lastOpenFiles": [
-    "C0D3X/02 Web/CMS+APIs.md",
+    "C0D3X/13 AI/Cheatsheet - AI Red Team.md",
+    "C0D3X/13 AI/README.md",
+    "C0D3X/13 AI/Recon.md",
+    "C0D3X/13 AI/ML - OWASP Top 10.md",
+    "C0D3X/13 AI/LLM - OWASP Top 10.md",
     "C0D3X/02 Web/XSS.md",
+    "C0D3X/02 Web/CMS+APIs.md",
     "C0D3X/02 Web/Client-Side+Office Payload Delivery.md",
     "C0D3X/02 Web/Auth+Sessions.md",
     "C0D3X/02 Web/0_Web App Methodology.md",
@@ -222,11 +228,6 @@
     "N3CR0-NOMNOM/1. Network/6. Phishing/WebDAV.md",
     "N3CR0-NOMNOM/5. Misc/Shellcode.md",
     "N3CR0-NOMNOM/5. Misc/Password Cracking.md",
-    "N3CR0-NOMNOM/1. Network/4. Post Exploitation/1. Privilege Escalation/Windows/Evasion.md",
-    "N3CR0-NOMNOM/2. Web Applications/11. Web Services and APIs/API Attacks.md",
-    "_HTB_MODULES/Web Fuzzing.md",
-    "_HTB_MODULES/Active Directory Enumeration & Attacks.md",
-    "N3CR0-NOMNOM/2. Web Applications/Misc/Cheatsheet.md",
     "C0D3X/14 Mobile",
     "N3CR0-NOMNOM/Untitled.base",
     "C0D3X",

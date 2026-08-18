@@ -143,7 +143,7 @@ $("#todo").html('New Text'); // jQuery function to change specific element
 document.getElementsByTagName('body')[0].innerHTML = "New Text" // Change the whole body
 
 // Minify the code and add to XSS payload, e.g.:
-<script>document.getElementsByTagName('body')[0].innerHTML = '<center><h1 style="color: white">Cyber Security Training</h1><p style="color: white">by <img src="https://academy.hackthebox.com/images/logo-htb.svg" height="25px" alt="HTB Academy"> </p></center>'</script>
+<script>document.getElementsByTagName('body')[0].innerHTML = '<center><h1 style="color: white">Cartman says hi!</h1><p style="color: white"><img src="https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/cartman.svg" height="25px" alt="Cartman"> </p></center>'</script>
 ```
 
 ---
