@@ -211,3 +211,81 @@ https://utf-8.jp/public/jjencode.html
 https://utf-8.jp/public/aaencode.html
 
 Test obfuscated code in: https://jsconsole.com/
+
+---
+## Mitigations / Remediations
+
+#### Front-end
+1. Input Validation
+```javascript
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test($("#login input[name=email]").val());
+}
+```
+2. Input Sanitization - [DOMPurify](https://github.com/cure53/DOMPurify)
+```javascript
+<script type="text/javascript" src="dist/purify.min.js"></script>
+let clean = DOMPurify.sanitize( dirty );
+```
+3. Direct Input
+```html
+<!-- Vulnerable HTML tags -->
+JavaScript code <script></script>
+CSS Style Code <style></style>
+Tag/Attribute Fields <div name='INPUT'></div>
+HTML Comments <!-- -->
+```
+
+```JavaScript
+// Vulnerable JavaScript functions
+DOM.innerHTML
+DOM.outerHTML
+document.write()
+document.writeln()
+document.domain
+```
+
+```JavaScript
+// Vulnerable jQuery functions
+html()
+parseHTML()
+add()
+append()
+prepend()
+after()
+insertAfter()
+before()
+insertBefore()
+replaceAll()
+replaceWith()
+```
+
+#### Back-end
+1. Input Validation
+```php
+if (filter_var($_GET['email'], FILTER_VALIDATE_EMAIL)) {
+    // do task
+} else {
+    // reject input - do not display it
+}
+```
+2. Input Sanitization
+```php
+addslashes($_GET['email'])
+```
+
+```JavaScript
+// For NodeJS Backend, we can use the same method as Front-end: https://github.com/cure53/DOMPurify
+import DOMPurify from 'dompurify';
+var clean = DOMPurify.sanitize(dirty);
+```
+3. Output HTML Encoding
+```php
+htmlentities($_GET['email']);
+```
+
+```JavaScript
+import encode from 'html-entities';
+encode('<'); // -> '&lt;'
+```
