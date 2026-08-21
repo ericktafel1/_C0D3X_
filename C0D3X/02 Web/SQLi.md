@@ -37,7 +37,7 @@ mysql> UPDATE logins SET password = 'change_password' WHERE id > 1;
 ```
 
 ---
-## Quick Payloads and First Probes
+## SQLi Payloads
 ### SIMPLE
 
 ```sql
