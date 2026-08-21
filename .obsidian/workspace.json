@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C0D3X/02 Web/XSS.md",
+                "file": "C0D3X/02 Web/SQLi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "XSS"
+              "title": "SQLi"
             }
           },
           {
@@ -215,8 +215,8 @@
   },
   "active": "ca901a89eb689cbd",
   "lastOpenFiles": [
-    "C0D3X/05 Linux/Privilege Escalation.md",
     "C0D3X/02 Web/XSS.md",
+    "C0D3X/05 Linux/Privilege Escalation.md",
     "C0D3X/13 AI/Cheatsheet - AI Red Team.md",
     "N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Test Payloads.md",
     "N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Scanners.md",

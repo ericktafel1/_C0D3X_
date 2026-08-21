@@ -74,11 +74,11 @@ You can potentially elicit error messages that leak sensitive data returned by y
 
 You can use batched queries to execute multiple queries in succession. Note that while the subsequent queries are executed, the results are not returned to the application. Hence this technique is primarily of use in relation to blind vulnerabilities where you can use a second query to trigger a DNS lookup, conditional error, or time delay.
 
-| Oracle | `                      Does not support batched queries.                  ` |
-| --- | --- |
-| Microsoft | `                      QUERY-1-HERE; QUERY-2-HERE                       QUERY-1-HERE QUERY-2-HERE                  ` |
-| PostgreSQL | `                      QUERY-1-HERE; QUERY-2-HERE                  ` |
-| MySQL | `                      QUERY-1-HERE; QUERY-2-HERE                  ` |
+| Oracle     | `                  Does not support batched queries.                  ` |
+| ---------- | ----------------------------------------------------------------------- |
+| Microsoft  | `                      QUERY-1-HERE; QUERY-2-HERE                  `    |
+| PostgreSQL | `                      QUERY-1-HERE; QUERY-2-HERE                  `    |
+| MySQL      | `                      QUERY-1-HERE; QUERY-2-HERE                  `    |
 
 #### Note
 
