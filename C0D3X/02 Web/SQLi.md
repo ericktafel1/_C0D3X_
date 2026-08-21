@@ -3,6 +3,28 @@
 Dense operator workflow page for manual SQLi validation and automated exploitation.
 Keep payload shaping, DB-specific behavior, file/system interaction, and post-enumeration decision support in one place.
 
+```bash
+# Login
+mysql -u root -p
+mysql -u root -p<password>
+mysql -u root -h docker.hackthebox.eu -P 3306 -p 
+```
+
+```MySQL
+# Basic Usage
+mysql> SHOW DATABASES;
+mysql> USE users;
+mysql> CREATE TABLE logins (
+	    id INT NOT NULL AUTO_INCREMENT,
+	    username VARCHAR(100) UNIQUE NOT NULL,
+	    password VARCHAR(100) NOT NULL,
+	    date_of_joining DATETIME DEFAULT NOW(),
+	    PRIMARY KEY (id)
+	    );
+mysql> SHOW TABLES;
+mysql> DESCRIBE logins;
+```
+
 ## SQL injection cheat sheet
 
 This SQL injection cheat sheet contains examples of useful syntax that you can use to perform a variety of tasks that often arise when performing SQL injection attacks.
@@ -11,11 +33,11 @@ This SQL injection cheat sheet contains examples of useful syntax that you can u
 
 You can concatenate together multiple strings to make a single string.
 
-| Oracle | `                      'foo'\|\|'bar'                  ` |
-| --- | --- | --- | --- |
-| Microsoft | `                      'foo'+'bar'                  ` |
-| PostgreSQL | `                      'foo'\|\|'bar'                  ` |
-| MySQL | `'foo' 'bar'` \[Note the space between the two strings\]   `CONCAT('foo','bar')` |
+| Oracle     | `                      'foo'\|\|'bar'                  `                         |     |     |
+| ---------- | -------------------------------------------------------------------------------- | --- | --- |
+| Microsoft  | `                      'foo'+'bar'                  `                            |     |     |
+| PostgreSQL | `                      'foo'\|\|'bar'                  `                         |     |     |
+| MySQL      | `'foo' 'bar'` \[Note the space between the two strings\]   `CONCAT('foo','bar')` |     |     |
 
 ## Substring
 
