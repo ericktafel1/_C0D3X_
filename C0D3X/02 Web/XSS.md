@@ -289,3 +289,10 @@ htmlentities($_GET['email']);
 import encode from 'html-entities';
 encode('<'); // -> '&lt;'
 ```
+4. Server Configuration
+- Using HTTPS across the entire domain.
+- Using XSS prevention headers.
+- Using the appropriate Content-Type for the page, like `X-Content-Type-Options=nosniff`.
+- Using `Content-Security-Policy` options, like `script-src 'self'`, which only allows locally hosted scripts.
+- Using the `HttpOnly` and `Secure` cookie flags to prevent JavaScript from reading cookies and only transport them over HTTPS.
+- A good WAF
