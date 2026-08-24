@@ -67,7 +67,6 @@ mysql> SELECT * FROM logins WHERE username != 'john' AND id > 1;
 # 
 ;
 )
-
 -- Payloads -- 
 admin' or '1'='1
 ' or '1'='1
