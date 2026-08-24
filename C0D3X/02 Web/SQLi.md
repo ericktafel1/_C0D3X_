@@ -58,7 +58,8 @@ mysql> SELECT * FROM logins WHERE username != 'john' AND id > 1;
 
 ---
 ## SQLi Payloads
-### QUICK PAYLOADS - [more payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#authentication-bypass)
+ - [more payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#authentication-bypass)
+### QUICK PAYLOADS
 
 ```sql
 -- Discover SQLi with these 5 (URL encode also): ---
