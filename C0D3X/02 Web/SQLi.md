@@ -7,7 +7,8 @@ Keep payload shaping, DB-specific behavior, file/system interaction, and post-en
 # Login
 mysql -u root -p
 mysql -u root -p<password>
-mysql -u root -h docker.hackthebox.eu -P 3306 -p 
+mysql -u root -h docker.hackthebox.eu -P 3306 -p
+mariadb -u root -h 154.57.164.65 -P 31538 -ppassword --skip-ssl
 ```
 
 ```MySQL
