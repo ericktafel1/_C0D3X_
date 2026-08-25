@@ -173,7 +173,7 @@ admin') or '1'='1'/*
 ### UNION
 
 ```sql
-SELECT a, b FROM table1 UNION SELECT c, d FROM table2    --- Basic usage
+SELECT a, b FROM table1 UNION SELECT c, d FROM table2    --- Basic usage, must be same # columns and same data type
 --- method 1 to determine # of columns
 ' ORDER BY 1--
 ' ORDER BY 2--
