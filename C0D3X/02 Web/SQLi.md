@@ -54,6 +54,11 @@ mysql> SELECT 1 = 1 || 'test' = 'abc';
 mysql> SELECT 1 != 1;
 mysql> SELECT * FROM logins WHERE username != 'john';
 mysql> SELECT * FROM logins WHERE username != 'john' AND id > 1;
+
+# Fingerprint Database
+SELECT @@version                 -- MySQL, MariaDB
+SELECT POW(1,1)
+SELECT SLEEP(5)
 ```
 
 ---
