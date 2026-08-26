@@ -13,52 +13,55 @@ mariadb -u root -h 154.57.164.65 -P 31538 -ppassword --skip-ssl
 
 ```MySQL
 # Basic Usage
-mysql> SHOW DATABASES;
-mysql> USE users;
-mysql> CREATE TABLE logins (
+SHOW DATABASES;
+USE users;
+CREATE TABLE logins (
 	    id INT NOT NULL AUTO_INCREMENT,
 	    username VARCHAR(100) UNIQUE NOT NULL,
 	    password VARCHAR(100) NOT NULL,
 	    date_of_joining DATETIME DEFAULT NOW(),
 	    PRIMARY KEY (id)
 	    );
-mysql> SHOW TABLES;
-mysql> DESCRIBE logins;
-mysql> INSERT INTO logins VALUES(1, 'admin', 'p@ssw0rd', '2020-07-02');
-mysql> INSERT INTO logins(username, password) VALUES('administrator', 'adm1n_p@ss');
-mysql> INSERT INTO logins(username, password) VALUES ('john', 'john123!'), ('tom', 'tom123!');
-mysql> SELECT * FROM users;
-mysql> SELECT column1, column2 FROM table_name;
-mysql> SELECT username,password FROM logins;
-mysql> DROP TABLE logins;
-mysql> ALTER TABLE logins RENAME COLUMN newColumn TO newerColumn;
-mysql> ALTER TABLE logins MODIFY newerColumn DATE;
-mysql> ALTER TABLE logins DROP newerColumn;
-mysql> UPDATE logins SET password = 'change_password' WHERE id > 1;
-mysql> SELECT * FROM logins ORDER BY password;
-mysql> SELECT * FROM logins ORDER BY password ASC;
-mysql> SELECT * FROM logins ORDER BY password DESC;
-mysql> SELECT * FROM logins ORDER BY password DESC, id ASC;
-mysql> SELECT * FROM logins LIMIT 2;
-mysql> SELECT * FROM logins LIMIT 1, 2;
-mysql> SELECT * FROM logins WHERE id > 1;
-mysql> SELECT * FROM logins where username = 'admin';
-mysql> SELECT * FROM logins WHERE username LIKE 'admin%';
-mysql> SELECT * FROM logins WHERE username like '___';
-MariaDB> select * from employees WHERE first_name LIKE 'Bar%' AND hire_date = '1990-01-01';
-mysql> SELECT 1 = 1 AND 'test' = 'test';
-mysql> SELECT 1 = 1 OR 'test' = 'abc';
-mysql> SELECT NOT 1 = 1;
-mysql> SELECT 1 = 1 && 'test' = 'abc';
-mysql> SELECT 1 = 1 || 'test' = 'abc';
-mysql> SELECT 1 != 1;
-mysql> SELECT * FROM logins WHERE username != 'john';
-mysql> SELECT * FROM logins WHERE username != 'john' AND id > 1;
+SHOW TABLES;
+DESCRIBE logins;
+INSERT INTO logins VALUES(1, 'admin', 'p@ssw0rd', '2020-07-02');
+INSERT INTO logins(username, password) VALUES('administrator', 'adm1n_p@ss');
+INSERT INTO logins(username, password) VALUES ('john', 'john123!'), ('tom', 'tom123!');
+SELECT * FROM users;
+SELECT column1, column2 FROM table_name;
+SELECT username,password FROM logins;
+DROP TABLE logins;
+ALTER TABLE logins RENAME COLUMN newColumn TO newerColumn;
+ALTER TABLE logins MODIFY newerColumn DATE;
+ALTER TABLE logins DROP newerColumn;
+UPDATE logins SET password = 'change_password' WHERE id > 1;
+SELECT * FROM logins ORDER BY password;
+SELECT * FROM logins ORDER BY password ASC;
+SELECT * FROM logins ORDER BY password DESC;
+SELECT * FROM logins ORDER BY password DESC, id ASC;
+SELECT * FROM logins LIMIT 2;
+SELECT * FROM logins LIMIT 1, 2;
+SELECT * FROM logins WHERE id > 1;
+SELECT * FROM logins where username = 'admin';
+SELECT * FROM logins WHERE username LIKE 'admin%';
+SELECT * FROM logins WHERE username like '___';
+select * from employees WHERE first_name LIKE 'Bar%' AND hire_date = '1990-01-01';
+SELECT 1 = 1 AND 'test' = 'test';
+SELECT 1 = 1 OR 'test' = 'abc';
+SELECT NOT 1 = 1;
+SELECT 1 = 1 && 'test' = 'abc';
+SELECT 1 = 1 || 'test' = 'abc';
+SELECT 1 != 1;
+SELECT * FROM logins WHERE username != 'john';
+SELECT * FROM logins WHERE username != 'john' AND id > 1;
 
 # Fingerprint Database
-SELECT @@version                 -- MySQL, MariaDB
-SELECT POW(1,1)
-SELECT SLEEP(5)
+SELECT @@version                 -- MySQL / MariaDB, tells us version
+SELECT POW(1,1)                 -- MySQL / MariaDB, outputs 1 if MySQL / MariaDB, else ERROR
+SELECT SLEEP(5)                 -- MySQL / MariaDB, delays page response, if MySQL / MariaDB, else no delay
+SELECT * FROM <database_name>.<table_name>;                 -- MySQL / MariaDB
+SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA;                 -- MySQL / MariaDB
+
 ```
 
 ---
