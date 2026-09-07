@@ -1,52 +1,24 @@
 {
   "main": {
-    "id": "4013863ee2cf21a2",
+    "id": "fca365a49b845236",
     "type": "split",
     "children": [
       {
-        "id": "3bd8a404ccd51c22",
+        "id": "b7a4a4059bfa2578",
         "type": "tabs",
         "children": [
           {
-            "id": "ca901a89eb689cbd",
+            "id": "64a7ad9c6c4c711a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C0D3X/02 Web/SQLi.md",
+                "file": "_HTB_MODULES/Advanced SQL Injections.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SQLi"
-            }
-          },
-          {
-            "id": "5d74cc329532db28",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "C0D3X/13 AI/Cheatsheet - AI Red Team.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Cheatsheet - AI Red Team"
-            }
-          },
-          {
-            "id": "dff98aa4749e17ba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "C0D3X/05 Linux/Privilege Escalation.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Privilege Escalation"
+              "title": "Advanced SQL Injections"
             }
           }
         ]
@@ -55,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "6fbd44ce8fd6f1de",
+    "id": "312e3b14c5876fe4",
     "type": "split",
     "children": [
       {
-        "id": "4fa5e9990c653e86",
+        "id": "a39b83bc6fd79c79",
         "type": "tabs",
         "children": [
           {
-            "id": "436d36a7eba98628",
+            "id": "eb2a2211dbd1b58f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -78,12 +50,12 @@
             }
           },
           {
-            "id": "30e9c51188b4fe35",
+            "id": "e1caf0abedef40f4",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "systemd",
+                "query": "SQLi",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -95,7 +67,7 @@
             }
           },
           {
-            "id": "52946725ec5e389b",
+            "id": "774b2e939eacbd2c",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -108,23 +80,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 228.5
+    "width": 300
   },
   "right": {
-    "id": "4f725853a0d09020",
+    "id": "3387ccba916ce3b9",
     "type": "split",
     "children": [
       {
-        "id": "ee3e3e0b53caf670",
+        "id": "af942b8826ee771b",
         "type": "tabs",
         "children": [
           {
-            "id": "9fb1d2d57fa0ea2d",
+            "id": "3592da7be412ec65",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "06 Services/MSSQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,25 +105,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for MSSQL"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "6a4682b877ed65f5",
+            "id": "cf0651e88cc83762",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "06 Services/MSSQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from MSSQL"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "61329876c4de9236",
+            "id": "e7985d02c23da069",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -167,7 +137,7 @@
             }
           },
           {
-            "id": "1f579d1557c17b4a",
+            "id": "f1b7d117ec8171f8",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -181,18 +151,17 @@
             }
           },
           {
-            "id": "75834308c2a6900b",
+            "id": "4aeaa8e1ce0e0e92",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "06 Services/MSSQL.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of MSSQL"
+              "title": "Outline"
             }
           }
         ]
@@ -213,44 +182,44 @@
       "bases:Create new base": false
     }
   },
-  "active": "ca901a89eb689cbd",
+  "active": "eb2a2211dbd1b58f",
   "lastOpenFiles": [
-    "C0D3X/05 Linux/Privilege Escalation.md",
-    "C0D3X/13 AI/Cheatsheet - AI Red Team.md",
-    "_HTB_MODULES/Using the Metasploit Framework.md",
-    "_HTB_MODULES/Vulnerability Assessment.md",
+    "_HTB_MODULES/Attacking Common Applications.md",
+    "C0D3X/02 Web/Content Discovery + VHosts.md",
+    "_HTB_MODULES/Advanced XSS and CSRF Exploitation.md",
+    "N3CR0-NOMNOM/1. Network/1. Reconnaissance/Active Directory.md",
+    "N3CR0-NOMNOM/1. Network/1. Reconnaissance/DNS/3. gobuster.md",
+    "N3CR0-NOMNOM/2. Web Applications/3. Server Side Attacks/2. Server-Side Includes.md",
+    "N3CR0-NOMNOM/2. Web Applications/3. Server Side Attacks/1. Server-Side Request Forgery.md",
+    "C0D3X/02 Web/Web App Methodology.md",
+    "_HTB_MODULES/Web Fuzzing.md",
+    "_HTB_MODULES/YARA & Sigma for SOC Analysts.md",
+    "_HTB_MODULES/Working with IDS-IPS.md",
+    "_HTB_MODULES/Wired Equivalent Privacy (WEP) Attacks.md",
+    "_HTB_MODULES/Windows Lateral Movement.md",
+    "_HTB_MODULES/Windows Fundamentals.md",
+    "_HTB_MODULES/Windows Event Logs & Finding Evil.md",
+    "_HTB_MODULES/Windows Attacks & Defense.md",
+    "_HTB_MODULES/Wi-Fi Penetration Testing Basics.md",
     "_HTB_MODULES/Wi-Fi Evil Twin Attacks.md",
-    "_HTB_MODULES/Password Attacks.md",
-    "C0D3X/10 Tool Box/Operator Quick Hits - S1R3N.md",
-    "_HTB_CHEATSHEETS/Linux Fundamentals.md",
-    "_HTB_MODULES/Linux Fundamentals.md",
-    "C0D3X/02 Web/SQLi.md",
-    "C0D3X/04 Windows/Privilege Escalation.md",
-    "C0D3X/04 Windows/PowerShell.md",
-    "C0D3X/04 Windows/LNK and Client-Side.md",
-    "C0D3X/04 Windows/Host Enumeration and Access.md",
-    "C0D3X/04 Windows/Bypasses and Tradecraft.md",
-    "C0D3X/02 Web/Deserialization.md",
-    "C0D3X/02 Web/XSS.md",
-    "N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Test Payloads.md",
-    "N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Scanners.md",
-    "N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Info.md",
-    "_HTB_MODULES/Cross-Site Scripting (XSS).md",
-    "_HTB_MODULES/Server-side Attacks.md",
-    "C0D3X/10 Tool Box/Links and References.md",
-    "C0D3X/06 Services/Redis.md",
-    "_HTB_MODULES/Footprinting.md",
-    "C0D3X/13 AI/LLM - OWASP Top 10.md",
-    "C0D3X/14 Mobile",
-    "N3CR0-NOMNOM/Untitled.base",
-    "C0D3X",
+    "_HTB_MODULES/Whitebox Pentesting 101- Command Injection.md",
+    "_HTB_MODULES/Whitebox Attacks.md",
+    "_HTB_MODULES/Web Requests.md",
+    "_HTB_MODULES/Web Attacks.md",
+    "_HTB_MODULES/Vulnerability Assessment.md",
+    "_HTB_MODULES/Using the Metasploit Framework.md",
+    "_HTB_MODULES/Using Web Proxies.md",
+    "_HTB_MODULES/Using CrackMapExec.md",
     "_HTB_MODULES",
-    "HTB Modules",
     "_HTB_CHEATSHEETS/modules.txt",
     "_HTB_CHEATSHEETS",
-    "copy-pasta-2.0/Untitled 1.base",
-    "copy-pasta-2.0/Untitled 2.base",
-    "02 Web/CWES-Course",
+    "N3CR0-NOMNOM/Untitled.base",
+    "N3CR0-NOMNOM/6. Wireless/Aircrack-NG",
+    "N3CR0-NOMNOM/6. Wireless",
+    "N3CR0-NOMNOM/5. Misc/Metasploit",
+    "N3CR0-NOMNOM/5. Misc",
+    "N3CR0-NOMNOM/4. Mobile/1. Android",
+    "N3CR0-NOMNOM/4. Mobile",
     "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723132618.png",
     "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723130557.png",
     "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723125914.png",
