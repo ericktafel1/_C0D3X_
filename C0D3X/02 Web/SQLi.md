@@ -399,11 +399,14 @@ sqlmap 'http://www.example.com/?id=1' -H 'User-Agent: Mozilla/5.0 (X11; Ubuntu; 
 # SQLMap with POST request specifying an injection point with asterisk
 sqlmap 'http://www.example.com/' --data 'uid=1*&name=test'
 
+# Passing an HTTP request file to SQLMap. Can specify injection point within the txt file with asterisk (e.g. `/?id=*`)
+sqlmap -r req.txt
+
 # Specifying a Cookie Header
 sqlmap ... --cookie='PHPSESSID=ab4530f4a7d10448457fa8b0eadac29c'
+sqlmap ... -H='Cookie:PHPSESSID=ab4530f4a7d10448457fa8b0eadac29c'
 
-# Passing an HTTP request file to SQLMap. Can specify injection point within the txt file with `*` (e.g. `/?id=*`)
-sqlmap -r req.txt
+# Use `--random-agent` and/or `--mobile` to evade detection.
 
 # Specifying a PUT request
 sqlmap -u www.target.com --data='id=1' --method PUT
