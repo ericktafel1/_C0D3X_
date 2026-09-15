@@ -191,7 +191,7 @@ sqlmap -r req.txt --batch --dump --parse-errors -t /tmp/traffic.txt -v 6
 # Debug errors with proxy
 sqlmap -r req.txt --batch --dump --parse-errors -t /tmp/traffic.txt -v 6 --proxy
 
-# Tamper Scripts:
+# Most Notable Tamper Scripts:
 `0eunion`	Replaces instances of UNION with e0UNION
 `base64encode`	Base64-encodes all characters in a given payload
 `between`	Replaces greater than operator (>) with NOT BETWEEN 0 AND # and equals operator (=) with BETWEEN # AND #
