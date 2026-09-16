@@ -19,7 +19,8 @@ whatweb http://192.168.123.100:9000/
 ```
 
 4. Check the website using [web-check.as93.net](https://web-check.as93.net/).
-5. Use `httpx` for detailed information:
+5. Determine language - Navigate to `index.html`, `index.php`, `index.asp`/`index.aspx`, `index.jsp`/`index.jspx`, `index.cgi`, `index.pl`, `index.py`, `index.rb`, `index.cfm`
+6. Use `httpx` for detailed information:
 
 ```bash
 httpx -u http://192.168.123.100:9000/ -td -sc -cl -ct -location -rt -lc -wc -title -server -method -websocket -ip -cname -asn -cdn -probe
