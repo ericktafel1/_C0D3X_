@@ -1,3 +1,7 @@
+Determine language - `feroxbuster` or `burp` to navigate `index.html`, `index.php`, `index.asp`/`index.aspx`, `index.jsp`/`index.jspx`, `index.cgi`, `index.pl`, `index.py`, `index.rb`, `index.cfm`
+	[Web Extension Wordlist](https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/web-extensions.txt)
+
+---
 # File Inclusion Uploads and Git Exposure
 
 File read/write abuse, LFI/RFI, wrapper abuse, upload bypasses, web shells, and exposed Git data.

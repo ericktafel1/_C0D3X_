@@ -27,7 +27,8 @@ httpx -u http://192.168.123.100:9000/ -td -sc -cl -ct -location -rt -lc -wc -tit
 
 6. Use browser extensions like Wappalyzer and Katana.
 7. Google the exact website title for additional information.
-8. Determine language - `feroxbuster` or navigate to `index.html`, `index.php`, `index.asp`/`index.aspx`, `index.jsp`/`index.jspx`, `index.cgi`, `index.pl`, `index.py`, `index.rb`, `index.cfm`
+8. Determine language - `feroxbuster` or `burp` to navigate `index.html`, `index.php`, `index.asp`/`index.aspx`, `index.jsp`/`index.jspx`, `index.cgi`, `index.pl`, `index.py`, `index.rb`, `index.cfm`
+	1. [Web Extension Wordlist](https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/web-extensions.txt)
 9. Run a small `feroxbuster` scan:
 
 ```bash
