@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C0D3X/02 Web/SQLi.md",
+                "file": "C0D3X/02 Web/Auth+Sessions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SQLi"
+              "title": "Auth+Sessions"
+            }
+          },
+          {
+            "id": "09c5fb303264b45a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C0D3X/02 Web/Command Injection.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Command Injection"
             }
           },
           {
@@ -49,7 +63,8 @@
               "title": "Privilege Escalation"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -83,7 +98,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "whois",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -104,8 +119,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -214,11 +228,22 @@
       "bases:Create new base": false
     }
   },
-  "active": "ca901a89eb689cbd",
+  "active": "09c5fb303264b45a",
   "lastOpenFiles": [
-    "C0D3X/05 Linux/Privilege Escalation.md",
-    "C0D3X/02 Web/SQLi.md",
+    "C0D3X/02 Web/Deserialization.md",
+    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/Command Injection.md",
+    "C0D3X/02 Web/Command Injection.md",
+    "C0D3X/02 Web/File Inclusion Uploads and Git Exposure.md",
+    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/1. SQL Injection/SQLMAP.md",
+    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/1. SQL Injection/SQL Injection.md",
+    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/3. Cypher Injection.md",
+    "C0D3X/02 Web/Auth+Sessions.md",
     "C0D3X/02 Web/0_Web App Methodology.md",
+    "C0D3X/02 Web/XSS.md",
+    "C0D3X/02 Web/Client-Side+Office Payload Delivery.md",
+    "C0D3X/02 Web/CMS+APIs.md",
+    "C0D3X/02 Web/SQLi.md",
+    "C0D3X/05 Linux/Privilege Escalation.md",
     "C0D3X/13 AI/Cheatsheet - AI Red Team.md",
     "_HTB_CHEATSHEETS/SQLMap Essentials.md",
     "_HTB_MODULES/Using the Metasploit Framework.md",
@@ -231,19 +256,8 @@
     "C0D3X/04 Windows/Privilege Escalation.md",
     "C0D3X/04 Windows/PowerShell.md",
     "C0D3X/04 Windows/LNK and Client-Side.md",
-    "C0D3X/04 Windows/Host Enumeration and Access.md",
-    "C0D3X/04 Windows/Bypasses and Tradecraft.md",
-    "C0D3X/02 Web/Deserialization.md",
-    "C0D3X/02 Web/XSS.md",
-    "N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Test Payloads.md",
-    "N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Scanners.md",
-    "N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Info.md",
-    "_HTB_MODULES/Cross-Site Scripting (XSS).md",
-    "_HTB_MODULES/Server-side Attacks.md",
-    "C0D3X/10 Tool Box/Links and References.md",
-    "C0D3X/06 Services/Redis.md",
     "C0D3X/14 Mobile",
-    "N3CR0-NOMNOM/Untitled.base",
+    "C0D3X/_N3CR0-NOMNOM/Untitled.base",
     "C0D3X",
     "_HTB_MODULES",
     "HTB Modules",
@@ -252,15 +266,15 @@
     "copy-pasta-2.0/Untitled 1.base",
     "copy-pasta-2.0/Untitled 2.base",
     "02 Web/CWES-Course",
-    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723132618.png",
-    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723130557.png",
-    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723125914.png",
-    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250630122617.png",
-    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250328160016.png",
-    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250327111312.png",
-    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20250327110033.png",
-    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20240705134337.png",
-    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20240628115017.png",
-    "N3CR0-NOMNOM/1. Network/Images/Pasted image 20240628114633.png"
+    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723132618.png",
+    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723130557.png",
+    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723125914.png",
+    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20250630122617.png",
+    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20250328160016.png",
+    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20250327111312.png",
+    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20250327110033.png",
+    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20240705134337.png",
+    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20240628115017.png",
+    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20240628114633.png"
   ]
 }
