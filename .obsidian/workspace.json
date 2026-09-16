@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C0D3X/02 Web/fInc + fUp & Git.md",
+                "file": "C0D3X/_N3CR0-NOMNOM/2. Web Applications/5. File Uploads/1. File Uploads.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "fInc + fUp & Git"
+              "title": "1. File Uploads"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C0D3X/02 Web/SQLi.md",
+                "file": "C0D3X/02 Web/fInc + fUp & Git.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SQLi"
+              "title": "fInc + fUp & Git"
             }
           },
           {
@@ -63,7 +63,8 @@
               "title": "Command Injection"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -227,18 +228,25 @@
       "bases:Create new base": false
     }
   },
-  "active": "09c5fb303264b45a",
+  "active": "5d74cc329532db28",
   "lastOpenFiles": [
-    "C0D3X/02 Web/0_Web App Methodology.md",
-    "C0D3X/02 Web/fInc + fUp & Git.md",
     "C0D3X/02 Web/Command Injection.md",
     "C0D3X/02 Web/SQLi.md",
+    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/5. File Uploads/1. File Uploads.md",
+    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/5. File Uploads/0. Web Shells.md",
+    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/XML eXternal Entities (XXE).md",
     "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/Command Injection.md",
+    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/4. Prototype Pollution/Prototype Pollution.md",
+    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Test Payloads.md",
+    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Scanners.md",
+    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Info.md",
+    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/1. SQL Injection/SQL Injection.md",
+    "C0D3X/02 Web/fInc + fUp & Git.md",
+    "C0D3X/02 Web/0_Web App Methodology.md",
     "C0D3X/02 Web/Deserialization.md",
     "C0D3X/02 Web/Dir + VHosts.md",
     "C0D3X/02 Web/Auth+Sessions.md",
     "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/1. SQL Injection/SQLMAP.md",
-    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/1. SQL Injection/SQL Injection.md",
     "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/3. Cypher Injection.md",
     "C0D3X/02 Web/XSS.md",
     "C0D3X/02 Web/Client-Side+Office Payload Delivery.md",
@@ -248,13 +256,6 @@
     "_HTB_CHEATSHEETS/SQLMap Essentials.md",
     "_HTB_MODULES/Using the Metasploit Framework.md",
     "_HTB_MODULES/Vulnerability Assessment.md",
-    "_HTB_MODULES/Wi-Fi Evil Twin Attacks.md",
-    "_HTB_MODULES/Password Attacks.md",
-    "C0D3X/10 Tool Box/Operator Quick Hits - S1R3N.md",
-    "_HTB_CHEATSHEETS/Linux Fundamentals.md",
-    "_HTB_MODULES/Linux Fundamentals.md",
-    "C0D3X/04 Windows/Privilege Escalation.md",
-    "C0D3X/04 Windows/PowerShell.md",
     "C0D3X/14 Mobile",
     "C0D3X/_N3CR0-NOMNOM/Untitled.base",
     "C0D3X",

