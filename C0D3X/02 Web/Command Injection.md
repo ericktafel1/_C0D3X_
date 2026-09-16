@@ -13,7 +13,7 @@ Common Command Injection Operators:
 | Sub-Shell              | ` `` `                  | `%60%60`                  | Both **(Linux-only)** Command inside       |
 | Sub-Shell              | `$()`                   | `%24%28%29`               | Both **(Linux-only)** Command inside       |
 >[!Note:]
->Front-end may be validating user input. **Capture in Burp and Repeat the paylod to bypass front-end sanitization!**
+>Front-end may be validating user input. **Capture in Burp and Repeat the paylod to bypass front-end sanitization!** May as well try encoded/obfuscated payload off the bat: `$($(rev<<<'imaohw'))`
 
 Most common operators to be used for various injection types:
 
