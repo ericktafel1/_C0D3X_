@@ -66,3 +66,46 @@ e.g:
 >Other ways to [Bypass Space Filters](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Command%20Injection#bypass-without-space)
 
 ### Bypassing Other Blacklisted Characters
+
+Other commonly blacklisted characters include:
+- `/`
+- `\`
+#### Linux
+
+In Linux, we can bypass this filter by specifying specific characters in environment variables:
+
+| **Character** | **Command**         | **Notes**                                                   |
+| ------------- | ------------------- | ----------------------------------------------------------- |
+| `/`           | `${PATH:0:1}`       | We can do the same with `$HOME` and `$PWD` variable as well |
+| `;`           | `${LS_COLORS:10:1}` | Specifies the starting position and string to select        |
+
+>[!Note:]
+>We can get all environment variables with `printenv`
+#### Windows
+
+In Windows, we can *ALSO* bypass this filter by specifying specific characters in environment variables:
+
+| **Character** | **Command**             | **Notes**                                                   |
+| ------------- | ----------------------- | ----------------------------------------------------------- |
+| `\`           | `%HOMEPATH:~6,-11%%`    | Cmd - Specifies starting position and negative end position |
+| `\`           | `$env:HOMEPATH[0]`      | PowerShell - Specifies the first character                  |
+| `\`           | `$env:PROGRAMFILES[10]` | PowerShell - Specifies the 10th character                   |
+>[!Note:]
+>In PowerShell, we can get all environment variables with `Get-ChildItem Env:`
+
+#### Character Shifting
+The following Linux command shifts the character we pass by `1`. So, all we have to do is find the character in the ASCII table that is just before our needed character (we can get it with `man ascii`), then add it instead of `[` in the below example. This way, the last printed character would be the one we need:
+
+```bash
+man ascii     # \ is on 92, before it is [ on 91
+echo $(tr '!-}' '"-~'<<<[)
+\
+
+echo $(tr '!-}' '"-~'<<<:)
+;
+```
+
+>[!Note:]
+>We can use PowerShell commands to perform Character Shifting as well
+
+---
