@@ -27,12 +27,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_Click_Script.md",
+                "file": "1. Network/4. Post Exploitation/2. Lateral Movement/2. Active Directory/Kerberos/0. Kerberos Checklist.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_Click_Script"
+              "title": "0. Kerberos Checklist"
+            }
+          },
+          {
+            "id": "eda3e8336146e50e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1. Network/4. Post Exploitation/2. Lateral Movement/2. Active Directory/8. BloodHound ACLs and AD CS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "8. BloodHound ACLs and AD CS"
+            }
+          },
+          {
+            "id": "0fc720a1a1c6eea5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Web Applications/1. Injection/5. Command Injection.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "5. Command Injection"
             }
           },
           {
@@ -41,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1. Network/05 Linux/Privilege Escalation.md",
+                "file": "1. Network/4. Post Exploitation/1. Privilege Escalation/Linux/0. PrivEsc Checklist.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Privilege Escalation"
+              "title": "0. PrivEsc Checklist"
             }
           },
           {
@@ -55,16 +83,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Web Applications/1. Injection/Command Injection.md",
+                "file": "2. Web Applications/1. Injection/5. Command Injection.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Command Injection"
+              "title": "5. Command Injection"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -228,35 +256,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "436d36a7eba98628",
+  "active": "0fc720a1a1c6eea5",
   "lastOpenFiles": [
-    "5. Tunneling/09 Movement/File Transfers.md",
-    "5. Tunneling/09 Movement/Pivoting Tunneling and Port Forwarding.md",
-    "5. Tunneling/09 Movement/Ligolo-ng.md",
-    "10 Tool Box/Links and References.md",
-    "_ToC_.base",
-    "CWES_Prep.md",
-    "00 README.md",
-    "2. Web Applications/3. Server Side Attacks/5. Extensible Stylesheet Language Transformations.md",
-    "1. Network/5. Misc/Moving Data.md",
-    "1. Network/5. Misc/encoding.md",
-    "1. Network/3. Exploitation/2. Windows/2. NTLM MITM.md",
-    "1. Network/3. Exploitation/2. Windows/1. Mimikatz.md",
-    "5. Tunneling/1. Linux/DNSCat.md",
-    "1. Network/6. Phishing/Windows Library Payload.md",
-    "1. Network/6. Phishing/WebDAV.md",
-    "1. Network/6. Phishing/SWAKS.md",
-    "1. Network/7. Antivirus/Windows Defender.md",
-    "1. Network/Misc/Wordlists.md",
-    "2. Web Applications/02 Web/FileUp.md",
-    "2. Web Applications/1. Injection/2. Cross-Site Scripting/Info.md",
-    "2. Web Applications/0. Checklist/Misc.md",
-    "2. Web Applications/5. File Uploads/1. File Uploads.md",
-    "2. Web Applications/5. File Uploads/0. Web Shells.md",
-    "2. Web Applications/02 Web/FileInc & Git.md",
     "2. Web Applications/02 Web/Command Injection.md",
-    "2. Web Applications/02 Web/SQLi.md",
-    "2. Web Applications/1. Injection/XML eXternal Entities (XXE).md",
+    "2. Web Applications/1. Injection/5. Command Injection.md",
+    "2. Web Applications/02 Web/Client-Side+Office Payload Delivery.md",
+    "2. Web Applications/1. Injection/6. XML eXternal Entities (XXE).md",
+    "2. Web Applications/1. Injection/3. Prototype Pollution/Prototype Pollution.md",
+    "2. Web Applications/1. Injection/4. Cypher Injection.md",
+    "2. Web Applications/1. Injection/2. Cross-Site Scripting/3. Test Payloads.md",
+    "2. Web Applications/1. Injection/2. Cross-Site Scripting/2. Scanners.md",
+    "2. Web Applications/1. Injection/2. Cross-Site Scripting/1. Info.md",
+    "2. Web Applications/1. Injection/2. Cross-Site Scripting/0. XSS - MASTER.md",
+    "2. Web Applications/1. Injection/1. SQL Injection/0. SQLi - MASTER.md",
+    "2. Web Applications/1. Injection/1. SQL Injection/2. SQLMAP.md",
+    "2. Web Applications/1. Injection/1. SQL Injection/1. SQL Injection.md",
+    "2. Web Applications/02 Web/CMS+APIs.md",
+    "2. Web Applications/2. Broken Auth/1. Brute Force.md",
+    "2. Web Applications/2. Broken Auth/Login Bruteforcing.md",
+    "2. Web Applications/2. Broken Auth/2. Auth + Sess Bypass.md",
+    "2. Web Applications/2. Broken Auth/Auth+Sessions.md",
+    "2. Web Applications/0. Checklist/WebApp Methodology.md",
+    "1. Network/2. Enumeration/1. Linux/4. Shell Stabilization.md",
+    "1. Network/2. Enumeration/1. Linux/3. Enum.md",
+    "1. Network/2. Enumeration/1. Linux/1. Checklist.md",
+    "1. Network/3. Exploitation/2. Windows/5. PowerShell.md",
+    "1. Network/3. Exploitation/2. Windows/4. LNK and Client-Side.md",
+    "1. Network/3. Exploitation/2. Windows/3. Bypasses and Tradecraft.md",
+    "1. Network/2. Enumeration/2. Windows/4. Host Enumeration and Access.md",
+    "_ToC_.base",
+    "1. Network/2. Enumeration/3. Active Directory/Untitled.base",
     "4. Mobile/14 Mobile",
     "C0D3X",
     "_HTB_MODULES",
@@ -265,7 +294,6 @@
     "_HTB_CHEATSHEETS",
     "copy-pasta-2.0/Untitled 1.base",
     "copy-pasta-2.0/Untitled 2.base",
-    "02 Web/CWES-Course",
     "1. Network/Images/Pasted image 20250723132618.png",
     "1. Network/Images/Pasted image 20250723130557.png",
     "1. Network/Images/Pasted image 20250723125914.png",

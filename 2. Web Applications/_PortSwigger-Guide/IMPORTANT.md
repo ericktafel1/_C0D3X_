@@ -42,7 +42,7 @@ title: MUST
 9. Check the loaded Javascript files
 
 # Stage1
-- [ ] [[2. Web Applications/02 Web/PortSwigger-Guide/XSS/XSS]]
+- [ ] [[2. Web Applications/_PortSwigger-Guide/XSS/XSS]]
 - [ ] [[CSRF]]
 - [ ] [[Clickjacking]]
 - [ ] [[DOM-based]]
@@ -56,7 +56,7 @@ title: MUST
 - [ ] [[Jwt]]
 
 # Stage2
-- [ ] [[2. Web Applications/02 Web/PortSwigger-Guide/XSS/XSS]]
+- [ ] [[2. Web Applications/_PortSwigger-Guide/XSS/XSS]]
 - [ ] [[CSRF]]
 - [ ] [[Clickjacking]]
 - [ ] [[DOM-based]]
