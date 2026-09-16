@@ -63,7 +63,8 @@
               "title": "Command Injection"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -227,20 +228,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "5d74cc329532db28",
+  "active": "c82ece2ba346aa4e",
   "lastOpenFiles": [
-    "C0D3X/02 Web/FileInc & Git.md",
+    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Info.md",
+    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/0. Checklist/Misc.md",
     "C0D3X/02 Web/FileUp.md",
-    "C0D3X/02 Web/Command Injection.md",
-    "C0D3X/02 Web/SQLi.md",
     "C0D3X/_N3CR0-NOMNOM/2. Web Applications/5. File Uploads/1. File Uploads.md",
     "C0D3X/_N3CR0-NOMNOM/2. Web Applications/5. File Uploads/0. Web Shells.md",
+    "C0D3X/02 Web/FileInc & Git.md",
+    "C0D3X/02 Web/Command Injection.md",
+    "C0D3X/02 Web/SQLi.md",
     "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/XML eXternal Entities (XXE).md",
     "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/Command Injection.md",
     "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/4. Prototype Pollution/Prototype Pollution.md",
     "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Test Payloads.md",
     "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Scanners.md",
-    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Info.md",
     "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/1. SQL Injection/SQL Injection.md",
     "C0D3X/02 Web/0_Web App Methodology.md",
     "C0D3X/02 Web/Deserialization.md",
@@ -254,7 +256,6 @@
     "C0D3X/05 Linux/Privilege Escalation.md",
     "C0D3X/13 AI/Cheatsheet - AI Red Team.md",
     "_HTB_CHEATSHEETS/SQLMap Essentials.md",
-    "_HTB_MODULES/Using the Metasploit Framework.md",
     "C0D3X/14 Mobile",
     "C0D3X/_N3CR0-NOMNOM/Untitled.base",
     "C0D3X",
