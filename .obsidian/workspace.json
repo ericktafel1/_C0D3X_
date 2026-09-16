@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C0D3X/02 Web/0_Web App Methodology.md",
+                "file": "C0D3X/02 Web/fInc + fUp & Git.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0_Web App Methodology"
+              "title": "fInc + fUp & Git"
             }
           },
           {
@@ -229,9 +229,9 @@
   },
   "active": "09c5fb303264b45a",
   "lastOpenFiles": [
-    "C0D3X/02 Web/File Inclusion + Upload & Git.md",
-    "C0D3X/02 Web/Command Injection.md",
     "C0D3X/02 Web/0_Web App Methodology.md",
+    "C0D3X/02 Web/fInc + fUp & Git.md",
+    "C0D3X/02 Web/Command Injection.md",
     "C0D3X/02 Web/SQLi.md",
     "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/Command Injection.md",
     "C0D3X/02 Web/Deserialization.md",
