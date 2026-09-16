@@ -19,8 +19,7 @@ whatweb http://192.168.123.100:9000/
 ```
 
 4. Check the website using [web-check.as93.net](https://web-check.as93.net/).
-5. Determine language - Navigate to `index.html`, `index.php`, `index.asp`/`index.aspx`, `index.jsp`/`index.jspx`, `index.cgi`, `index.pl`, `index.py`, `index.rb`, `index.cfm`
-6. Use `httpx` for detailed information:
+5. Use `httpx` for detailed information:
 
 ```bash
 httpx -u http://192.168.123.100:9000/ -td -sc -cl -ct -location -rt -lc -wc -title -server -method -websocket -ip -cname -asn -cdn -probe
@@ -28,7 +27,8 @@ httpx -u http://192.168.123.100:9000/ -td -sc -cl -ct -location -rt -lc -wc -tit
 
 6. Use browser extensions like Wappalyzer and Katana.
 7. Google the exact website title for additional information.
-8. Run a small `feroxbuster` scan:
+8. Determine language - `feroxbuster` or navigate to `index.html`, `index.php`, `index.asp`/`index.aspx`, `index.jsp`/`index.jspx`, `index.cgi`, `index.pl`, `index.py`, `index.rb`, `index.cfm`
+9. Run a small `feroxbuster` scan:
 
 ```bash
 feroxbuster -u http://domain.com -w /usr/share/seclists/Discovery/Web-Content/raft-large-files.txt
