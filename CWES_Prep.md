@@ -1,9 +1,9 @@
 
 1. PortSwigger Labs
-2. HTB  Labs - Challenges
+2. HTB  Labs - Challenges (probably just this is enough)
 	1. Filter for Web
 3. HTB Lab - Machines
-```
+
 |#|Machine|OS|Key Focus|
 |---|---|---|---|
 |1|Bashed|Linux|Web shell, directory discovery|
@@ -30,8 +30,6 @@
 |22|RedCross|Linux|XSS, SQLi|
 |23|Timing|Linux|LFI, mass assignment|
 |24|Node|Linux|API exploitation, deserialization|
-```
-
 
 DURING EXAM:
 - some `Note:` sections in `HTB_MODULES` will have information to help identify the intended path

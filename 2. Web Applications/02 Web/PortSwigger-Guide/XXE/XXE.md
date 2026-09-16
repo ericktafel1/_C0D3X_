@@ -152,5 +152,5 @@ title: Solution
 ```
 
 # Payloads
-![[C0D3X/02 Web/PortSwigger-Guide/XXE/PAYLOADS]]
+![[2. Web Applications/02 Web/PortSwigger-Guide/XXE/PAYLOADS]]
 ![[XXEPayloads]]

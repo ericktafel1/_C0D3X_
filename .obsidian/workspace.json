@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C0D3X/02 Web/FileUp.md",
+                "file": "2. Web Applications/02 Web/FileUp.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C0D3X/02 Web/FileUp.md",
+                "file": "_Click_Script.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "FileUp"
+              "title": "_Click_Script"
             }
           },
           {
@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C0D3X/05 Linux/Privilege Escalation.md",
+                "file": "1. Network/05 Linux/Privilege Escalation.md",
                 "mode": "source",
                 "source": false
               },
@@ -55,7 +55,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/Command Injection.md",
+                "file": "2. Web Applications/1. Injection/Command Injection.md",
                 "mode": "source",
                 "source": false
               },
@@ -228,36 +228,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "c82ece2ba346aa4e",
+  "active": "436d36a7eba98628",
   "lastOpenFiles": [
-    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Info.md",
-    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/0. Checklist/Misc.md",
-    "C0D3X/02 Web/FileUp.md",
-    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/5. File Uploads/1. File Uploads.md",
-    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/5. File Uploads/0. Web Shells.md",
-    "C0D3X/02 Web/FileInc & Git.md",
-    "C0D3X/02 Web/Command Injection.md",
-    "C0D3X/02 Web/SQLi.md",
-    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/XML eXternal Entities (XXE).md",
-    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/Command Injection.md",
-    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/4. Prototype Pollution/Prototype Pollution.md",
-    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Test Payloads.md",
-    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/2. Cross-Site Scripting/Scanners.md",
-    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/1. SQL Injection/SQL Injection.md",
-    "C0D3X/02 Web/0_Web App Methodology.md",
-    "C0D3X/02 Web/Deserialization.md",
-    "C0D3X/02 Web/Dir + VHosts.md",
-    "C0D3X/02 Web/Auth+Sessions.md",
-    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/1. SQL Injection/SQLMAP.md",
-    "C0D3X/_N3CR0-NOMNOM/2. Web Applications/1. Injection/3. Cypher Injection.md",
-    "C0D3X/02 Web/XSS.md",
-    "C0D3X/02 Web/Client-Side+Office Payload Delivery.md",
-    "C0D3X/02 Web/CMS+APIs.md",
-    "C0D3X/05 Linux/Privilege Escalation.md",
-    "C0D3X/13 AI/Cheatsheet - AI Red Team.md",
-    "_HTB_CHEATSHEETS/SQLMap Essentials.md",
-    "C0D3X/14 Mobile",
-    "C0D3X/_N3CR0-NOMNOM/Untitled.base",
+    "5. Tunneling/09 Movement/File Transfers.md",
+    "5. Tunneling/09 Movement/Pivoting Tunneling and Port Forwarding.md",
+    "5. Tunneling/09 Movement/Ligolo-ng.md",
+    "10 Tool Box/Links and References.md",
+    "_ToC_.base",
+    "CWES_Prep.md",
+    "00 README.md",
+    "2. Web Applications/3. Server Side Attacks/5. Extensible Stylesheet Language Transformations.md",
+    "1. Network/5. Misc/Moving Data.md",
+    "1. Network/5. Misc/encoding.md",
+    "1. Network/3. Exploitation/2. Windows/2. NTLM MITM.md",
+    "1. Network/3. Exploitation/2. Windows/1. Mimikatz.md",
+    "5. Tunneling/1. Linux/DNSCat.md",
+    "1. Network/6. Phishing/Windows Library Payload.md",
+    "1. Network/6. Phishing/WebDAV.md",
+    "1. Network/6. Phishing/SWAKS.md",
+    "1. Network/7. Antivirus/Windows Defender.md",
+    "1. Network/Misc/Wordlists.md",
+    "2. Web Applications/02 Web/FileUp.md",
+    "2. Web Applications/1. Injection/2. Cross-Site Scripting/Info.md",
+    "2. Web Applications/0. Checklist/Misc.md",
+    "2. Web Applications/5. File Uploads/1. File Uploads.md",
+    "2. Web Applications/5. File Uploads/0. Web Shells.md",
+    "2. Web Applications/02 Web/FileInc & Git.md",
+    "2. Web Applications/02 Web/Command Injection.md",
+    "2. Web Applications/02 Web/SQLi.md",
+    "2. Web Applications/1. Injection/XML eXternal Entities (XXE).md",
+    "4. Mobile/14 Mobile",
     "C0D3X",
     "_HTB_MODULES",
     "HTB Modules",
@@ -266,15 +266,15 @@
     "copy-pasta-2.0/Untitled 1.base",
     "copy-pasta-2.0/Untitled 2.base",
     "02 Web/CWES-Course",
-    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723132618.png",
-    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723130557.png",
-    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20250723125914.png",
-    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20250630122617.png",
-    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20250328160016.png",
-    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20250327111312.png",
-    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20250327110033.png",
-    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20240705134337.png",
-    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20240628115017.png",
-    "C0D3X/_N3CR0-NOMNOM/1. Network/Images/Pasted image 20240628114633.png"
+    "1. Network/Images/Pasted image 20250723132618.png",
+    "1. Network/Images/Pasted image 20250723130557.png",
+    "1. Network/Images/Pasted image 20250723125914.png",
+    "1. Network/Images/Pasted image 20250630122617.png",
+    "1. Network/Images/Pasted image 20250328160016.png",
+    "1. Network/Images/Pasted image 20250327111312.png",
+    "1. Network/Images/Pasted image 20250327110033.png",
+    "1. Network/Images/Pasted image 20240705134337.png",
+    "1. Network/Images/Pasted image 20240628115017.png",
+    "1. Network/Images/Pasted image 20240628114633.png"
   ]
 }
