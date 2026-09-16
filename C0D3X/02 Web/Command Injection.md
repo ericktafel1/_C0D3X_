@@ -10,8 +10,8 @@ Common Command Injection Operators:
 | Pipe                   | `\|`                    | `%7c`                     | Both (only second output is shown)         |
 | AND                    | `&&`                    | `%26%26`                  | Both (only if first succeeds)              |
 | OR                     | `\|\|`                  | `%7c%7c`                  | Second (only if first fails)               |
-| Sub-Shell              | ` `` `                  | `%60%60`                  | Both **(Linux-only)**                      |
-| Sub-Shell              | `$()`                   | `%24%28%29`               | Both **(Linux-only)**                      |
+| Sub-Shell              | ` `` `                  | `%60%60`                  | Both **(Linux-only)** Command inside       |
+| Sub-Shell              | `$()`                   | `%24%28%29`               | Both **(Linux-only)** Command inside       |
 >[!Note:]
 >Front-end may be validating user input. **Capture in Burp and Repeat the paylod to bypass front-end sanitization!**
 
@@ -233,3 +233,4 @@ typ%TEMP:~-3,-2% %CommonProgramFiles:~17,-11%:\Users\h%TMP:~-13,-12%b-stu%System
 >[!Note:]
 >Remember, we can run Windows tools on Linux with `pwsh`
 
+id
