@@ -133,7 +133,8 @@ shell.soap
 shell.xamlx
 ```
 
-
+>[!Tip:]
+>In Windows Servers, file names are case insensitive, so we may try uploading a `php` with a mixed-case (e.g. `pHp`), which may bypass the blacklist as well, and should still execute as a PHP script (Burp > Payload Processing > Modify Case).
 ## Whitelist Filters
 
 ### Whitelisting Extensions
