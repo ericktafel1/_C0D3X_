@@ -103,7 +103,7 @@ The validation may also check the file type or file content for the type matchin
 ***PAYLOAD ALL THE THINGS***
 
 PHP
-```
+```bash
 .jpeg.php
 .jpg.php
 .png.php
@@ -125,10 +125,11 @@ PHP
 .php\x00.png
 .php%00.jpg
 .php\x00.jpg
+# Other Character Injections (see below) 
 ```
 
 .NET
-```
+```bash
 shell.asa
 shell.ashx
 shell.asmx
@@ -138,6 +139,7 @@ shell.cer
 shell.soap
 shell.xamlx
 shell.aspx:.jpg
+# Other Character Injections (see below)
 ```
 
 >[!Tip:]
