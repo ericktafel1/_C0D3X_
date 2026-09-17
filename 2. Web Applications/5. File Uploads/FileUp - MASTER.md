@@ -134,7 +134,7 @@ shell.xamlx
 ```
 
 >[!Tip:]
->In Windows Servers, file names are case insensitive, so we may try uploading a `php` with a mixed-case (e.g. `pHp`), which may bypass the blacklist as well, and should still execute as a PHP script (Burp > Payload Type > Case Modification > To upper + To lower).
+>In Windows Servers, file names are case insensitive, so we may try uploading a `php` with a mixed-case (e.g. `pHp`), which may bypass the blacklist as well, and should still execute as a PHP script. Make a simple list via scripting or for all upper/lower use Burp > Payload Type > Case Modification > To upper + To lower.
 ## Whitelist Filters
 
 ### Whitelisting Extensions
