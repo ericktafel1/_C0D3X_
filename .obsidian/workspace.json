@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Web Applications/5. File Uploads/FileUp - MASTER.md",
+                "file": "1. Network/4. Post Exploitation/2. Lateral Movement/2. Active Directory/0. Enum+Phish.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "FileUp - MASTER"
+              "title": "0. Enum+Phish"
             }
           },
           {
@@ -112,7 +112,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "whois",
+                "query": "swaks",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -244,6 +244,8 @@
   },
   "active": "dff98aa4749e17ba",
   "lastOpenFiles": [
+    "1. Network/6. Phishing/SWAKS.md",
+    "2. Web Applications/5. File Uploads/FileUp - MASTER.md",
     "2. Web Applications/7. Session Security/Session Security.md",
     "2. Web Applications/2. Broken Auth/2. Auth + Sess Bypass.md",
     "1. Network/3. Exploitation/1. Linux/Brute Force SSH.md",
@@ -272,8 +274,6 @@
     "5. Tunneling/2. Windows/0. Netsh.md",
     "5. Tunneling/1. Linux/4. sshuttle.md",
     "5. Tunneling/1. Linux/3. SSH Tunneling.md",
-    "5. Tunneling/1. Linux/2. SOCAT.md",
-    "5. Tunneling/1. Linux/1. Ptunnel.md",
     "2. Web Applications/15. Client Side Payload Delivery",
     "_ToC_.base",
     "1. Network/2. Enumeration/3. Active Directory/Untitled.base",
