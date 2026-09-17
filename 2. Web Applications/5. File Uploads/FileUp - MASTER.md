@@ -137,6 +137,7 @@ shell.aspx
 shell.cer
 shell.soap
 shell.xamlx
+shell.aspx:.jpg
 ```
 
 >[!Tip:]
@@ -177,7 +178,7 @@ shell.php.jpg
 ```
 
 #### Character Injection
-We can inject several characters before or after the final extension to cause the web application to misinterpret the filename and execute the uploaded file as a PHP script.
+We can inject several characters **before** or **after** the final extension to cause the web application to misinterpret the filename and execute the uploaded file as a PHP script.
 
 ``` url
 %20
